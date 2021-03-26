@@ -5,12 +5,11 @@
     <title>HTML Academy: Погнали</title>
   </head>
 
-  <body  class="page__body">
+  <body class="page-body">
     <header class="page-header">
       <div class="page-header__top-bar top-bar">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img class="logo__image--blue" src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
-          <img class="logo__image--white" src="img/logo_mobile_white.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
         </a>
 
         <div class="top-bar__menu menu">
@@ -103,18 +102,18 @@
       </div>
     </header>
 
-    <main class="main">
+    <main class="page-main">
       <h1 class="visually-hidden">Сервис поиска попутчиков «Погнали»</h1>
 
-      <section class="main__top-section promo">
+      <section class="main__section main__section--top promo">
         <h2 class="visually-hidden">Промо-блок</h2>
 
         <p class="promo__slogan">В путешествие с крутыми попутчиками!</p>
 
-        <div class="promo__review">
-          <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
-          <p class="promo__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
-        </div>
+        <blockquote class="promo__review review">
+          <p class="review__quote">«Лучшее приложение, что я видел в жизни!»</p>
+          <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+        </blockquote>
 
         <ul class="promo__features features">
           <li class="features__item">Выберите направление</li>
@@ -380,7 +379,7 @@
         <form class="feedback__form feedback-form" method="POST" action="https://echo.htmlacademy.ru/">
           <label class="visually-hidden" for="feedback-email">Ваш e-mail:</label>
           <input class="feedback-form__input" type="email" id="feedback-email" name="email" placeholder="E-mail">
-          <button class="feedback-from__button button" type="submit" aria-label="Регистрация">
+          <button class="feedback-form__button button" type="submit" aria-label="Регистрация">
             <span class="button__text">Регистрация</span>
           </button>
         </form>
@@ -430,12 +429,12 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <a class="footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
+    <footer class="page-footer">
+      <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
         <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
       </a>
 
-      <ul class="footer__socials socials">
+      <ul class="page-footer__socials socials">
         <li class="socials__item">
           <a class="socials__link" href="#" target="_blank" aria-label="Перейти на страницу «Погнали» в Фейсбуке">
             <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -471,16 +470,16 @@
         </li>
       </ul>
 
-      <p class="footer__copyright copyright">
-        <span class="copyright__text">Разработано</span>
+      <p class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Перейти на сайт HTML Academy">
+          <span class="copyright__text">Разработано</span>
           <img src="img/htmlacademy.svg" width="27" height="33" alt="Логотип HTML Academy">
         </a>
       </p>
     </footer>
 
-    <div class="modal">
-      <h3 class="modal__title">Бизнес-тарифы</h3>
+    <div class="modal modal--business-rates">
+      <h2 class="modal__title">Бизнес-тарифы</h2>
 
       <table class="modal__table table">
         <tr class="table__row">
