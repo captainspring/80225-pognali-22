@@ -145,7 +145,7 @@
 
             <fieldset class="form__fieldset">
               <legend class="form__legend">Транспорт</legend>
-              <ul class="form__list">
+              <ul class="form__list form__list--row">
                 <li class="form__item">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="plane" id="transport-plane" checked>
                   <label class="form__label form__label--plane" for="transport-plane">
@@ -327,8 +327,8 @@
               <fieldset class="form__fieldset form__fieldset--no-border">
                 <legend class="visually-hidden">Страны</legend>
 
-                <ul class="form__select-country select-country">
-                  <li class="select-country__item">
+                <ul class="form__list select-country">
+                  <li class="form__item select-country__item">
                     <div class="select-country__controls">
                       <button class="select-country__pick-button select-country__pick-button--picked button button--select" type="button">
                         <span class="select-country__name">Босния и Герцеговина</span>
@@ -406,7 +406,7 @@
                     </div>
                   </li>
 
-                  <li class="select-country__item">
+                  <li class="form__item select-country__item">
                     <div class="select-country__controls">
                       <button class="select-country__pick-button select-country__pick-button--picked button button--select" type="button">
                         <span class="select-country__name">Чехия</span>
@@ -484,7 +484,7 @@
                     </div>
                   </li>
 
-                  <li class="select-country__item">
+                  <li class="form__item select-country__item">
                     <div class="select-country__controls">
                       <button class="select-country__pick-button select-country__pick-button--clicked button button--select" type="button">
                         Выбрать страну
@@ -562,11 +562,31 @@
                     </div>
                   </li>
 
-                  <li class="select-country__item">
+                  <li class="form__item select-country__item">
                     <button class="select-country__add-button button button--select button--blue" type="button">
                       Добавить страну
                     </button>
                   </li>
+                </ul>
+              </fieldset>
+
+              <button class="form__button button" type="submit">Следующий шаг</button>
+              <a class="form__back-link" href="#">На шаг назад</a>
+            </form>
+          </li>
+
+          <li class="app-plan__step step">
+            <h3 class="step__title"><span class="step__number">Шаг 3.</span> Развлечения</h3>
+
+            <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+            </p>
+
+            <form class="step__form form" id="plan-entertainment" method="POST" action="https://echo.htmlacademy.ru/">
+              <fieldset class="form__fieldset form__fieldset--no-border">
+                <legend class="visually-hidden">Описание развлечений</legend>
+
+                <ul class="form__list descriptions">
+                  <li class="form__item"></li>
                 </ul>
               </fieldset>
 
