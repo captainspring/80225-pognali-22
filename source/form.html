@@ -216,14 +216,14 @@
           </ul>
         </div>
 
-        <ul class="add-plan__steps">
-          <li class="app-plan__step step step--current">
-            <h3 class="step__title"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
+        <form class="add-plan__form form" id="add-plan" method="POST" action="https://echo.htmlacademy.ru/">
+          <ul class="add-plan__steps">
+            <li class="app-plan__step step step--current">
+              <h3 class="step__title"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
 
-            <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
-            <form class="step__form form" id="plan-dates" method="POST" action="https://echo.htmlacademy.ru/">
-              <fieldset class="form__fieldset form__fieldset--no-border">
+              <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
                 <legend class="visually-hidden">Попутчики</legend>
 
                 <label class="form__label" for="quantity-companions">Ищу попутчиков:</label>
@@ -238,7 +238,7 @@
                 <label class="form__label form__label--small" for="kids-ok">Можно с детьми</label>
               </fieldset>
 
-              <fieldset class="form__fieldset form__fieldset--no-border">
+              <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
                 <legend class="visually-hidden">Даты</legend>
 
                 <label class="form__label" for="quantity-days">Длительность:</label>
@@ -314,17 +314,15 @@
                 </div>
               </fieldset>
 
-              <button class="form__button button" type="submit">Следующий шаг</button>
-            </form>
-          </li>
+              <a class="form__button button" href="#">Следующий шаг</a>
+            </li>
 
-          <li class="app-plan__step step">
-            <h3 class="step__title"><span class="step__number">Шаг 2.</span> Маршрут</h3>
+            <li class="app-plan__step step">
+              <h3 class="step__title"><span class="step__number">Шаг 2.</span> Маршрут</h3>
 
-            <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
 
-            <form class="step__form form" id="plan-countries" method="POST" action="https://echo.htmlacademy.ru/">
-              <fieldset class="form__fieldset form__fieldset--no-border">
+              <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
                 <legend class="visually-hidden">Страны</legend>
 
                 <ul class="form__list select-country">
@@ -570,19 +568,17 @@
                 </ul>
               </fieldset>
 
-              <button class="form__button button" type="submit">Следующий шаг</button>
+              <a class="form__button button" href="#">Следующий шаг</a>
               <a class="form__back-link" href="#">На шаг назад</a>
-            </form>
-          </li>
+            </li>
 
-          <li class="app-plan__step step">
-            <h3 class="step__title"><span class="step__number">Шаг 3.</span> Развлечения</h3>
+            <li class="app-plan__step step">
+              <h3 class="step__title"><span class="step__number">Шаг 3.</span> Развлечения</h3>
 
-            <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-            </p>
+              <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+              </p>
 
-            <form class="step__form form" id="plan-entertainment" method="POST" action="https://echo.htmlacademy.ru/">
-              <fieldset class="form__fieldset form__fieldset--no-border">
+              <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
                 <legend class="visually-hidden">Описание развлечений</legend>
 
                 <ul class="form__list descriptions">
@@ -606,9 +602,10 @@
 
               <button class="form__button button" type="submit">Отправить</button>
               <a class="form__back-link" href="#">На шаг назад</a>
-            </form>
-          </li>
-        </ul>
+              </form>
+            </li>
+          </ul>
+        </form>
       </section>
     </main>
 
