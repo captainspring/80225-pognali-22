@@ -217,7 +217,7 @@
         </div>
 
         <ul class="add-plan__steps">
-          <li class="app-plan__step step">
+          <li class="app-plan__step step step--current">
             <h3 class="step__title"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
 
             <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
@@ -315,6 +315,263 @@
               </fieldset>
 
               <button class="form__button button" type="submit">Следующий шаг</button>
+            </form>
+          </li>
+
+          <li class="app-plan__step step">
+            <h3 class="step__title"><span class="step__number">Шаг 2.</span> Маршрут</h3>
+
+            <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+
+            <form class="step__form form" id="plan-countries" method="POST" action="https://echo.htmlacademy.ru/">
+              <fieldset class="form__fieldset form__fieldset--no-border">
+                <legend class="visually-hidden">Страны</legend>
+
+                <ul class="form__select-country select-country">
+                  <li class="select-country__item">
+                    <div class="select-country__controls">
+                      <button class="select-country__pick-button select-country__pick-button--picked button button--select" type="button">
+                        <span class="select-country__name">Босния и Герцеговина</span>
+                      </button>
+                      <span class="select-country__flag select-country__flag--bosnia"></span>
+                      <button class="select-country__deselect" type="button" aria-label="Убрать страну из списка"></button>
+                    </div>
+
+                    <div class="select-country__choice-container">
+                      <div class="select-country__first-letters">
+                        <span class="select-country__first-letter" tabindex="0">А</span>
+                        <span class="select-country__first-letter" tabindex="0">Б</span>
+                        <span class="select-country__first-letter" tabindex="0">В</span>
+                        <span class="select-country__first-letter" tabindex="0">Г</span>
+                        <span class="select-country__first-letter" tabindex="0">Д</span>
+                        <span class="select-country__first-letter" tabindex="0">Е</span>
+                        <span class="select-country__first-letter" tabindex="0">З</span>
+                        <span class="select-country__first-letter" tabindex="0">И</span>
+                        <span class="select-country__first-letter" tabindex="0">К</span>
+                        <span class="select-country__first-letter" tabindex="0">Л</span>
+                        <span class="select-country__first-letter" tabindex="0">М</span>
+                        <span class="select-country__first-letter" tabindex="0">Н</span>
+                        <span class="select-country__first-letter" tabindex="0">О</span>
+                        <span class="select-country__first-letter" tabindex="0">П</span>
+                        <span class="select-country__first-letter" tabindex="0">Р</span>
+                        <span class="select-country__first-letter" tabindex="0">С</span>
+                        <span class="select-country__first-letter" tabindex="0">Т</span>
+                        <span class="select-country__first-letter" tabindex="0">У</span>
+                        <span class="select-country__first-letter" tabindex="0">Ф</span>
+                        <span class="select-country__first-letter" tabindex="0">Х</span>
+                        <span class="select-country__first-letter" tabindex="0">Ч</span>
+                        <span class="select-country__first-letter" tabindex="0">Ш</span>
+                        <span class="select-country__first-letter" tabindex="0">Э</span>
+                        <span class="select-country__first-letter" tabindex="0">Ю</span>
+                        <span class="select-country__first-letter" tabindex="0">Я</span>
+                      </div>
+
+                      <ul class="select-country__list">
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Австралия</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Австрия</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Азербайджан</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Албания</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Алжир</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Ангола</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Андорра</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Антигуа и Барбуда</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Аргентина</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Армения</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Афганистан</a>
+                        </li>
+                      </ul>
+
+                      <button class="select-country__close" type="button" aria-label="Закрыть выпадающее меню выбора страны"></button>
+                    </div>
+                  </li>
+
+                  <li class="select-country__item">
+                    <div class="select-country__controls">
+                      <button class="select-country__pick-button select-country__pick-button--picked button button--select" type="button">
+                        <span class="select-country__name">Чехия</span>
+                      </button>
+                      <span class="select-country__flag select-country__flag--czech"></span>
+                      <button class="select-country__deselect" type="button" aria-label="Убрать страну из списка"></button>
+                    </div>
+
+                    <div class="select-country__choice-container">
+                      <div class="select-country__first-letters">
+                        <span class="select-country__first-letter" tabindex="0">А</span>
+                        <span class="select-country__first-letter" tabindex="0">Б</span>
+                        <span class="select-country__first-letter" tabindex="0">В</span>
+                        <span class="select-country__first-letter" tabindex="0">Г</span>
+                        <span class="select-country__first-letter" tabindex="0">Д</span>
+                        <span class="select-country__first-letter" tabindex="0">Е</span>
+                        <span class="select-country__first-letter" tabindex="0">З</span>
+                        <span class="select-country__first-letter" tabindex="0">И</span>
+                        <span class="select-country__first-letter" tabindex="0">К</span>
+                        <span class="select-country__first-letter" tabindex="0">Л</span>
+                        <span class="select-country__first-letter" tabindex="0">М</span>
+                        <span class="select-country__first-letter" tabindex="0">Н</span>
+                        <span class="select-country__first-letter" tabindex="0">О</span>
+                        <span class="select-country__first-letter" tabindex="0">П</span>
+                        <span class="select-country__first-letter" tabindex="0">Р</span>
+                        <span class="select-country__first-letter" tabindex="0">С</span>
+                        <span class="select-country__first-letter" tabindex="0">Т</span>
+                        <span class="select-country__first-letter" tabindex="0">У</span>
+                        <span class="select-country__first-letter" tabindex="0">Ф</span>
+                        <span class="select-country__first-letter" tabindex="0">Х</span>
+                        <span class="select-country__first-letter" tabindex="0">Ч</span>
+                        <span class="select-country__first-letter" tabindex="0">Ш</span>
+                        <span class="select-country__first-letter" tabindex="0">Э</span>
+                        <span class="select-country__first-letter" tabindex="0">Ю</span>
+                        <span class="select-country__first-letter" tabindex="0">Я</span>
+                      </div>
+
+                      <ul class="select-country__list">
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Австралия</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Австрия</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Азербайджан</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Албания</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Алжир</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Ангола</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Андорра</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Антигуа и Барбуда</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Аргентина</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Армения</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Афганистан</a>
+                        </li>
+                      </ul>
+
+                      <button class="select-country__close" type="button" aria-label="Закрыть выпадающее меню выбора страны"></button>
+                    </div>
+                  </li>
+
+                  <li class="select-country__item">
+                    <div class="select-country__controls">
+                      <button class="select-country__pick-button select-country__pick-button--clicked button button--select" type="button">
+                        Выбрать страну
+                      </button>
+                      <span class="select-country__flag"></span>
+                      <button class="select-country__deselect" type="button" aria-label="Убрать страну из списка"></button>
+                    </div>
+
+                    <div class="select-country__choice-container select-country__choice-container--show">
+                      <div class="select-country__first-letters">
+                        <span class="select-country__first-letter" tabindex="0">А</span>
+                        <span class="select-country__first-letter" tabindex="0">Б</span>
+                        <span class="select-country__first-letter" tabindex="0">В</span>
+                        <span class="select-country__first-letter" tabindex="0">Г</span>
+                        <span class="select-country__first-letter" tabindex="0">Д</span>
+                        <span class="select-country__first-letter" tabindex="0">Е</span>
+                        <span class="select-country__first-letter" tabindex="0">З</span>
+                        <span class="select-country__first-letter" tabindex="0">И</span>
+                        <span class="select-country__first-letter" tabindex="0">К</span>
+                        <span class="select-country__first-letter" tabindex="0">Л</span>
+                        <span class="select-country__first-letter" tabindex="0">М</span>
+                        <span class="select-country__first-letter" tabindex="0">Н</span>
+                        <span class="select-country__first-letter" tabindex="0">О</span>
+                        <span class="select-country__first-letter" tabindex="0">П</span>
+                        <span class="select-country__first-letter" tabindex="0">Р</span>
+                        <span class="select-country__first-letter" tabindex="0">С</span>
+                        <span class="select-country__first-letter" tabindex="0">Т</span>
+                        <span class="select-country__first-letter" tabindex="0">У</span>
+                        <span class="select-country__first-letter" tabindex="0">Ф</span>
+                        <span class="select-country__first-letter" tabindex="0">Х</span>
+                        <span class="select-country__first-letter" tabindex="0">Ч</span>
+                        <span class="select-country__first-letter" tabindex="0">Ш</span>
+                        <span class="select-country__first-letter" tabindex="0">Э</span>
+                        <span class="select-country__first-letter" tabindex="0">Ю</span>
+                        <span class="select-country__first-letter" tabindex="0">Я</span>
+                      </div>
+
+                      <ul class="select-country__list">
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Австралия</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Австрия</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Азербайджан</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Албания</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Алжир</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Ангола</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Андорра</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Антигуа и Барбуда</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Аргентина</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Армения</a>
+                        </li>
+                        <li class="select-country__list-item">
+                          <a class="select-country__country" href="#">Афганистан</a>
+                        </li>
+                      </ul>
+
+                      <button class="select-country__close" type="button" aria-label="Закрыть меню выбора страны"></button>
+                    </div>
+                  </li>
+
+                  <li class="select-country__item">
+                    <button class="select-country__add-button button button--select button--blue" type="button">
+                      Добавить страну
+                    </button>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <button class="form__button button" type="submit">Следующий шаг</button>
+              <a class="form__back-link" href="#">На шаг назад</a>
             </form>
           </li>
         </ul>
