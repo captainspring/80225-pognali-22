@@ -198,6 +198,127 @@
           </li>
         </ol>
       </section>
+
+      <section class="page-main__section add-plan">
+        <h2 class="page-main__title add-plan__title">Добавить план:</h2>
+
+        <div class="add-plan__steps-tracker steps-tracker">
+          <ul class="steps-tracker__list">
+            <li class="steps-tracker__item steps-tracker__item--current">
+              <span class="steps-tracker__text">Даты</span>
+            </li>
+            <li class="steps-tracker__item">
+              <span class="steps-tracker__text">Маршрут</span>
+            </li>
+            <li class="steps-tracker__item">
+              <span class="steps-tracker__text">Развлечения</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="add-plan__steps">
+          <li class="app-plan__step step">
+            <h3 class="step__title"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
+
+            <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+
+            <form class="step__form form" id="plan-dates" method="POST" action="https://echo.htmlacademy.ru/">
+              <fieldset class="form__fieldset form__fieldset--no-border">
+                <legend class="visually-hidden">Попутчики</legend>
+
+                <label class="form__label" for="quantity-companions">Ищу попутчиков:</label>
+                <div class="form__input number-input">
+                  <button class="number-input__minus-button" type="button" aria-label="На одного попутчика меньше"></button>
+                  <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
+                  <button class="number-input__plus-button" type="button" aria-label="На одного попутчика больше"></button>
+                  <span class="number-input__units" aria-label="Человек">Чел.</span>
+                </div>
+
+                <input class="form__checkbox" type="checkbox" name="kids-ok" id="kids-ok" checked>
+                <label class="form__label form__label--small" for="kids-ok">Можно с детьми</label>
+              </fieldset>
+
+              <fieldset class="form__fieldset form__fieldset--no-border">
+                <legend class="visually-hidden">Даты</legend>
+
+                <label class="form__label" for="quantity-days">Длительность:</label>
+                <div class="form__input number-input">
+                  <button class="number-input__minus-button" type="button" aria-label="На один день меньше"></button>
+                  <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1"
+                    step="1">
+                  <button class="number-input__plus-button" type="button" aria-label="На один день больше"></button>
+                  <span class="number-input__units" aria-label="Дней">Дн.</span>
+                </div>
+
+                <div class="form__calendar calendar">
+                  <div class="calendar__month">
+                    <button class="calendar__arrow calendar__arrow--left" type="button" aria-label="Предыдущий месяц"></button>
+                    <span class="calendar__month-name">Март 2019</span>
+                    <button class="calendar__arrow calendar__arrow--right" type="button" aria-label="Следующий месяц"></button>
+                  </div>
+
+                  <div class="calendar__weekdays">
+                    <span class="calendar__weekday">П</span>
+                    <span class="calendar__weekday">В</span>
+                    <span class="calendar__weekday">С</span>
+                    <span class="calendar__weekday">Ч</span>
+                    <span class="calendar__weekday">П</span>
+                    <span class="calendar__weekday calendar__weekday--weekend">С</span>
+                    <span class="calendar__weekday calendar__weekday--weekend">В</span>
+                  </div>
+
+                  <div class="calendar__days">
+                    <span class="calendar__day calendar__day--grey" tabindex="0">23</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">24</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">25</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">26</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">27</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">28</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">1</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">2</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">3</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">4</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">5</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">6</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">7</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">8</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">9</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">10</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">11</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">12</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">13</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">14</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">15</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">16</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">17</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">18</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">19</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">20</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">21</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">22</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">23</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">24</span>
+                    <span class="calendar__day calendar__day--grey" tabindex="0">25</span>
+                    <span class="calendar__day calendar__day--first" tabindex="0">26</span>
+                    <span class="calendar__day calendar__day--picked" tabindex="0">27</span>
+                    <span class="calendar__day calendar__day--last" tabindex="0">28</span>
+                    <span class="calendar__day" tabindex="0">29</span>
+                    <span class="calendar__day" tabindex="0">30</span>
+                    <span class="calendar__day" tabindex="0">31</span>
+                    <span class="calendar__day" tabindex="0">1</span>
+                    <span class="calendar__day" tabindex="0">2</span>
+                    <span class="calendar__day" tabindex="0">3</span>
+                    <span class="calendar__day" tabindex="0">4</span>
+                    <span class="calendar__day" tabindex="0">5</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <button class="form__button button" type="submit">Следующий шаг</button>
+            </form>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="page-footer">
