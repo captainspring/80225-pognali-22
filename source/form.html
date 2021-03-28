@@ -109,7 +109,75 @@
     </header>
 
     <main class="page-main">
+      <div class="page-main__title-container">
+        <h1 class="page-main__title">Направления</h1>
+      </div>
 
+      <section class="user-profile">
+        <h2 class="visually-hidden">Ваш профиль</h2>
+
+        <div class="user-profile__badge level-badge">
+          <p class="level-badge__text">
+            <span class="level-badge__number">80</span>
+            <span class="level-badge__label">level</span>
+          </p>
+          <svg class="level-badge__level-bar level-bar" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-hidden="true" focusable="false">
+            <circle class="level-bar__progress" r="28" cx="30" cy="30" fill="transparent" stroke-dasharray="270"
+              stroke-dashoffset="125" stroke="#FF8D30" stroke-width="4" transform="rotate(-90, 30, 30)" stroke-linecap="round">
+            </circle>
+          </svg>
+        </div>
+
+        <img class="user-profile__avatar" src="img/avatars/petya-demin.jpg" width="100" height="100"
+          alt="Ваш аватар: бородатый мужчина в шапке и темных очках на фоне снега">
+        <a class="user-profile__change-avatar button button--blue" href="blank.html"><span class="button__additional-text">Сменить</span> фото</a>
+
+        <div class="user-profile__tags info">
+          <h3 class="visually-hidden">Информация о вас</h3>
+          <form class="info__form form" id="user-tags" method="POST" action="https://echo.htmlacademy.ru/">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Тэги</legend>
+              <label class="form__label">
+                <textarea class="form__textarea" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко расскажите о себе с помощью 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+              </label>
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Транспорт</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="plane" id="transport-plane" checked>
+                  <label class="form__label form__label--plane" for="transport-plane">
+                    <span class="visually-hidden">Путешествия самолётом</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="car"
+                    id="transport-car" checked>
+                  <label class="form__label form__label--car" for="transport-car">
+                    <span class="visually-hidden">Путешествия автотранспортом</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="bicycle"
+                    id="transport-bicycle">
+                  <label class="form__label form__label--bicycle" for="transport-bicycle">
+                    <span class="visually-hidden">Путешествия на велосипеде</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="afoot"
+                    id="transport-afoot" checked>
+                  <label class="form__label form__label--afoot" for="transport-afoot">
+                    <span class="visually-hidden">Путешествия пешком</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
