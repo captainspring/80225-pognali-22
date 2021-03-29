@@ -212,13 +212,13 @@
         <div class="add-plan__steps-tracker steps-tracker">
           <ul class="steps-tracker__list">
             <li class="steps-tracker__item steps-tracker__item--current">
-              <span class="steps-tracker__text">Даты</span>
+              <a class="steps-tracker__link" href="#step1">Даты</a>
             </li>
             <li class="steps-tracker__item">
-              <span class="steps-tracker__text">Маршрут</span>
+              <a class="steps-tracker__link" href="#step2">Маршрут</a>
             </li>
             <li class="steps-tracker__item">
-              <span class="steps-tracker__text">Развлечения</span>
+              <a class="steps-tracker__link" href="#step3">Развлечения</a>
             </li>
           </ul>
         </div>
@@ -226,7 +226,7 @@
         <form class="add-plan__form form" id="add-plan" method="POST" action="https://echo.htmlacademy.ru/">
           <ul class="add-plan__steps">
             <li class="add-plan__step step step--current">
-              <h3 class="step__title"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
+              <h3 class="step__title" id="step1"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
 
               <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
@@ -321,11 +321,11 @@
                 </div>
               </fieldset>
 
-              <a class="form__button button" href="#">Следующий шаг</a>
+              <a class="form__button button" href="#step2">Следующий шаг</a>
             </li>
 
             <li class="add-plan__step step">
-              <h3 class="step__title"><span class="step__number">Шаг 2.</span> Маршрут</h3>
+              <h3 class="step__title" id="step2"><span class="step__number">Шаг 2.</span> Маршрут</h3>
 
               <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
 
@@ -450,12 +450,12 @@
                 </ul>
               </fieldset>
 
-              <a class="form__button button" href="#">Следующий шаг</a>
-              <a class="form__back-link" href="#">На шаг назад</a>
+              <a class="form__button button" href="#step3">Следующий шаг</a>
+              <a class="form__back-link" href="#step1">На шаг назад</a>
             </li>
 
             <li class="add-plan__step step">
-              <h3 class="step__title"><span class="step__number">Шаг 3.</span> Развлечения</h3>
+              <h3 class="step__title" id="step3"><span class="step__number">Шаг 3.</span> Развлечения</h3>
 
               <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
               </p>
@@ -479,7 +479,7 @@
               </fieldset>
 
               <button class="form__button button" type="submit">Отправить</button>
-              <a class="form__back-link" href="#">На шаг назад</a>
+              <a class="form__back-link" href="#step2">На шаг назад</a>
             </li>
           </ul>
         </form>
