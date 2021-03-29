@@ -233,7 +233,7 @@
                   <button class="number-input__minus-button" type="button" aria-label="На одного попутчика меньше"></button>
                   <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
                   <button class="number-input__plus-button" type="button" aria-label="На одного попутчика больше"></button>
-                  <span class="number-input__units" aria-label="Человек">Чел.</span>
+                  <span class="number-input__units" aria-hidden="true">Чел.</span>
                 </div>
 
                 <input class="form__checkbox" type="checkbox" name="kids-ok" id="kids-ok" checked>
@@ -249,7 +249,7 @@
                   <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1"
                     step="1">
                   <button class="number-input__plus-button" type="button" aria-label="На один день больше"></button>
-                  <span class="number-input__units" aria-label="Дней">Дн.</span>
+                  <span class="number-input__units" aria-hidden="true">Дн.</span>
                 </div>
 
                 <div class="form__calendar calendar">
@@ -301,9 +301,9 @@
                     <span class="calendar__day calendar__day--grey" tabindex="0">23</span>
                     <span class="calendar__day calendar__day--grey" tabindex="0">24</span>
                     <span class="calendar__day calendar__day--grey" tabindex="0">25</span>
-                    <span class="calendar__day calendar__day--first" tabindex="0">26 <span class="calendar__text">Заезд</span></span>
+                    <span class="calendar__day calendar__day--picked" tabindex="0">26 <span class="calendar__text">Заезд</span></span>
                     <span class="calendar__day calendar__day--picked" tabindex="0">27</span>
-                    <span class="calendar__day calendar__day--last" tabindex="0">28 <span class="calendar__text">Выезд</span></span>
+                    <span class="calendar__day calendar__day--picked" tabindex="0">28 <span class="calendar__text">Выезд</span></span>
                     <span class="calendar__day" tabindex="0">29</span>
                     <span class="calendar__day" tabindex="0">30</span>
                     <span class="calendar__day" tabindex="0">31</span>
@@ -388,37 +388,48 @@
 
                       <ul class="select-country__list">
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Австралия</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="australia" id="country-choice-australia" checked>
+                          <label class="select-country__label" for="country-choice-australia">Австралия</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Австрия</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="austria" id="country-choice-austria">
+                          <label class="select-country__label" for="country-choice-austria">Австрия</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Азербайджан</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="azerbaijan" id="country-choice-azerbaijan">
+                          <label class="select-country__label" for="country-choice-azerbaijan">Азербайджан</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Албания</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="albania" id="country-choice-albania">
+                          <label class="select-country__label" for="country-choice-albania">Албания</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Алжир</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="algeria" id="country-choice-algeria">
+                          <label class="select-country__label" for="country-choice-algeria">Алжир</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Ангола</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="angola" id="country-choice-angola">
+                          <label class="select-country__label" for="country-choice-angola">Ангола</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Андорра</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="andorra" id="country-choice-andorra">
+                          <label class="select-country__label" for="country-choice-andorra">Андорра</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Антигуа и Барбуда</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="antigua" id="country-choice-antigua">
+                          <label class="select-country__label" for="country-choice-antigua">Антигуа и Барбуда</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Аргентина</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="argentina" id="country-choice-argentina">
+                          <label class="select-country__label" for="country-choice-argentina">Аргентина</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Армения</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="armenia" id="country-choice-armenia">
+                          <label class="select-country__label" for="country-choice-armenia">Армения</label>
                         </li>
                         <li class="select-country__list-item">
-                          <a class="select-country__country" href="#">Афганистан</a>
+                          <input class="visually-hidden select-country__input" type="radio" name="country-choice" value="afghanistan" id="country-choice-afghanistan">
+                          <label class="select-country__label" for="country-choice-afghanistan">Афганистан</label>
                         </li>
                       </ul>
 
