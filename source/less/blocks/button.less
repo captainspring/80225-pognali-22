@@ -1,0 +1,20 @@
+.button {
+  padding: 12px 40px 8px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @basic-blue;
+  background-color: @basic-yellow;
+
+  &:hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@basic-blue, 30%);
+    background-color: @special-yellow-dark;
+  }
+}
