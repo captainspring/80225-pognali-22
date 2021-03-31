@@ -1,1 +1,32 @@
-// pagination block
+.pagination {
+  background-color: @white;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 25px 28px;
+  list-style: none;
+}
+
+.pagination__item {
+  &--current {
+    background-color: @basic-yellow;
+    cursor: default;
+  }
+}
+
+.pagination__link {
+  font-weight: 700;
+  .fontsize(20px);
+  color: @basic-blue-light;
+
+  &:hover {
+    color: fade(@basic-blue-light, 60%);
+  }
+
+  &--current {
+    &:hover {
+      color: @basic-blue-light;
+    }
+  }
+}

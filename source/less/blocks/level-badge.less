@@ -1,32 +1,37 @@
 .level-badge {
-  background-color: fade(@black, 60%);
-
-  &--profile {
-    background-color: transparent;
+  &--background {
+    background-color: fade(@black, 60%);
   }
 }
 
 .level-badge__text {
   text-align: center;
-  color: @white;
 }
 
 .level-badge__number {
   font-weight: 700;
   .fontsize(24px);
-}
+  color: @basic-blue-light;
 
-.level-badge--profile .level-badge__number {
-  .fontsize(38px);
-  color: @basic-blue-other;
+  &--big {
+    .fontsize(38px);
+  }
+
+  &--white {
+    color: @white;
+  }
 }
 
 .level-badge__label {
   font-weight: 400;
   .fontsize(14px);
-}
-
-.level-badge--profile .level-badge__label {
-  .fontsize(18px);
   color: @special-grey;
+
+  &--big {
+    .fontsize(18px);
+  }
+
+  &--white {
+    color: @white;
+  }
 }

@@ -1,1 +1,46 @@
-// filter-catalog block
+.filter-catalog {
+  padding: 26px 25px 22px;
+  background-color: @basic-yellow;
+}
+
+.filter-catalog__title {
+  margin: 0;
+  .fontsize(22px);
+  color: @basic-blue-light;
+}
+
+.filter-catalog__legend {
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+  cursor: pointer;
+
+  .interactions-opacity();
+}
+
+.filter-catalog__options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-catalog__label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: @black;
+
+  .interactions-opacity();
+}
+
+.filter-catalog__number-input {
+  padding: 13px 8px 8px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  text-align: center;
+  color: @basic-blue-light;
+}

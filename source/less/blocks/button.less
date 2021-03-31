@@ -6,6 +6,7 @@
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
   color: @basic-blue;
   background-color: @basic-yellow;
 
@@ -36,6 +37,55 @@
     &:active {
       color: fade(@basic-blue, 30%);
       background-color: @special-blue-light;
+    }
+  }
+
+  &--fading {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: transparent;
+
+    &:hover {
+      opacity: 0.6;
+      background-color: transparent;
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: transparent;
+    }
+  }
+
+  &--dark-blue {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: @special-darkblue;
+
+    &:hover {
+      background-color: @special-darkblue-dark;
+    }
+
+    &:active {
+      color: fade(@basic-blue-other, 30%);
+      background-color: @special-darkblue-dark;
+    }
+  }
+
+  &--white {
+    padding: 14px;
+    .fontsize(17px);
+    color: @basic-blue;
+    background-color: @white;
+
+    &:hover {
+      background-color: @white;
+    }
+
+    &:active {
+      color: fade(@basic-blue, 30%);
+      background-color: @special-yellow-faded;
     }
   }
 
