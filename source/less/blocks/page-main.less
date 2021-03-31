@@ -21,11 +21,39 @@
   }
 }
 
+.page-main__title-container {
+  padding: 12px 25px;
+  background-color: @basic-blue-inner;
+}
+
 .page-main__title {
   font-weight: 700;
   .fontsize(24px);
 
   &--orange {
     color: @special-orange;
+  }
+}
+
+// Inner pages
+.page-main--inner .page-main__section {
+  padding: 30px 25px 60px;
+
+  &:nth-of-type(2) {
+    background-color: @special-blue-light;
+  }
+
+  &:nth-of-type(3) {
+    background-color: @special-steelblue-dark;
+  }
+}
+
+.page-main--inner .page-main__title {
+  margin: 0;
+  color: @basic-blue-light;
+
+  &--main {
+    .fontsize(36px);
+    color: @white;
   }
 }
