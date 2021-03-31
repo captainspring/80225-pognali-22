@@ -111,19 +111,19 @@
 
     <main class="page-main page-main--inner">
       <div class="page-main__title-container">
-        <h1 class="page-main__title">Направления</h1>
+        <h1 class="page-main__title page-main__title--main">Направления</h1>
       </div>
 
       <section class="user-profile">
         <h2 class="visually-hidden">Ваш профиль</h2>
 
-        <div class="user-profile__badge level-badge">
+        <div class="user-profile__badge level-badge level-badge--profile">
           <p class="level-badge__text">
             <span class="level-badge__number">80</span>
             <span class="level-badge__label">level</span>
           </p>
-          <svg class="level-badge__level-bar level-bar" width="60" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
-            <circle class="level-bar__progress" r="28" cx="30" cy="30" fill="transparent" stroke-dasharray="270" stroke-dashoffset="125" stroke="#FF8D30" stroke-width="4" transform="rotate(-90, 30, 30)" stroke-linecap="round">
+          <svg class="level-badge__level-bar level-bar" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+            <circle class="level-bar__progress" r="47" cx="50" cy="50" fill="transparent" stroke-dasharray="270" stroke-dashoffset="25" stroke="#FF8D30" stroke-width="3" transform="rotate(-90, 50, 50)" stroke-linecap="round">
             </circle>
           </svg>
         </div>
@@ -344,7 +344,7 @@
 
                   <li class="form__item select-country__item">
                     <div class="select-country__controls">
-                      <button class="select-country__pick-button select-country__pick-button--clicked button button--select" type="button">
+                      <button class="select-country__pick-button button button--select button--select-clicked" type="button">
                         Выбрать страну
                       </button>
                       <span class="select-country__flag"></span>
@@ -353,7 +353,7 @@
 
                     <div class="select-country__choice-container select-country__choice-container--show">
                       <div class="select-country__first-letters">
-                        <span class="select-country__first-letter" tabindex="0">А</span>
+                        <span class="select-country__first-letter select-country__first-letter--selected" tabindex="0">А</span>
                         <span class="select-country__first-letter" tabindex="0">Б</span>
                         <span class="select-country__first-letter" tabindex="0">В</span>
                         <span class="select-country__first-letter" tabindex="0">Г</span>
@@ -455,12 +455,12 @@
                 <ul class="form__list descriptions">
                   <li class="form__item descriptions__item">
                     <label class="descriptions__country descriptions__country--bosnia">Босния и Герцеговина</label>
-                    <textarea class="descriptions__textarea" name="entertainment-description-1" id="entertainment-description-1" placeholder="План действий" aria-label="Ваш план действий в этой стране"></textarea>
+                    <textarea class="descriptions__textarea" name="entertainment-description-1" id="entertainment-description-1" placeholder="План действий" required aria-label="Ваш план действий в этой стране"></textarea>
                   </li>
 
                   <li class="form__item descriptions__item">
                     <label class="descriptions__country descriptions__country--czech">Чехия</label>
-                    <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" aria-label="Ваш план действий в этой стране">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" required aria-label="Ваш план действий в этой стране">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                   </li>
                 </ul>
               </fieldset>
