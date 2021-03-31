@@ -1,0 +1,33 @@
+.contacts {
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.contacts__link {
+  color: @basic-blue-other;
+
+  &:hover {
+    color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@basic-yellow, 30%);
+  }
+
+  &--yellow {
+    color: @basic-yellow;
+  }
+}
+
+.contacts__icon {
+  fill: @basic-yellow;
+}
+
+.contacts__link:hover .contacts__icon {
+  fill: @special-yellow-dark;
+}
+
+.contacts__link:active .contacts__icon {
+  fill: fade(@special-yellow-dark, 30%);
+}

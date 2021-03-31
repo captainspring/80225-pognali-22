@@ -1,0 +1,25 @@
+.socials__link {
+  &--yellow-bg {
+    background-color: @basic-yellow;
+
+    &:hover {
+      background-color: @special-yellow-dark;
+    }
+
+    &:active {
+      background-color: @special-yellow-dark;
+    }
+  }
+}
+
+.socials__link:hover .socials__icon {
+  opacity: 0.6;
+}
+
+.socials__link--yellow-bg:hover .socials__icon {
+  opacity: 1;
+}
+
+.socials__link:active .socials__icon {
+  opacity: 0.3;
+}

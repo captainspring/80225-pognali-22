@@ -1,0 +1,42 @@
+.modal {
+  padding: 34px 0 0;
+  background-color: @white;
+}
+
+.modal__title {
+  padding: 0 25px;
+  font-weight: 700;
+  .fontsize(24px);
+  text-align: center;
+
+  &--orange {
+    color: @special-orange;
+  }
+}
+
+.modal__table {
+  padding: 0 25px;
+}
+
+.modal__button-close {
+  padding: 21px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+  background-color: @special-grey-light;
+  border: 0;
+
+  &:hover {
+    background-color: @special-blue-light;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+    background-color: @special-blue-light;
+  }
+}

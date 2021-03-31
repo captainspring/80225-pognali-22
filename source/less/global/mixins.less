@@ -1,0 +1,14 @@
+.fontsize(@value) {
+  font-size: @value;
+  line-height: @value;
+}
+
+.interactions(@value) {
+  &:hover {
+    color: fade(@value, 70%);
+  }
+
+  &:active {
+    color: fade(@value, 30%);
+  }
+}

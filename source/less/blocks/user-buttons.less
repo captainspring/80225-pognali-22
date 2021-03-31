@@ -1,0 +1,21 @@
+.user-buttons__item {
+  &--phone {
+    background-color: @special-orange;
+
+    &:hover {
+      background-color: @special-orange-dark;
+    }
+  }
+
+  &--email {
+    background-color: @special-yellow-dark;
+
+    &:hover {
+      background-color: @special-orange;
+    }
+  }
+}
+
+.user-buttons__item:active .user-buttons__icon {
+  opacity: 0.3;
+}
