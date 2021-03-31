@@ -1,1 +1,23 @@
-// descriptions block
+.descriptions__country {
+  font-weight: 500;
+  .fontsize(18px);
+  color: @basic-blue-light;
+}
+
+.descriptions__textarea {
+  padding: 10px 14px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: fade(@special-grey, 30%);
+
+  &:focus {
+    color: @special-grey;
+  }
+
+  &::placeholder {
+    color: fade(@special-grey, 30%);
+  }
+}

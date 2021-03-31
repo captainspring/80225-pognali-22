@@ -1,1 +1,38 @@
-// select-country block
+.select-country {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.select-country__first-letter {
+  padding: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+  cursor: pointer;
+
+  &--selected {
+    background-color: @basic-steelblue;
+  }
+}
+
+.select-country__list {
+  margin: 0;
+  padding: 20px 19px;
+  list-style: none;
+}
+
+.select-country__label {
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
+}

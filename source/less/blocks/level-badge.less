@@ -1,8 +1,13 @@
 .level-badge {
   background-color: fade(@black, 60%);
+
+  &--profile {
+    background-color: transparent;
+  }
 }
 
 .level-badge__text {
+  text-align: center;
   color: @white;
 }
 
@@ -11,7 +16,17 @@
   .fontsize(24px);
 }
 
+.level-badge--profile .level-badge__number {
+  .fontsize(38px);
+  color: @basic-blue-other;
+}
+
 .level-badge__label {
   font-weight: 400;
   .fontsize(14px);
+}
+
+.level-badge--profile .level-badge__label {
+  .fontsize(18px);
+  color: @special-grey;
 }
