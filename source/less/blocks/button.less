@@ -22,4 +22,40 @@
     .fontsize(18px);
     text-transform: none;
   }
+
+  &--blue {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    background-color: @special-blue-light;
+
+    &:hover {
+      background-color: @special-steelblue;
+    }
+
+    &:active {
+      color: fade(@basic-blue, 30%);
+      background-color: @special-blue-light;
+    }
+  }
+
+  &--select {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: @white;
+
+    &:hover {
+      background-color: @white;
+    }
+  }
+
+  &--select-clicked {
+    color: @white;
+    background-color: @basic-blue-light;
+
+    &:hover {
+      background-color: @basic-blue-light;
+    }
+  }
 }

@@ -1,0 +1,52 @@
+.form__fieldset {
+  margin: 0;
+  padding: 27px 25px;
+}
+
+.form__legend {
+  padding: 0 17px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+}
+
+.form__label {
+  font-weight: 500;
+  .fontsize(16px);
+  text-transform: uppercase;
+  color: @basic-blue-light;
+
+  &--small {
+    font-weight: 400;
+    .fontsize(15px);
+    text-transform: none;
+  }
+}
+
+.form__textarea {
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: fade(@special-grey, 60%);
+  background-color: transparent;
+  border: none;
+  resize: none;
+
+  &:focus {
+    color: @special-grey;
+  }
+}
+
+.form__back-link {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @basic-blue-light;
+}

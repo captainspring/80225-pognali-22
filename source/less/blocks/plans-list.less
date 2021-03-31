@@ -1,0 +1,46 @@
+.plans-list {
+  margin: 0;
+  padding: 0;
+}
+
+.plans-list__item {
+  padding: 24px 23px;
+
+  &::marker {
+    font-family: "Blogger Sans", "Tahoma", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    .fontsize(16px);
+    color: @basic-blue-light;
+  }
+}
+
+.plans-list__title {
+  margin: 0;
+  font-weight: 700;
+  .fontsize(16px);
+  color: @basic-blue-light;
+}
+
+.plans-list__details {
+  margin: 0;
+  font-weight: 500;
+  .fontsize(14px);
+  text-transform: uppercase;
+  color: @basic-blue-light;
+}
+
+.plans-list__edit {
+  font-weight: 500;
+  .fontsize(14px);
+  text-transform: uppercase;
+  color: fade(@black, 30%);
+
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 10%);
+  }
+}
