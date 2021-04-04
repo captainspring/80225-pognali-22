@@ -1,13 +1,13 @@
 .contacts {
-  margin: 0;
+  width: 100%;
+  margin-top: 0;
   padding: 0;
-  font-weight: 700;
-  line-height: 18px;
-  text-transform: uppercase;
   list-style: none;
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
   color: @basic-blue-other;
 
   &:hover {
@@ -23,6 +23,17 @@
   }
 }
 
+.contacts__link svg {
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  @media (min-width: 768px) {
+    width: 68px;
+    height: 68px;
+  }
+}
+
 .contacts__icon {
   fill: @basic-yellow;
 }
@@ -33,4 +44,10 @@
 
 .contacts__link:active .contacts__icon {
   fill: fade(@special-yellow-dark, 30%);
+}
+
+.contacts__text {
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
 }

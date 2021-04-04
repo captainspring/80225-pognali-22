@@ -9,6 +9,7 @@
   text-align: center;
   color: @basic-blue;
   background-color: @basic-yellow;
+  border-radius: 25px;
 
   &:hover {
     background-color: @special-yellow-dark;
@@ -107,5 +108,10 @@
     &:hover {
       background-color: @basic-blue-light;
     }
+  }
+
+  @media (min-width: 768px) {
+    padding: 17px 30px 13px;
+    .fontsize(20px);
   }
 }

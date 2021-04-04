@@ -1,4 +1,14 @@
+.user-buttons {
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  align-items: start;
+}
+
 .user-buttons__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &--phone {
     background-color: @special-orange;
 
@@ -13,6 +23,14 @@
     &:hover {
       background-color: @special-orange;
     }
+  }
+}
+
+.user-buttons__item:not(.button) {
+  .circle(40px);
+
+  @media (min-width: 1440px) {
+    .circle(50px);
   }
 }
 
