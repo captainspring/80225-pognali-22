@@ -2,6 +2,7 @@
   position: relative;
   top: 0;
   left: 0;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -12,17 +13,18 @@
   padding-bottom: 41px;
   background-color: @white;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-top: 0;
+    padding-top: 185px;
     padding-bottom: 93px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr min-content;
+    padding-top: 0;
     padding-bottom: 0;
     background-color: transparent;
   }
@@ -31,11 +33,16 @@
 .menu__toggle {
   position: fixed;
   top: 25px;
+  z-index: 3;
   align-self: flex-end;
   width: 19px;
   height: 19px;
+  background-image: url('../../img/ui/icon_menu_close.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     align-self: flex-start;
     order: 1;
     width: 22px;
@@ -44,7 +51,7 @@
     margin-right: 50%;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }
@@ -52,11 +59,11 @@
 .menu__navigation {
   margin-bottom: 51px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     order: 3;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     order: unset;
     margin-bottom: 0;
     padding-left: 242px;
@@ -67,11 +74,13 @@
 .menu__login {
   margin-bottom: 51px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
+    position: fixed;
+    top: 40px;
     order: 2;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }
@@ -79,35 +88,35 @@
 .menu__contacts {
   margin-bottom: 41px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     order: 3;
     padding: 0 57px;
     .fontsize(28px);
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
 .menu__socials {
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     order: 4;
     justify-content: flex-start;
     padding: 0 57px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
 .menu__user-buttons {
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: grid;
   }
 }

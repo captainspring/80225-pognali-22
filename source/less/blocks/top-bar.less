@@ -5,7 +5,19 @@
   padding: 25px 25px 0;
   background-color: @white;
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     background-color: transparent;
+  }
+}
+
+.top-bar__logo {
+  position: fixed;
+  top: 27px;
+  left: 25px;
+  z-index: 4;
+
+  @media (min-width: @tablet-width) {
+    top: 45px;
+    left: 40px;
   }
 }

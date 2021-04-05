@@ -1,16 +1,50 @@
+.country-card {
+  position: relative;
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.country-card__image {
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.country-card__flag {
+  position: relative;
+  left: 25px;
+  margin-top: -24px;
+  z-index: 2;
+  display: block;
+}
+
+.country-card__container {
+  position: relative;
+  margin-top: -10px;
+  padding: 26px 24px 24px;
+  background-color: @white;
+  border-radius: 10px;
+}
+
 .country-card__name {
+  margin: 0 0 2px;
   font-weight: 700;
   .fontsize(21px);
   color: @black;
 }
 
 .country-card__slogan {
+  margin: 0;
   font-weight: 500;
   line-height: 18px;
   color: fade(@special-grey, 30%);
 }
 
 .country-card__counter {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  margin: 0;
   font-weight: 500;
   line-height: 20px;
   color: fade(@basic-blue, 30%);

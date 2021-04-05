@@ -1,5 +1,34 @@
+.address {
+  padding: 62px 0 0;
+}
+
+.address__container {
+  position: relative;
+  z-index: 2;
+  padding: 0 25px 35px;
+  background-color: @basic-yellow;
+  border-radius: 25px;
+}
+
 .address__address {
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue-light;
+}
+
+.address__map-container {
+  position: relative;
+  z-index: 1;
+  margin-top: -25px;
+  width: 100%;
+  height: 328px;
+}
+
+.address__map-container iframe {
+  position: relative;
+  left: 50%;
+  display: block;
+  height: 100%;
+  border: 0;
+  transform: translateX(-50%);
 }

@@ -1,9 +1,27 @@
 .companion-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 270px;
   color: @special-grey;
   background-color: @white;
+  border-radius: 10px;
+}
+
+.companion-card__avatar {
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.companion-card__info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 27px 45px 20px;
 }
 
 .companion-card__name {
+  order: 2;
+  margin: 0 0 15px;
   font-weight: 700;
   .fontsize(21px);
   text-align: center;
@@ -16,10 +34,23 @@
 }
 
 .companion-card__tags {
+  order: 3;
+  margin: 0 0 14px;
   font-weight: 400;
   line-height: 18px;
 
   &--centered {
     text-align: center;
   }
+}
+
+.companion-card__flags {
+  position: relative;
+  margin-top: -40px;
+  margin-bottom: 13px;
+  order: 1;
+}
+
+.companion-card__transport-list {
+  order: 4;
 }

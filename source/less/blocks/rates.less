@@ -1,6 +1,21 @@
+.rates {
+  padding-top: 53px;
+}
+
+.rates__title {
+  margin-bottom: 56px;
+}
+
+.rates__table {
+  margin-bottom: 31px;
+}
+
 .rates__link {
+  display: block;
+  width: 100%;
   font-weight: 700;
   .fontsize(16px);
+  text-align: center;
   color: @special-blue;
 
   .interactions(@special-blue);
@@ -12,4 +27,12 @@
 
 .rates__link:active .rates__icon {
   opacity: 0.3;
+}
+
+.rates__icon-container {
+  display: none;
+}
+
+.rates__icon {
+  display: inline-block;
 }

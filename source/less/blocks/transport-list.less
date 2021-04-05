@@ -1,3 +1,16 @@
+.transport-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-list__item:not(:last-child) {
+  margin-right: 13px;
+}
+
 .transport-list__icon {
   fill: fade(@basic-blue-light, 15%);
 

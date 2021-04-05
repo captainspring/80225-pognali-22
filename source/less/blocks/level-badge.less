@@ -1,14 +1,20 @@
 .level-badge {
+  position: relative;
+
   &--background {
+    .circle(60px);
     background-color: fade(@black, 60%);
   }
 }
 
 .level-badge__text {
+  margin: 0;
   text-align: center;
 }
 
 .level-badge__number {
+  position: relative;
+  top: 15px;
   font-weight: 700;
   .fontsize(24px);
   color: @basic-blue-light;
@@ -23,6 +29,8 @@
 }
 
 .level-badge__label {
+  position: relative;
+  top: 30px;
   font-weight: 400;
   .fontsize(14px);
   color: @special-grey;
@@ -34,4 +42,10 @@
   &--white {
     color: @white;
   }
+}
+
+.level-badge__level-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

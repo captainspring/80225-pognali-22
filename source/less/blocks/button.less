@@ -1,4 +1,5 @@
 .button {
+  box-sizing: border-box;
   padding: 12px 40px 8px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -21,8 +22,22 @@
   }
 
   &--index {
+    display: flex;
+    padding: 23px;
     .fontsize(18px);
     text-transform: none;
+    border-radius: 10px;
+  }
+
+  &--rectangular {
+    min-width: 60px;
+    padding: 24px 22px;
+    border: 0;
+    border-radius: 20px;
+  }
+
+  &--outline {
+    border: 3px solid @basic-blue-other;
   }
 
   &--blue {
@@ -110,8 +125,12 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     padding: 17px 30px 13px;
     .fontsize(20px);
   }
+}
+
+.button__text {
+  display: none;
 }

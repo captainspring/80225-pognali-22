@@ -5,13 +5,13 @@
   line-height: 35px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 71px;
     padding: 0 57px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     width: unset;
     .fontsize(20px);
   }
@@ -22,7 +22,7 @@
   padding: 0;
   list-style: none;
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -42,11 +42,11 @@
 .navigation__item {
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     text-align: left;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     &:not(:last-child) {
       margin-right: 34px;
     }
@@ -64,7 +64,7 @@
     color: fade(@basic-yellow, 30%);
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     color: @white;
   }
 }

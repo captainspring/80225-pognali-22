@@ -1,11 +1,22 @@
+.feedback-form {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  background-color: @white;
+  border-radius: 20px;
+}
+
 .feedback-form__input {
-  padding: 22px 25px;
+  box-sizing: border-box;
+  min-width: 230px;
+  padding: 22px 45px 22px 25px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
-  .fontsize(24px);
+  .fontsize(18px);
   color: fade(@special-grey, 30%);
   background-color: @white;
+  border: 0;
+  border-radius: 20px 0 0 20px;
 
   &:hover {
     color: fade(@special-grey, 50%);

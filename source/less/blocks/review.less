@@ -1,4 +1,33 @@
+.review {
+  margin: 0;
+  padding: 48px 50px 29px;
+  background-color: @basic-blue-other-dark;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 72px;
+    background-color: transparent;
+  }
+}
+
+.review__quote {
+  margin: 0 0 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+    padding-right: 392px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
 .review__author {
+  display: block;
   font-style: normal;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 404px;
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

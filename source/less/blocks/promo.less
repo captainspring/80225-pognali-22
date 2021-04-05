@@ -1,10 +1,38 @@
 .promo {
-  padding: 48px 0 39px;
+  padding: 94px 0 39px;
+  background-image: url("../../img/backgrounds/traveller-illustration-mobile.png"), url("../../img/backgrounds/globe-back-mobile.jpg");
+  background-position: 70% 220px, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/backgrounds/traveller-illustration-tablet.png"), url("../../img/backgrounds/globe-back-tablet.jpg");
+    background-position: 70% 404px, 0% 382px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/backgrounds/traveller-illustration-desktop.png"), url("../../img/backgrounds/globe-back-desktop.jpg");
+    background-position: 60% 110px, 0 0;
+  }
 }
 
 .promo__slogan {
+  margin: 0 0 261px;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 86px;
+    padding: 0 185px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+.promo__review {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 246px;
+  }
 }

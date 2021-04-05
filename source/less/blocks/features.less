@@ -1,25 +1,125 @@
 .features {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0 25px;
   font-weight: 700;
   .fontsize(18px);
   color: @basic-blue;
+  list-style: none;
+  counter-reset: listCounter;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    .fontsize(24px);
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 60px;
+  }
 }
 
 .features__item {
-  padding: 22px 96px 24px 24px;
+  position: relative;
+  padding: 22px 96px 36px 24px;
+  counter-increment: listCounter;
+  border-radius: 10px 10px 0 0;
 
   &:first-child {
     background-color: @special-orange;
   }
 
   &:nth-child(2) {
+    top: -10px;
     background-color: @special-orange-light;
   }
 
   &:nth-child(3) {
+    top: -20px;
     background-color: @special-yellow-dark;
   }
 
   &:last-child {
+    top: -30px;
+    padding-bottom: 24px;
     background-color: @basic-yellow;
+    border-radius: 10px;
+  }
+
+  &::after {
+    content: counter(listCounter);
+    position: absolute;
+    top: 22px;
+    right: 21px;
+    display: block;
+    font-weight: 700;
+    .fontsize(18px);
+    color: @white;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 31px 33px 61px;
+
+    &:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      border-radius: 10px 10px 0 0;
+    }
+
+    &:nth-child(3) {
+      top: 0;
+      border-radius: 0 0 0 10px;
+    }
+
+    &:last-child {
+      top: 0;
+      padding-bottom: 61px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    &::after {
+      top: unset;
+      right: unset;
+      bottom: 21px;
+      left: 33px;
+      .fontsize(30px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 103px 30px 34px;
+
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:nth-child(3) {
+      top: 0;
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:last-child {
+      top: 0;
+      padding-bottom: 61px;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    &::after {
+      top: 29px;
+      right: 34px;
+      bottom: unset;
+      left: unset;
+      .fontsize(24px);
+    }
   }
 }

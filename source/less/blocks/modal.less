@@ -1,9 +1,23 @@
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  display: none;
+  box-sizing: border-box;
+  min-width: 270px;
   padding: 34px 0 0;
   background-color: @white;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+
+  &--show {
+    display: block;
+  }
 }
 
 .modal__title {
+  margin: 0 0 28px;
   padding: 0 25px;
   font-weight: 700;
   .fontsize(24px);
@@ -15,10 +29,12 @@
 }
 
 .modal__table {
+  margin-bottom: 34px;
   padding: 0 25px;
 }
 
 .modal__button-close {
+  width: 100%;
   padding: 21px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -30,6 +46,7 @@
   color: @basic-blue-light;
   background-color: @special-grey-light;
   border: 0;
+  border-radius: 0 0 20px 20px;
 
   &:hover {
     background-color: @special-blue-light;

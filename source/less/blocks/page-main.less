@@ -1,5 +1,5 @@
 .page-main__section {
-  padding: 101px 25px 34px;
+  padding: 71px 25px 34px;
 
   &--top {
     color: @white;
@@ -7,18 +7,36 @@
   }
 
   &--dark {
+    position: relative;
+    margin-top: -25px;
+    z-index: 2;
     color: @white;
     background-color: @basic-blue-other;
   }
 
   &--light {
+    position: relative;
+    z-index: 3;
     background-color: @basic-steelblue;
   }
 
   &--special {
+    position: relative;
+    margin-top: -25px;
+    z-index: 1;
     padding-top: 65px;
     background-color: @basic-yellow;
   }
+
+  @media (min-width: @tablet-width) {
+    &--top {
+      background-color: @basic-blue-inner;
+    }
+  }
+}
+
+.page-main__section:not(.page-main__section--top) {
+  border-radius: 0 0 25px 25px;
 }
 
 .page-main__title-container {
@@ -27,6 +45,7 @@
 }
 
 .page-main__title {
+  margin: 0;
   font-weight: 700;
   .fontsize(24px);
 
