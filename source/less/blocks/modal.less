@@ -11,6 +11,11 @@
   border-radius: 20px;
   transform: translate(-50%, -50%);
 
+  @media (min-width: @tablet-width) {
+    min-width: 688px;
+    padding-top: 54px;
+  }
+
   &--show {
     display: block;
   }
@@ -23,14 +28,30 @@
   .fontsize(24px);
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    .fontsize(45px);
+    margin-bottom: 47px;
+  }
+
   &--orange {
     color: @special-orange;
   }
+
 }
 
 .modal__table {
   margin-bottom: 34px;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+    padding: 0 90px;
+    font-size: 22px;
+  }
+}
+
+.modal__table .table__row {
+  padding: 14px 0;
 }
 
 .modal__button-close {
@@ -55,5 +76,10 @@
   &:active {
     color: fade(@basic-blue-light, 30%);
     background-color: @special-blue-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 41px;
+    .fontsize(24px);
   }
 }
