@@ -13,9 +13,12 @@
 .address__container {
   position: relative;
   z-index: 2;
-  padding: 0 25px 35px;
   background-color: @basic-yellow;
   border-radius: 25px;
+}
+
+.address__wrapper {
+  padding: 0 25px 35px;
 
   @media (min-width: @tablet-width) {
     padding: 0 75px 84px;
@@ -28,7 +31,6 @@
     align-items: center;
     box-sizing: border-box;
     width: 1322px;
-    margin: 0 auto;
     padding: 0 75px 61px;
   }
 }
@@ -74,6 +76,7 @@
   position: relative;
   left: 50%;
   display: block;
+  width: 100%;
   height: 100%;
   border: 0;
   transform: translateX(-50%);

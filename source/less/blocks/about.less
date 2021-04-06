@@ -1,15 +1,21 @@
 .about {
-  padding: 33px 50px 82px;
   background-image: url("../../img/backgrounds/about-mobile.png");
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -85px;
+  }
+}
+
+.about__wrapper {
+  padding: 33px 50px 82px;
 
   @media (min-width: @tablet-width) {
     padding: 41px 385px 89px 74px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -85px;
     padding: 190px 691px 163px 130px;
   }
 }

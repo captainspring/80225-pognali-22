@@ -1,13 +1,16 @@
 .page-footer {
   position: relative;
   z-index: 3;
+  margin-top: -25px;
+  background-color: @white;
+  border-radius: 25px 25px 0 0;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: -25px;
   padding: 37px 25px 18px;
-  background-color: @white;
-  border-radius: 25px 25px 0 0;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
