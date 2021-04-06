@@ -12,8 +12,15 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 209px 0 123px;
     background-image: url("../../img/backgrounds/traveller-illustration-desktop.png"), url("../../img/backgrounds/globe-back-desktop.jpg");
     background-position: 60% 110px, 0 0;
+    background-color: transparent;
   }
 }
 
@@ -30,10 +37,28 @@
     font-size: 60px;
     line-height: 70px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 418px;
+    padding: 0 0 0 69px;
+    text-align: left;
+  }
 }
 
 .promo__review {
   @media (min-width: @tablet-width) {
     margin-bottom: 211px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    margin-bottom: 116px;
+    padding-top: 12px;
+  }
+}
+
+.promo__features {
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }

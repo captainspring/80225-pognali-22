@@ -39,6 +39,11 @@
       .fontsize(24px);
       border-radius: 20px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 275px;
+      min-height: 80px;
+    }
   }
 
   &--rectangular {
@@ -117,6 +122,10 @@
     }
   }
 
+  &--normalcase {
+    text-transform: none;
+  }
+
   &--select {
     font-weight: 500;
     font-size: 14px;
@@ -140,4 +149,9 @@
 
 .button__text {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    .fontsize(24px);
+  }
 }

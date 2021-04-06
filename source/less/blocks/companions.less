@@ -6,6 +6,18 @@
   @media (min-width: @tablet-width) {
     padding: 208px 74px 87px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-areas: "right-top left"
+      "right-middle-1 left"
+      "right-middle-2 left"
+      "right-bottom left";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    grid-row-gap: 0;
+    padding: 231px 60px 134px;
+  }
 }
 
 .companions__title {
@@ -13,6 +25,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: right-top;
   }
 }
 
@@ -26,6 +42,11 @@
     line-height: 34px;
   }
 
+  @media (min-width: @desktop-width) {
+    grid-area: right-middle-1;
+    margin-bottom: 42px;
+  }
+
   &--bold {
     margin-bottom: 54px;
     font-weight: 700;
@@ -34,6 +55,11 @@
       margin-bottom: 59px;
       font-size: 21px;
       line-height: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+    grid-area: right-middle-2;
+    margin-bottom: 85px;
     }
   }
 }
@@ -52,6 +78,11 @@
     justify-content: center;
     margin-bottom: 81px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: left;
+    margin-bottom: 0;
+  }
 }
 
 .companions__item {
@@ -65,4 +96,11 @@
     }
   }
 
+}
+
+.companions__button {
+  @media (min-width: @desktop-width) {
+    grid-area: right-bottom;
+    align-self: end;
+  }
 }

@@ -7,6 +7,11 @@
     padding: 0 72px;
     background-color: transparent;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    padding: 0 83px 0 0;
+  }
 }
 
 .review__quote {
@@ -15,8 +20,11 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
     padding-right: 360px;
-    font-size: 28px;
-    line-height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    line-height: 32px;
   }
 }
 
@@ -29,5 +37,10 @@
     padding-right: 404px;
     font-size: 21px;
     line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    line-height: 24px;
   }
 }

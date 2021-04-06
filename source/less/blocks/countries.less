@@ -3,6 +3,17 @@
     padding-right: 75px;
     padding-left: 75px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-areas: "right left-top"
+      "right left-middle"
+      "right left-bottom";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    grid-row-gap: 0;
+    padding: 161px 60px 138px;
+  }
 }
 
 .countries__title {
@@ -11,6 +22,12 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
     padding-right: 310px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: left-top;
+    margin-bottom: 58px;
+    padding-top: 6px;
   }
 }
 
@@ -23,6 +40,11 @@
     font-size: 28px;
     line-height: 33px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: left-middle;
+    margin-bottom: 98px;
+  }
 }
 
 .countries__list {
@@ -33,6 +55,11 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 46px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: right;
+    margin-bottom: 0;
+  }
 }
 
 .countries__item {
@@ -40,5 +67,16 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.countries__button {
+  @media (min-width: @desktop-width) {
+    grid-area: left-bottom;
+    align-self: end;
   }
 }

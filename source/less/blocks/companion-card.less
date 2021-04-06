@@ -20,6 +20,10 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding: 27px 45px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 31px 27px;
+  }
 }
 
 .companion-card__name {
@@ -41,6 +45,11 @@
   margin: 0 0 14px;
   font-weight: 400;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 
   &--centered {
     text-align: center;

@@ -3,6 +3,18 @@
   margin-top: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  @media (min-width: @desktop-width) {
+    margin-right: 110px;
+  }
 }
 
 .contacts__link {
@@ -31,6 +43,13 @@
   @media (min-width: @tablet-width) {
     width: 68px;
     height: 68px;
+    margin-right: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
   }
 }
 

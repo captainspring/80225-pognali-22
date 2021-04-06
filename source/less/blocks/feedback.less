@@ -5,6 +5,11 @@
     padding-top: 133px;
     padding-bottom: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 208px;
+    padding-bottom: 103px;
+  }
 }
 
 .feedback__title {
@@ -15,6 +20,10 @@
     margin-bottom: 59px;
     text-align: center;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .feedback__text {
@@ -24,8 +33,16 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
-    font-size: 28px;
-    line-height: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
+
+  &:nth-of-type(2) {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 43px;
+    }
   }
 }
 
@@ -34,6 +51,12 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    max-width: 1174px;
+    margin: 0 auto 70px;
   }
 }
 
