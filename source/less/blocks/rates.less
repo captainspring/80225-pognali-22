@@ -1,17 +1,32 @@
 .rates {
   padding-top: 53px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 74px;
+    padding-bottom: 63px;
+  }
 }
 
 .rates__title {
   margin-bottom: 56px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+    text-align: center;
+  }
 }
 
 .rates__table {
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .rates__link {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   font-weight: 700;
   .fontsize(16px);
@@ -19,6 +34,13 @@
   color: @special-blue;
 
   .interactions(@special-blue);
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    align-items: center;
+    .fontsize(20px);
+    text-align: left;
+  }
 }
 
 .rates__link:hover .rates__icon {
@@ -31,8 +53,17 @@
 
 .rates__icon-container {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 21px;
+    .circle(68px);
+    background-color: @special-bluegrey;
+  }
 }
 
 .rates__icon {
-  display: inline-block;
+  display: block;
 }

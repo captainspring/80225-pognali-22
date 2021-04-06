@@ -5,6 +5,10 @@
   padding: 25px 25px 0;
   background-color: @white;
 
+  @media (min-width: @tablet-width) {
+    padding: 40px 40px 0;
+  }
+
   @media (min-width: @desktop-width) {
     background-color: transparent;
   }
@@ -14,10 +18,16 @@
   position: fixed;
   top: 27px;
   left: 25px;
-  z-index: 4;
+  z-index: 5;
 
   @media (min-width: @tablet-width) {
     top: 45px;
     left: 40px;
   }
+}
+
+.top-bar--no-js .top-bar__logo {
+  position: relative;
+  top: 0;
+  left: 0;
 }

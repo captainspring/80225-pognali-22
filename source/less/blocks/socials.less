@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -12,11 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  .circle(45px);
 
   &--yellow-bg {
-    .circle(45px);
     background-color: @basic-yellow;
 
     &:hover {
@@ -25,6 +22,10 @@
 
     &:active {
       background-color: @special-yellow-dark;
+    }
+
+    @media (min-width: @tablet-width) {
+      .circle(62px);
     }
   }
 }

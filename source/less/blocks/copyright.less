@@ -2,6 +2,11 @@
   margin: 0;
   padding-top: 13px;
   border-top: 1px solid @special-grey-lightest;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    border: 0;
+  }
 }
 
 .copyright__link {
@@ -9,7 +14,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
   color: @special-grey;
 
   &:hover {
@@ -19,8 +23,16 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    min-width: 155px;
+  }
 }
 
 .copyright__text {
   font-weight: 400;
+
+  @media (min-width: @tablet-width)  {
+    .fontsize(20px);
+  }
 }

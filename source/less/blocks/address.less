@@ -1,5 +1,9 @@
 .address {
   padding: 62px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 124px;
+  }
 }
 
 .address__container {
@@ -8,12 +12,22 @@
   padding: 0 25px 35px;
   background-color: @basic-yellow;
   border-radius: 25px;
+
+  @media (min-width: @tablet-width)  {
+    padding: 0 75px 84px;
+  }
 }
 
 .address__address {
+  margin: 0 0 32px;
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 62px;
+    .fontsize(28px);
+  }
 }
 
 .address__map-container {
@@ -22,6 +36,7 @@
   margin-top: -25px;
   width: 100%;
   height: 328px;
+  overflow-x: hidden;
 }
 
 .address__map-container iframe {

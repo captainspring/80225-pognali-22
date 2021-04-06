@@ -3,21 +3,47 @@
   background-image: url("../../img/backgrounds/about-mobile.png");
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px 385px 89px 74px;
+  }
 }
 
 .about__title {
   margin: 0 0 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .about__text {
   margin: 0 0 20px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
   &--bold {
     margin-bottom: 0;
     font-weight: 700;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 52px;
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
+
 }
 
 .about__button {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 276px;
+  }
 }

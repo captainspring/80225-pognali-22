@@ -1,5 +1,6 @@
+// menu with js
 .menu {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 4;
@@ -17,7 +18,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-top: 185px;
+    padding-top: 98px;
     padding-bottom: 93px;
   }
 
@@ -43,6 +44,7 @@
   border: 0;
 
   @media (min-width: @tablet-width) {
+    top: 55px;
     align-self: flex-start;
     order: 1;
     width: 22px;
@@ -119,4 +121,18 @@
   @media (min-width: @desktop-width) {
     display: grid;
   }
+}
+
+
+// menu without js
+.menu--no-js {
+  position: static;
+}
+
+.menu--no-js .menu__toggle {
+  display: none;
+}
+
+.menu--no-js .menu__login {
+  position: absolute;
 }
