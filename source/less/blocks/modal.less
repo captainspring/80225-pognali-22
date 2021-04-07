@@ -16,6 +16,10 @@
     padding-top: 54px;
   }
 
+  @media (min-width: @desktop-width) {
+    min-width: 750px;
+  }
+
   &--show {
     display: block;
   }
@@ -33,6 +37,10 @@
     margin-bottom: 47px;
   }
 
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
+  }
+
   &--orange {
     color: @special-orange;
   }
@@ -48,10 +56,19 @@
     padding: 0 90px;
     font-size: 22px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
+    padding: 0 60px;
+  }
 }
 
 .modal__table .table__row {
   padding: 14px 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 12px 0 15px;
+  }
 }
 
 .modal__button-close {
@@ -81,5 +98,10 @@
   @media (min-width: @tablet-width) {
     padding: 41px;
     .fontsize(24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 41px 41px 45px;
+    line-height: 26px;
   }
 }
