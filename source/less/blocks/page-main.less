@@ -1,3 +1,16 @@
+.page-main {
+  position: relative;
+  margin-top: -73px;
+
+  &--no-js {
+    margin-top: 0;
+
+    @media (min-width: @desktop-width) {
+      margin-top: -130px;
+    }
+  }
+}
+
 .page-main__section {
   &--top {
     color: @white;
