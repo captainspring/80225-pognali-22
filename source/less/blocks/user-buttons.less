@@ -1,9 +1,27 @@
+.user-buttons {
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  align-items: start;
+}
+
 .user-buttons__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &--phone {
     background-color: @special-orange;
 
     &:hover {
       background-color: @special-orange-dark;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
     }
   }
 
@@ -13,9 +31,33 @@
     &:hover {
       background-color: @special-orange;
     }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
+}
+
+.user-buttons__item:not(.button) {
+  .circle(40px);
+
+  @media (min-width: @desktop-width) {
+    .circle(50px);
   }
 }
 
 .user-buttons__item:active .user-buttons__icon {
   opacity: 0.3;
+}
+
+.user-buttons .button {
+  padding: 7px 40px 3px;
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 28px 14px;
+  }
 }

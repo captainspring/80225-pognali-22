@@ -1,1 +1,16 @@
-// flags-list block
+.flags-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flags-list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.flags-list__flag {
+  display: block;
+}

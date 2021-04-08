@@ -1,1 +1,76 @@
-// table block
+.table {
+  width: 100%;
+  padding-right: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px 35px 45px 92px;
+    .fontsize(28px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 51px 345px 51px 164px;
+  }
+}
+
+.table tbody {
+  counter-reset: listCounter;
+}
+
+.table__row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 13px 0 18px;
+  border-top: 1px solid fade(@black, 5%);
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 19px 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid fade(@black, 5%);
+  }
+
+  &--counter {
+    position: relative;
+    counter-increment: listCounter;
+
+    &::after {
+      content: counter(listCounter);
+      position: absolute;
+      top: 0;
+      right: -40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .circle(34px);
+      .fontsize(16px);
+      color: @white;
+
+      @media (min-width: @tablet-width) {
+        .circle(68px);
+        .fontsize(28px);
+        right: unset;
+        left: -90px;
+      }
+    }
+
+    &:first-child::after {
+      background-color: @special-orange;
+    }
+
+    &:nth-child(2)::after {
+      background-color: @special-yellow-dark;
+    }
+
+    &:nth-child(3)::after {
+      background-color: @basic-yellow;
+    }
+  }
+}

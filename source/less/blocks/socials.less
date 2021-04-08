@@ -1,10 +1,18 @@
 .socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .circle(45px);
+
   &--yellow-bg {
     background-color: @basic-yellow;
 
@@ -14,6 +22,10 @@
 
     &:active {
       background-color: @special-yellow-dark;
+    }
+
+    @media (min-width: @tablet-width) {
+      .circle(62px);
     }
   }
 }

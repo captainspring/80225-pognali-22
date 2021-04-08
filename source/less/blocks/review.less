@@ -1,4 +1,46 @@
+.review {
+  margin: 0;
+  padding: 48px 50px 29px;
+  background-color: @basic-blue-other-dark;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 72px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    padding: 0 83px 0 0;
+  }
+}
+
+.review__quote {
+  margin: 0 0 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+    padding-right: 360px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    line-height: 32px;
+  }
+}
+
 .review__author {
+  display: block;
   font-style: normal;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 404px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    line-height: 24px;
+  }
 }

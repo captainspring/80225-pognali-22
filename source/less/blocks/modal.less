@@ -1,13 +1,45 @@
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  display: none;
+  box-sizing: border-box;
+  min-width: 270px;
   padding: 34px 0 0;
   background-color: @white;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @tablet-width) {
+    min-width: 688px;
+    padding-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 750px;
+  }
+
+  &--show {
+    display: block;
+  }
 }
 
 .modal__title {
+  margin: 0 0 28px;
   padding: 0 25px;
   font-weight: 700;
   .fontsize(24px);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .fontsize(45px);
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
+  }
 
   &--orange {
     color: @special-orange;
@@ -15,10 +47,31 @@
 }
 
 .modal__table {
+  margin-bottom: 34px;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+    padding: 0 90px;
+    font-size: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
+    padding: 0 60px;
+  }
+}
+
+.modal__table .table__row {
+  padding: 14px 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 12px 0 15px;
+  }
 }
 
 .modal__button-close {
+  width: 100%;
   padding: 21px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -30,6 +83,7 @@
   color: @basic-blue-light;
   background-color: @special-grey-light;
   border: 0;
+  border-radius: 0 0 20px 20px;
 
   &:hover {
     background-color: @special-blue-light;
@@ -38,5 +92,15 @@
   &:active {
     color: fade(@basic-blue-light, 30%);
     background-color: @special-blue-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 41px;
+    .fontsize(24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 41px 41px 45px;
+    line-height: 26px;
   }
 }

@@ -1,12 +1,71 @@
 .about {
-  padding: 33px 50px 82px;
   background-image: url("../../img/backgrounds/about-mobile.png");
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -85px;
+  }
+}
+
+.about__wrapper {
+  padding: 33px 50px 82px;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px 385px 89px 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 190px 691px 163px 130px;
+  }
+}
+
+.about__title {
+  margin: 0 0 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .about__text {
+  margin: 0 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 38px;
+  }
+
   &--bold {
+    margin-bottom: 0;
     font-weight: 700;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 52px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 85px;
+      padding-right: 194px;
+      line-height: 24px;
+    }
+  }
+}
+
+.about__button {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 276px;
   }
 }
