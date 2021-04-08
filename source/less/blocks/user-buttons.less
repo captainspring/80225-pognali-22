@@ -15,6 +15,14 @@
     &:hover {
       background-color: @special-orange-dark;
     }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
   }
 
   &--email {
@@ -22,6 +30,14 @@
 
     &:hover {
       background-color: @special-orange;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
     }
   }
 }
@@ -41,7 +57,7 @@
 .user-buttons .button {
   padding: 7px 40px 3px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     padding: 16px 28px 14px;
   }
 }
