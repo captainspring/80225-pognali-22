@@ -24,7 +24,7 @@
   &--dark {
     position: relative;
     margin-top: -25px;
-    z-index: 2;
+    z-index: @z-index-page-main-dark;
     color: @white;
     background-color: @basic-blue-other;
 
@@ -32,21 +32,21 @@
       margin-top: -40px;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       margin-top: -58px;
     }
   }
 
   &--light {
     position: relative;
-    z-index: 3;
+    z-index: @z-index-page-main-light;
     background-color: @basic-steelblue;
   }
 
   &--special {
     position: relative;
     margin-top: -25px;
-    z-index: 1;
+    z-index: @z-index-page-main-special;
     padding-top: 65px;
     background-color: @basic-yellow;
 

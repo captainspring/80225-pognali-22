@@ -3,7 +3,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: @z-index-menu;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -36,7 +36,7 @@
   position: fixed;
   top: 25px;
   right: 25px;
-  z-index: 3;
+  z-index: @z-index-menu-toggle;
   align-self: flex-end;
   width: 19px;
   height: 19px;
@@ -199,7 +199,7 @@
 
 .menu--no-js .menu__user-buttons {
   top: 495px;
-  z-index: 2;
+  z-index: @z-index-menu-nojs-user-buttons;
   margin-bottom: -40px;
 
   @media (min-width: @desktop-width) {
