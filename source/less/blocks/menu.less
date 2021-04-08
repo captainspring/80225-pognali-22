@@ -109,6 +109,7 @@
 }
 
 .menu__contacts {
+  display: none;
   margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
@@ -202,6 +203,14 @@
   @media (min-width: @tablet-width) {
     margin-top: -145px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.menu--no-js .menu__contacts {
+  display: block;
 
   @media (min-width: @desktop-width) {
     display: none;
