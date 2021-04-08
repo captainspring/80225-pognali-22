@@ -29,6 +29,10 @@
 
   &--show {
     background-color: @white;
+
+    @media (min-width: @desktop-width) {
+      background-color: transparent;
+    }
   }
 }
 
@@ -98,10 +102,13 @@
 
 .menu--show .menu__login {
   display: block;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .menu__contacts {
-  display: none;
   margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
@@ -117,6 +124,10 @@
 
 .menu--show .menu__contacts {
   display: block;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .menu__socials {
@@ -136,6 +147,10 @@
 
 .menu--show .menu__socials {
   display: flex;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .menu__user-buttons {
@@ -154,6 +169,10 @@
 
 .menu--show .menu__user-buttons {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+  }
 }
 
 /* Menu -- no JS */
