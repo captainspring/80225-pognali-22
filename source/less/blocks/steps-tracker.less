@@ -1,15 +1,38 @@
+.steps-tracker {
+  width: 47px;
+}
+
+.steps-tracker__list {
+  width: 47px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
 .steps-tracker__item {
-  opacity: 0.6;
+  &::marker {
+    display: inline;
+    color: fade(@basic-blue-light, 30%);
+  }
 
   &--current {
-    opacity: 1;
+    &::marker {
+      color: @basic-blue-light;
+    }
   }
 }
 
 .steps-tracker__link {
+  display: none;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
   color: @black;
+  opacity: 0.6;
+}
+
+.steps-tracker__item--current .steps-tracker__link {
+  opacity: 1;
 }

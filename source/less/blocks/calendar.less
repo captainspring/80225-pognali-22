@@ -1,7 +1,30 @@
+.calendar__month {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  margin-bottom: 15px;
+  border: 1px solid @special-grey-border-other;
+  border-left: 0;
+  border-right: 0;
+}
+
 .calendar__month-name {
+  padding: 12px 0 11px;
   font-weight: 700;
   .fontsize(20px);
   color: @basic-blue-light;
+  text-align: center;
+}
+
+.calendar__arrow {
+  background-color: transparent;
+  border: 0;
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  grid-template-rows: 32px;
   text-align: center;
 }
 
@@ -15,6 +38,14 @@
   }
 }
 
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  grid-template-rows: 32px;
+  text-align: center;
+}
+
 .calendar__day {
   padding: 8px;
   font-weight: 500;
@@ -23,11 +54,15 @@
   text-align: center;
   color: @basic-blue-light;
   background-color: @basic-steelblue;
+  outline: 1px solid @special-grey-border-other;
   cursor: pointer;
 
   &:hover {
+    position: relative;
+    z-index: @z-index-calendar-day-hover;
     color: @white;
     background-color: @basic-blue-light;
+    outline: 2px solid @special-red-saturated;
   }
 
   &--grey {
@@ -49,6 +84,7 @@
 }
 
 .calendar__text {
+  display: none;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;

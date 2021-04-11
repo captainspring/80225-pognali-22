@@ -4,23 +4,121 @@
   list-style: none;
 }
 
+.select-country__item {
+  position: relative;
+}
+
+.select-country__item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.select-country__controls {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 53px;
+  grid-template-rows: 42px;
+}
+
+.select-country__pick-button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding: 11px 13px 11px;
+  text-align: left;
+  overflow: hidden;
+
+  &--picked {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.select-country__pick-button:not(.button--select-clicked) {
+  border: 1px solid @special-grey-border;
+  border-radius: 4px;
+}
+
+.select-country__name {
+  display: inline-block;
+  width: 150%;
+  text-align: left;
+}
+
+.select-country__flag {
+  border: 1px solid @special-grey-border;
+  border-left: 0;
+  border-radius: 4px;
+}
+
+.select-country__controls--active .select-country__flag {
+  display: none;
+}
+
+.select-country__pick-button:not(.select-country__pick-button--picked) + .select-country__flag {
+  display: none;
+}
+
+.select-country__deselect {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  .circle(21px);
+  background-color: @basic-steelblue;
+  border: 0;
+}
+
+.select-country__controls--active .select-country__deselect {
+  display: none;
+}
+
+// Country -- choice popup
+.select-country__choice-container {
+  position: absolute;
+  z-index: @z-index-country-choice-container;
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: @white;
+
+  &--show {
+    display: block;
+  }
+}
+
+.select-country__first-letters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .select-country__first-letter {
   padding: 12px;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   color: @basic-blue-light;
+  border: 1px solid @special-grey-border;
+  border-top: 0;
   cursor: pointer;
 
   &--selected {
-    background-color: @basic-blue-light;
+    background-color: @basic-steelblue;
+    cursor: default;
   }
+}
+
+.select-country__first-letter:not(:nth-of-type(5n)) {
+  border-right: 0;
 }
 
 .select-country__list {
   margin: 0;
   padding: 20px 19px;
+  border: 1px solid @special-grey-border;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
   list-style: none;
 }
 
@@ -34,5 +132,23 @@
 
   &:active {
     color: fade(@basic-blue-light, 30%);
+  }
+}
+
+.select-country__close {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.select-country__add-button {
+  width: 100%;
+  text-align: left;
+  background-color: @basic-steelblue;
+
+  &:hover {
+    background-color: @special-blue-light;
   }
 }

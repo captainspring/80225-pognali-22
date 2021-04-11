@@ -1,4 +1,34 @@
+.number-input {
+  display: grid;
+  grid-template-areas: "empty empty units"
+    "minus number plus";
+  grid-template-columns: 42px 1fr 42px;
+  grid-row-gap: 9px;
+}
+
+.number-input__button {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: @white;
+  border: 1px solid @special-grey-border;
+
+  &--minus {
+    grid-area: minus;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--plus {
+    grid-area: plus;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
 .number-input__input {
+  grid-area: number;
+  box-sizing: border-box;
+  width: 100%;
   padding: 16px 16px 13px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -6,9 +36,13 @@
   .fontsize(14px);
   text-align: center;
   color: @basic-blue-light;
+  border: 1px solid @special-grey-border;
+  border-right: 0;
+  border-left: 0;
 }
 
 .number-input__units {
+  grid-area: units;
   font-weight: 500;
   .fontsize(16px);
   text-transform: uppercase;

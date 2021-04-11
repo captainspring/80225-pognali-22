@@ -1,12 +1,16 @@
 .plans-list {
   margin: 0;
   padding: 0;
+  list-style-position: inside;
 }
 
 .plans-list__item {
   padding: 24px 23px;
+  background-color: @white;
+  border-radius: 10px;
 
   &::marker {
+    display: inline;
     font-family: "Blogger Sans", "Tahoma", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -15,8 +19,13 @@
   }
 }
 
+.plans-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .plans-list__title {
-  margin: 0;
+  display: inline-block;
+  margin: 0 0 20px;
   font-weight: 700;
   .fontsize(16px);
   color: @basic-blue-light;
@@ -28,6 +37,14 @@
   .fontsize(14px);
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
+}
+
+.plans-list__details:not(:last-of-type) {
+  margin-bottom: 5px;
 }
 
 .plans-list__edit {

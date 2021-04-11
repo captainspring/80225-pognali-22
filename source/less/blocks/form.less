@@ -1,6 +1,20 @@
 .form__fieldset {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
   margin: 0;
   padding: 27px 25px;
+  border: 1px solid @special-grey-border;
+  border-radius: 10px;
+
+  &--no-border {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.form__fieldset:not(:last-of-type) {
+  margin-bottom: 18px;
 }
 
 .form__legend {
@@ -20,10 +34,18 @@
 }
 
 .form__label {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-right: 70px;
   font-weight: 500;
   .fontsize(16px);
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  &--container {
+    display: block;
+    margin: 0;
+  }
 
   &--small {
     font-weight: 400;
@@ -33,6 +55,7 @@
 }
 
 .form__textarea {
+  width: 100%;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +71,37 @@
   }
 }
 
+.form__input {
+  &--number {
+    position: relative;
+    margin-top: -24px;
+  }
+}
+
+.form__checkbox-kids {
+  position: relative;
+  top: 115px;
+}
+
+.form__input-days {
+  position: relative;
+  margin-top: -25px;
+  margin-bottom: 71px;
+}
+
+.form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 13px;
+  padding: 7px 11px;
+}
+
 .form__back-link {
+  display: inline-block;
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;

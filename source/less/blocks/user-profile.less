@@ -1,3 +1,31 @@
 .user-profile {
+  display: grid;
+  grid-template-areas: "badge avatar"
+    "button button"
+    "tags tags";
+  justify-items: center;
+  row-gap: 18px;
   padding: 20px 25px 65px;
+}
+
+.user-profile__badge {
+  grid-area: badge;
+  width: 100px;
+  height: 100px;
+}
+
+.user-profile__avatar {
+  grid-area: avatar;
+  display: block;
+  .circle(100px);
+}
+
+.user-profile__change-avatar {
+  grid-area: button;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.user-profile__tags {
+  grid-area: tags;
 }
