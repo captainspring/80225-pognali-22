@@ -10,6 +10,10 @@
 
 .select-country__item:not(:last-child) {
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
 }
 
 .select-country__controls {
@@ -17,14 +21,23 @@
   display: grid;
   grid-template-columns: 1fr 53px;
   grid-template-rows: 42px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 395px 95px min-content;
+    grid-template-rows: 70px;
+  }
 }
 
 .select-country__pick-button {
+  position: relative;
   grid-column-start: 1;
   grid-column-end: -1;
-  padding: 11px 13px 11px;
-  text-align: left;
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    grid-column-end: 2;
+    margin-right: 26px;
+  }
 
   &--picked {
     grid-column-start: 1;
@@ -47,6 +60,31 @@
   border: 1px solid @special-grey-border;
   border-left: 0;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: block;
+    border: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: -7px;
+      display: block;
+      .circle(14px);
+      border: 1px solid @special-grey-border;
+    }
+  }
+}
+
+.select-country__pick-button--picked + .select-country__flag {
+  @media (min-width: @tablet-width) {
+    &::before {
+      background-color: @basic-blue-light;
+      border: 0;
+    }
+  }
 }
 
 .select-country__controls--active .select-country__flag {
@@ -55,6 +93,10 @@
 
 .select-country__pick-button:not(.select-country__pick-button--picked) + .select-country__flag {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .select-country__deselect {
@@ -64,10 +106,20 @@
   .circle(21px);
   background-color: @basic-steelblue;
   border: 0;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    place-self: center;
+    width: 22px;
+    height: 24px;
+    background-color: transparent;
+  }
 }
 
 .select-country__controls--active .select-country__deselect {
-  display: none;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 // Country -- choice popup
@@ -79,8 +131,17 @@
   width: 100%;
   background-color: @white;
 
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 2fr 1fr;
+    min-width: 578px;
+  }
+
   &--show {
     display: block;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+    }
   }
 }
 
@@ -89,6 +150,11 @@
   grid-template-columns: repeat(5, 1fr);
   box-sizing: border-box;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 35px 79px 33px 27px;
+    border-right: 1px solid @special-grey-border-other;
+  }
 }
 
 .select-country__first-letter {
@@ -103,9 +169,28 @@
   border-top: 0;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 55px;
+    min-height: 70px;
+    .fontsize(20px);
+
+    &:nth-child(-n+5) {
+      border-top: 1px solid @special-grey-border;
+    }
+  }
+
   &--selected {
     background-color: @basic-steelblue;
     cursor: default;
+
+    @media (min-width: @tablet-width) {
+      color: @white;
+      background-color: @basic-blue-light;
+    }
   }
 }
 
@@ -120,6 +205,17 @@
   border-top: 0;
   border-radius: 0 0 4px 4px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 11px 33px 25px;
+    border: 0;
+  }
+}
+
+.select-country__list-item {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .select-country__label {
@@ -133,6 +229,10 @@
   &:active {
     color: fade(@basic-blue-light, 30%);
   }
+
+  @media (min-width: @tablet-width) {
+    .fontsize(20px);
+  }
 }
 
 .select-country__close {
@@ -141,6 +241,14 @@
   right: 0;
   width: 42px;
   height: 42px;
+
+  @media (min-width: @tablet-width) {
+    top: -70px;
+    right: unset;
+    left: 300px;
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .select-country__add-button {
@@ -150,5 +258,21 @@
 
   &:hover {
     background-color: @special-blue-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 369px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: -35px;
+      display: block;
+      .circle(14px);
+      background-color: @basic-steelblue;
+      border: 1px solid @special-grey-border;
+    }
   }
 }

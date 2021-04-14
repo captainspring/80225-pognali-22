@@ -39,6 +39,10 @@
   border: 1px solid @special-grey-border;
   border-right: 0;
   border-left: 0;
+
+  @media (min-width: @tablet-width) {
+    .fontsize(20px);
+  }
 }
 
 .number-input__units {
@@ -47,4 +51,9 @@
   .fontsize(16px);
   text-transform: uppercase;
   color: fade(@basic-blue-light, 30%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
 }

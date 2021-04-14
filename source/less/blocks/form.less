@@ -25,12 +25,25 @@
   text-align: center;
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    .fontsize(20px);
+  }
 }
 
 .form__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--row {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .form__label {
@@ -42,15 +55,27 @@
   text-transform: uppercase;
   color: @basic-blue-light;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
   &--container {
     display: block;
     margin: 0;
+    padding: 0;
   }
 
   &--small {
     font-weight: 400;
     .fontsize(15px);
     text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      font-weight: 500;
+      .fontsize(20px);
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -69,6 +94,11 @@
   &:focus {
     color: @special-grey;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .form__input {
@@ -81,26 +111,49 @@
 .form__checkbox-kids {
   position: relative;
   top: 115px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    padding-top: 25px;
+  }
 }
 
 .form__input-days {
   position: relative;
-  margin-top: -25px;
-  margin-bottom: 71px;
+  top: -25px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    margin-bottom: 58px;
+  }
+}
+
+.form__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .form__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 13px;
-  padding: 7px 11px;
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 13px;
+  }
 }
 
 .form__back-link {
-  display: inline-block;
+  display: block;
   width: 100%;
   font-weight: 700;
   font-size: 17px;
@@ -108,4 +161,12 @@
   text-transform: uppercase;
   text-align: center;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    width: unset;
+    padding-left: 50px;
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+  }
 }

@@ -10,6 +10,11 @@
   position: absolute;
   top: 30px;
   right: 43px;
+
+  @media (min-width: @tablet-width) {
+    top: 66px;
+    right: 73px;
+  }
 }
 
 .add-plan__steps {
@@ -20,4 +25,8 @@
 
 .add-plan__step:not(:last-child) {
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+  }
 }

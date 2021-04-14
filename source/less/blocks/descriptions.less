@@ -1,5 +1,15 @@
+.descriptions__item {
+  @media (min-width: @tablet-width) {
+    padding-right: 13px;
+  }
+}
+
 .descriptions__item:not(:last-child) {
   margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .descriptions__country {
@@ -8,6 +18,11 @@
   font-weight: 500;
   .fontsize(18px);
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 38px;
+    .fontsize(30px);
+  }
 }
 
 .descriptions__textarea {
@@ -27,6 +42,11 @@
 
   &:focus {
     color: @special-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
   }
 
   &::placeholder {

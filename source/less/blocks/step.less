@@ -2,6 +2,11 @@
   padding: 24px 25px 23px;
   background-color: @white;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 40px 56px;
+    border-radius: 30px;
+  }
 }
 
 .step__title {
@@ -9,6 +14,11 @@
   font-weight: 700;
   .fontsize(20px);
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+    .fontsize(36px);
+  }
 }
 
 .step__number {
@@ -18,8 +28,25 @@
 .step__description {
   margin: 0 0 20px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 38px;
+    padding-right: 11px;
+  }
+}
+
+.step__fieldset {
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+    border-top: 1px solid @special-grey-border-dark;
+    border-radius: 0;
+  }
 }
 
 .step__fieldset:last-of-type {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+  }
 }

@@ -47,6 +47,12 @@
     }
   }
 
+  &--short {
+    @media (min-width: @tablet-width) {
+      width: 284px;
+    }
+  }
+
   &--rectangular {
     min-width: 60px;
     padding: 24px 22px;
@@ -137,15 +143,21 @@
   }
 
   &--select {
-    padding: 11px;
+    padding: 11px 13px 11px;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
+    text-align: left;
     background-color: @white;
     border-radius: 4px;
 
     &:hover {
       background-color: @white;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 27px 25px 23px;
+      .fontsize(20px);
     }
   }
 
