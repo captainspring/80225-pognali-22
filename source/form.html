@@ -19,7 +19,7 @@
           <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
         </a>
 
-        <div class="top-bar__menu menu menu--no-js">
+        <div class="top-bar__menu menu menu--inner-page menu--no-js">
           <button class="menu__toggle" type="button" aria-label="Показать меню навигации"></button>
 
           <nav class="menu__navigation navigation">
@@ -96,7 +96,7 @@
             </li>
           </ul>
 
-          <div class="menu__user-buttons user-buttons user-buttons--inner">
+          <div class="menu__user-buttons user-buttons">
             <a class="user-buttons__item user-buttons__item--phone" href="tel:88005558628" aria-label="Позвонить нам">
               <img class="user-buttons__icon" src="img/icons/icon_call.svg" width="18" height="18" alt="Иконка звонящей трубки">
             </a>
@@ -123,7 +123,7 @@
             <span class="level-badge__label level-badge__label--big">level</span>
           </p>
           <svg class="level-badge__level-bar level-bar" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
-            <circle class="level-bar__progress" r="47" cx="50" cy="50" fill="transparent" stroke-dasharray="270" stroke-dashoffset="25" stroke="#FF8D30" stroke-width="3" transform="rotate(-90, 50, 50)" stroke-linecap="round">
+            <circle class="level-bar__progress level-bar__progress--user-profile" r="47" cx="50" cy="50" fill="transparent" stroke-dasharray="270" stroke-dashoffset="25" stroke="#FF8D30" stroke-width="3" transform="rotate(-90, 50, 50)" stroke-linecap="round">
             </circle>
           </svg>
         </div>
@@ -134,35 +134,35 @@
         <div class="user-profile__tags info info--no-js">
           <h3 class="visually-hidden">Информация о вас</h3>
           <form class="info__form form" id="user-tags" method="POST" action="https://echo.htmlacademy.ru/">
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Тэги</legend>
+            <fieldset class="info__fieldset info__fieldset--tags form__fieldset">
+              <legend class="info__legend form__legend">Тэги</legend>
               <label class="form__label form__label--container">
                 <textarea class="form__textarea" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко расскажите о себе с помощью 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
               </label>
             </fieldset>
 
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Транспорт</legend>
+            <fieldset class="info__fieldset info__fieldset--transport form__fieldset">
+              <legend class="info__legend form__legend">Транспорт</legend>
               <ul class="form__list form__list--row">
-                <li class="form__item">
+                <li class="info__transport form__item">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="plane" id="transport-plane" checked>
                   <label class="form__label form__label--container form__label--plane" for="transport-plane">
                     <span class="visually-hidden">Путешествия самолётом</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="info__transport form__item">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car" checked>
                   <label class="form__label form__label--container form__label--car" for="transport-car">
                     <span class="visually-hidden">Путешествия автотранспортом</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="info__transport form__item">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="bicycle" id="transport-bicycle">
                   <label class="form__label form__label--container form__label--bicycle" for="transport-bicycle">
                     <span class="visually-hidden">Путешествия на велосипеде</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="info__transport form__item">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="afoot" id="transport-afoot" checked>
                   <label class="form__label form__label--container form__label--afoot" for="transport-afoot">
                     <span class="visually-hidden">Путешествия пешком</span>
@@ -171,7 +171,7 @@
               </ul>
             </fieldset>
 
-            <button class="info__button form__button form__button--hidden button button--blue" type="submit">Обновить профиль</button>
+            <button class="info__button form__button button button--blue" type="submit">Обновить профиль</button>
           </form>
         </div>
       </section>
@@ -258,13 +258,13 @@
                   </div>
 
                   <div class="calendar__weekdays">
-                    <span class="calendar__weekday">П</span>
-                    <span class="calendar__weekday">В</span>
-                    <span class="calendar__weekday">С</span>
-                    <span class="calendar__weekday">Ч</span>
-                    <span class="calendar__weekday">П</span>
-                    <span class="calendar__weekday calendar__weekday--weekend">С</span>
-                    <span class="calendar__weekday calendar__weekday--weekend">В</span>
+                    <p class="calendar__weekday">П<span class="calendar__weekday-letter">н</span></p>
+                    <p class="calendar__weekday">В<span class="calendar__weekday-letter">т</span></p>
+                    <p class="calendar__weekday">С<span class="calendar__weekday-letter">р</span></p>
+                    <p class="calendar__weekday">Ч<span class="calendar__weekday-letter">т</span></p>
+                    <p class="calendar__weekday">П<span class="calendar__weekday-letter">т</span></p>
+                    <p class="calendar__weekday calendar__weekday--weekend">С<span class="calendar__weekday-letter">б</span></p>
+                    <p class="calendar__weekday calendar__weekday--weekend">В<span class="calendar__weekday-letter">с</span></p>
                   </div>
 
                   <div class="calendar__days">
@@ -314,7 +314,7 @@
                 </div>
               </fieldset>
 
-              <a class="form__button button" href="#step2">Следующий шаг</a>
+              <a class="form__button button button--index button--short" href="#step2">Следующий шаг</a>
             </li>
 
             <li class="add-plan__step step">
@@ -443,8 +443,10 @@
                 </ul>
               </fieldset>
 
-              <a class="form__button button" href="#step3">Следующий шаг</a>
-              <a class="form__back-link" href="#step1">На шаг назад</a>
+              <div class="form__buttons">
+                <a class="form__button button button--index button--short" href="#step3">Следующий шаг</a>
+                <a class="form__back-link" href="#step1">На шаг назад</a>
+              </div>
             </li>
 
             <li class="add-plan__step step">
@@ -469,8 +471,10 @@
                 </ul>
               </fieldset>
 
-              <button class="form__button button" type="submit">Отправить</button>
-              <a class="form__back-link" href="#step2">На шаг назад</a>
+              <div class="form__buttons">
+                <button class="form__button button button--index button--short" type="submit">Отправить</button>
+                <a class="form__back-link" href="#step2">На шаг назад</a>
+              </div>
             </li>
           </ul>
         </form>
