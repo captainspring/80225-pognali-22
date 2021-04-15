@@ -113,10 +113,10 @@
 .form__input {
   &--number {
     position: relative;
-    margin-top: -24px;
+    .move-up(-24px);
 
     @media (min-width: @desktop-width) {
-      margin-top: 0;
+      .move-up(0);
       margin-right: auto;
     }
   }
