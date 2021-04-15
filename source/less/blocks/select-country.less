@@ -264,7 +264,9 @@
 }
 
 .select-country__first-letters .select-country__first-letter--selected {
-  border-color: @basic-blue-light;
+  @media (min-width: @tablet-width) {
+    border-color: @basic-blue-light;
+  }
 }
 
 .select-country__list {
