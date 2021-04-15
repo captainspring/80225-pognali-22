@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+  }
 }
 
 .select-country__item {
@@ -14,6 +22,31 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 16px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 997px;
+  }
+}
+
+.select-country__item:last-child {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: minmax(396px, 775px) minmax(117px, 198px) 22px;
+    grid-template-rows: 70px;
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 26px;
+      left: -7px;
+      display: block;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      .circle(14px);
+      background-color: @basic-steelblue;
+      border: 1px solid @special-grey-border;
+    }
+  }
 }
 
 .select-country__controls {
@@ -23,7 +56,7 @@
   grid-template-rows: 42px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 395px 95px min-content;
+    grid-template-columns: minmax(396px, 776px) minmax(117px, 198px) 22px;
     grid-template-rows: 70px;
   }
 }
@@ -36,7 +69,8 @@
 
   @media (min-width: @tablet-width) {
     grid-column-end: 2;
-    margin-right: 26px;
+    min-width: 369px;
+    margin-right: 6%;
   }
 
   &--picked {
@@ -112,7 +146,8 @@
     place-self: center;
     width: 22px;
     height: 24px;
-    background-color: transparent;
+    background-color: red;
+    border-radius: 0;
   }
 }
 
@@ -125,14 +160,18 @@
 // Country -- choice popup
 .select-country__choice-container {
   position: absolute;
+  top: 42px;
   z-index: @z-index-country-choice-container;
   display: none;
   box-sizing: border-box;
   width: 100%;
-  background-color: @white;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 2fr 1fr;
+    top: 70px;
+    grid-template-areas: "close close"
+      "letters countries";
+    grid-template-columns: minmax(373px, 489px) minmax(206px, 241px);
+    width: unset;
     min-width: 578px;
   }
 
@@ -146,14 +185,22 @@
 }
 
 .select-country__first-letters {
+  grid-area: letters;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   box-sizing: border-box;
   width: 100%;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     padding: 35px 79px 33px 27px;
     border-right: 1px solid @special-grey-border-other;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-gap: 16px;
+    grid-row-gap: 14px;
+    padding: 34px 102px 36px 27px;
   }
 }
 
@@ -183,6 +230,15 @@
     }
   }
 
+  @media (min-width: @desktop-width) {
+    border-top: 1px solid @special-grey-border;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: @basic-blue-light;
+    }
+  }
+
   &--selected {
     background-color: @basic-steelblue;
     cursor: default;
@@ -190,17 +246,32 @@
     @media (min-width: @tablet-width) {
       color: @white;
       background-color: @basic-blue-light;
+      border-color: @basic-blue-light;
     }
   }
 }
 
 .select-country__first-letter:not(:nth-of-type(5n)) {
   border-right: 0;
+
+  @media (min-width: @desktop-width) {
+    border-right: 1px solid @special-grey-border;
+
+    &:hover {
+      border-right-color: @basic-blue-light;
+    }
+  }
+}
+
+.select-country__first-letters .select-country__first-letter--selected {
+  border-color: @basic-blue-light;
 }
 
 .select-country__list {
+  grid-area: countries;
   margin: 0;
   padding: 20px 19px;
+  background-color: @white;
   border: 1px solid @special-grey-border;
   border-top: 0;
   border-radius: 0 0 4px 4px;
@@ -209,6 +280,10 @@
   @media (min-width: @tablet-width) {
     padding: 37px 11px 33px 25px;
     border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 35px 26px;
   }
 }
 
@@ -243,14 +318,15 @@
   height: 42px;
 
   @media (min-width: @tablet-width) {
-    top: -70px;
-    right: unset;
-    left: 300px;
+    position: static;
+    grid-area: close;
+    justify-self: end;
     width: 70px;
     height: 70px;
   }
 }
 
+// Add country button
 .select-country__add-button {
   width: 100%;
   text-align: left;
@@ -262,17 +338,8 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    width: 369px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 26px;
-      right: -35px;
-      display: block;
-      .circle(14px);
-      background-color: @basic-steelblue;
-      border: 1px solid @special-grey-border;
-    }
+    width: unset;
+    min-width: 369px;
+    margin-right: 6%;
   }
 }

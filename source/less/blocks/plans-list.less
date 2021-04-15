@@ -25,6 +25,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-areas: "title companions dates edit";
+    grid-template-columns: 1fr 176px 282px 186px;
+  }
 }
 
 .plans-list__item:not(:last-child) {
@@ -32,6 +37,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
   }
 }
 
@@ -50,6 +59,11 @@
     padding: 40px 40px 34px;
     .fontsize(24px);
     border-bottom: 1px solid @special-grey-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 36px 36px 95px;
+    border: 0;
   }
 }
 
@@ -75,6 +89,12 @@
     text-align: center;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 38px;
+    text-align: left;
+  }
+
   &--companions {
     @media (min-width: @tablet-width) {
       grid-area: companions;
@@ -90,6 +110,10 @@
 
 .plans-list__details:not(:last-of-type) {
   margin-bottom: 5px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .plans-list__edit {
@@ -111,5 +135,10 @@
     padding: 20px 10px 14px;
     .fontsize(20px);
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 42px 38px;
+    text-align: right;
   }
 }

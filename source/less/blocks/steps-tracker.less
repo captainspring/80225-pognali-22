@@ -4,20 +4,34 @@
   @media (min-width: @tablet-width) {
     width: 76px;
   }
+
+  @media (min-width: @desktop-width) {
+    min-width: 181px;
+  }
 }
 
 .steps-tracker__list {
-  width: 47px;
   display: flex;
+  width: 47px;
   margin: 0;
   padding: 0;
   list-style-position: inside;
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .steps-tracker__item {
   &::marker {
     display: inline;
     color: fade(@basic-blue-light, 30%);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 27px;
   }
 
   &--current {
@@ -35,6 +49,10 @@
   text-transform: uppercase;
   color: @black;
   opacity: 0.6;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }
 
 .steps-tracker__item--current .steps-tracker__link {

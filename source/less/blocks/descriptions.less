@@ -1,27 +1,88 @@
-.descriptions__item {
+.descriptions {
+  padding: 10px 10px 0;
+
   @media (min-width: @tablet-width) {
-    padding-right: 13px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 775px;
+  }
+}
+
+.descriptions__item {
+  position: relative;
+  padding: 0 14px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    display: block;
+    .circle(6px);
+    background-color: @basic-blue-light;
+  }
+
+  @media (max-width: 767px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 11px;
+      height: 2px;
+      background-color: @basic-blue-light;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 25px 68px 0;
+
+    &::after {
+      top: -7px;
+      left: unset;
+      right: -7px;
+      .circle(14px);
+    }
   }
 }
 
 .descriptions__item:not(:last-child) {
-  margin-bottom: 27px;
+  padding-bottom: 27px;
+  border-left: 2px solid @basic-blue-light;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 44px;
+    padding-bottom: 44px;
+    border-left: 0;
+    border-right: 2px solid @basic-blue-light;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 47px;
   }
 }
 
 .descriptions__country {
   display: inline-block;
-  margin-bottom: 13px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 11px;
   font-weight: 500;
   .fontsize(18px);
   color: @basic-blue-light;
+  transform: translateY(-50%);
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-right: 120px;
     .fontsize(30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 37px;
   }
 }
 
@@ -45,8 +106,15 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 19px 18px;
     font-size: 20px;
     line-height: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+    padding: 26px 25px;
+    line-height: 20px;
   }
 
   &::placeholder {

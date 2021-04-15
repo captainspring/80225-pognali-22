@@ -5,6 +5,10 @@
   border: 1px solid @special-grey-border-other;
   border-left: 0;
   border-right: 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .calendar__month-name {
@@ -17,6 +21,10 @@
   @media (min-width: @tablet-width) {
     padding: 27px 0 23px;
     .fontsize(36px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 28px 0 22px;
   }
 }
 
@@ -35,6 +43,11 @@
   @media (min-width: @tablet-width) {
     grid-template-rows: 45px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+    text-align: left;
+  }
 }
 
 .calendar__weekday {
@@ -45,6 +58,10 @@
 
   @media (min-width: @tablet-width) {
     .fontsize(18px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 16px;
   }
 
   &--weekend {
@@ -64,16 +81,21 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
-  grid-template-rows: 32px;
-  text-align: center;
+  grid-template-rows: repeat(6, 32px);
 
   @media (min-width: @tablet-width) {
-    grid-template-rows: 69px;
+    grid-template-rows: repeat(6, 69px);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-rows: repeat(6, 71px);
+    align-items: stretch;
   }
 }
 
 .calendar__day {
   box-sizing: border-box;
+  margin: 0;
   padding: 8px;
   font-weight: 400;
   font-size: 14px;
@@ -97,6 +119,12 @@
     .fontsize(18px);
   }
 
+  @media (min-width: @desktop-width) {
+    padding: 15px 16px;
+    text-align: left;
+    color: @special-grey;
+  }
+
   &--grey {
     font-weight: 400;
     color: fade(@special-grey, 30%);
@@ -115,9 +143,22 @@
   }
 }
 
+.calendar__first-day {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
 .calendar__text {
   display: none;
+  margin-top: 9px;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

@@ -60,6 +60,11 @@
     line-height: 18px;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-right: 57px;
+  }
+
   &--container {
     display: block;
     margin: 0;
@@ -75,6 +80,10 @@
       font-weight: 500;
       .fontsize(20px);
       text-transform: uppercase;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 0;
     }
   }
 }
@@ -105,6 +114,11 @@
   &--number {
     position: relative;
     margin-top: -24px;
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+      margin-right: auto;
+    }
   }
 }
 
@@ -116,6 +130,10 @@
     position: static;
     padding-top: 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .form__input-days {
@@ -126,6 +144,26 @@
   @media (min-width: @tablet-width) {
     position: static;
     margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.form__input-days .form__label {
+  @media (min-width: @desktop-width) {
+    padding-right: 78px;
+  }
+}
+
+.form__calendar {
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 

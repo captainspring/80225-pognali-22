@@ -4,6 +4,12 @@
     "minus number plus";
   grid-template-columns: 42px 1fr 42px;
   grid-row-gap: 9px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-areas: "minus number plus units";
+    grid-template-columns: 58px min-content 58px min-content;
+    min-width: 180px;
+  }
 }
 
 .number-input__button {
@@ -43,6 +49,12 @@
   @media (min-width: @tablet-width) {
     .fontsize(20px);
   }
+
+  @media (min-width: @desktop-width) {
+    width: 58px;
+    padding: 26px 10px;
+    line-height: 18px;
+  }
 }
 
 .number-input__units {
@@ -55,5 +67,11 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    margin-left: 35px;
+    color: @basic-blue-light;
   }
 }
