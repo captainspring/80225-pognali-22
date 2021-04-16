@@ -1,3 +1,82 @@
 .user-profile {
-  padding: 20px 25px 65px;
+  display: grid;
+  grid-template-areas: "badge avatar"
+    "button button"
+    "tags tags";
+  justify-items: center;
+  row-gap: 18px;
+  padding: 20px 25px 59px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-areas: "badge empty empty avatar"
+      "button button button button"
+      "tags tags tags tags";
+    grid-template-columns: 164px 1fr 1fr 164px;
+    grid-row-gap: 51px;
+    padding: 66px 75px 86px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -190px;
+    grid-template-areas: "empty badge avatar"
+      "none none button"
+      "tags tags tags";
+    grid-template-columns: 860px 95px 285px;
+    grid-row-gap: 0;
+    align-items: center;
+    margin-bottom: -190px;
+    padding: 0 0 64px 125px;
+  }
+}
+
+.user-profile__badge {
+  grid-area: badge;
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
+}
+
+.user-profile__badge-text {
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+}
+
+.user-profile__avatar {
+  grid-area: avatar;
+  display: block;
+  .circle(100px);
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    border-radius: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 190px;
+    height: 190px;
+    border-radius: 7px 7px 0 0;
+  }
+}
+
+.user-profile__change-avatar {
+  grid-area: button;
+  width: 100%;
+  margin-bottom: 7px;
+
+  @media (min-width: @desktop-width) {
+    width: 190px;
+    margin-bottom: 27px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.user-profile__tags {
+  grid-area: tags;
 }

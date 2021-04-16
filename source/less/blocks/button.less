@@ -10,6 +10,7 @@
   text-align: center;
   color: @basic-blue;
   background-color: @basic-yellow;
+  border: 0;
   border-radius: 25px;
 
   &:hover {
@@ -43,6 +44,20 @@
     @media (min-width: @desktop-width) {
       width: 275px;
       min-height: 80px;
+    }
+  }
+
+  &--mobile-round {
+    @media (max-width: 767px) {
+      padding: 12px 12px 8px;
+      text-transform: uppercase;
+      border-radius: 25px;
+    }
+  }
+
+  &--short {
+    @media (min-width: @tablet-width) {
+      width: 284px;
     }
   }
 
@@ -136,19 +151,29 @@
   }
 
   &--select {
+    padding: 11px 13px 11px;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
+    text-align: left;
     background-color: @white;
+    border-radius: 4px;
 
     &:hover {
       background-color: @white;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 27px 25px 23px;
+      .fontsize(20px);
     }
   }
 
   &--select-clicked {
     color: @white;
     background-color: @basic-blue-light;
+    border-color: @basic-blue-light;
+    border-radius: 4px 4px 0 0;
 
     &:hover {
       background-color: @basic-blue-light;
@@ -162,5 +187,11 @@
   @media (min-width: @desktop-width) {
     display: inline;
     .fontsize(24px);
+  }
+}
+
+.button__additional-text {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

@@ -1,25 +1,70 @@
 .plans-list {
   margin: 0;
   padding: 0;
+  list-style-position: inside;
 }
 
 .plans-list__item {
   padding: 24px 23px;
+  background-color: @white;
+  border-radius: 10px;
 
   &::marker {
+    display: inline;
     font-family: "Blogger Sans", "Tahoma", sans-serif;
     font-style: normal;
     font-weight: 500;
     .fontsize(16px);
     color: @basic-blue-light;
   }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-areas: "title title title"
+      "companions dates edit";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-areas: "title companions dates edit";
+    grid-template-columns: 1fr 176px 282px 186px;
+  }
+}
+
+.plans-list__item:not(:last-child) {
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .plans-list__title {
-  margin: 0;
+  display: inline-block;
+  margin: 0 0 20px;
   font-weight: 700;
   .fontsize(16px);
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    grid-area: title;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 40px 40px 34px;
+    .fontsize(24px);
+    border-bottom: 1px solid @special-grey-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 36px 36px 95px;
+    border: 0;
+  }
 }
 
 .plans-list__details {
@@ -28,6 +73,47 @@
   .fontsize(14px);
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  &:last-of-type {
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding: 20px 10px 14px;
+    .fontsize(20px);
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 38px;
+    text-align: left;
+  }
+
+  &--companions {
+    @media (min-width: @tablet-width) {
+      grid-area: companions;
+    }
+  }
+
+  &--dates {
+    @media (min-width: @tablet-width) {
+      grid-area: dates;
+    }
+  }
+}
+
+.plans-list__details:not(:last-of-type) {
+  margin-bottom: 5px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .plans-list__edit {
@@ -42,5 +128,17 @@
 
   &:active {
     color: fade(@black, 10%);
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-area: edit;
+    padding: 20px 10px 14px;
+    .fontsize(20px);
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 42px 38px;
+    text-align: right;
   }
 }

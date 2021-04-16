@@ -1,6 +1,20 @@
 .form__fieldset {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
   margin: 0;
   padding: 27px 25px;
+  border: 1px solid @special-grey-border;
+  border-radius: 10px;
+
+  &--no-border {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.form__fieldset:not(:last-of-type) {
+  margin-bottom: 18px;
 }
 
 .form__legend {
@@ -11,28 +25,71 @@
   text-align: center;
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    .fontsize(20px);
+  }
 }
 
 .form__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--row {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .form__label {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-right: 70px;
   font-weight: 500;
   .fontsize(16px);
   text-transform: uppercase;
   color: @basic-blue-light;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-right: 57px;
+  }
+
+  &--container {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
   &--small {
     font-weight: 400;
     .fontsize(15px);
     text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      font-weight: 500;
+      .fontsize(20px);
+      text-transform: uppercase;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 0;
+    }
   }
 }
 
 .form__textarea {
+  width: 100%;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -46,13 +103,108 @@
   &:focus {
     color: @special-grey;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.form__input {
+  &--number {
+    position: relative;
+    .move-up(-24px);
+
+    @media (min-width: @desktop-width) {
+      .move-up(0);
+      margin-right: auto;
+    }
+  }
+}
+
+.form__checkbox-kids {
+  position: relative;
+  top: 115px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    padding-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.form__input-days {
+  position: relative;
+  top: -25px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.form__input-days .form__label {
+  @media (min-width: @desktop-width) {
+    padding-right: 78px;
+  }
+}
+
+.form__calendar {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.form__button {
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 13px;
+  }
 }
 
 .form__back-link {
+  display: block;
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    width: unset;
+    padding-left: 50px;
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+  }
 }

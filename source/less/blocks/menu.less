@@ -180,7 +180,7 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    margin-top: -53px;
+    .move-up(-53px);
     padding: 0;
   }
 }
@@ -219,17 +219,23 @@
 }
 
 .menu--no-js .menu__user-buttons {
+  position: relative;
   top: 495px;
   z-index: @z-index-menu-nojs-user-buttons;
   margin-bottom: -40px;
 
   @media (min-width: @tablet-width) {
-    position: relative;
     top: -140px;
-    margin-bottom: -20px;
   }
 
   @media (min-width: @desktop-width) {
     top: 0;
+  }
+}
+
+// Inner pages
+.menu--inner-page .menu__user-buttons {
+  @media (max-width: 767px) {
+    display: none;
   }
 }

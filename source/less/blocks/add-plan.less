@@ -1,5 +1,56 @@
+.app-plan__wrapper {
+  position: relative;
+  padding: 30px 25px 100px;
+
+  @media (min-width: @tablet-width) {
+    padding: 53px 75px 114px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 60px 130px;
+  }
+}
+
+.add-plan__title {
+  padding-right: 60px;
+}
+
+.add-plan .add-plan__title {
+  @media (min-width: @desktop-width) {
+    padding-left: 69px;
+  }
+}
+
+.add-plan__steps-tracker {
+  position: absolute;
+  top: 30px;
+  right: 43px;
+
+  @media (min-width: @tablet-width) {
+    top: 66px;
+    right: 73px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 252px;
+    right: 267px;
+  }
+}
+
 .add-plan__steps {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.add-plan__step:not(:last-child) {
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+  }
 }
