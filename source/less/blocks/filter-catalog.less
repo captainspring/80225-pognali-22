@@ -1,19 +1,30 @@
 .filter-catalog {
+  margin-bottom: 28px;
   padding: 26px 25px 22px;
   background-color: @basic-yellow;
+  border-radius: 20px;
 }
 
 .filter-catalog__title {
-  margin: 0;
+  margin: 0 0 23px;
   .fontsize(22px);
   color: @basic-blue-light;
 }
 
+.filter-catalog__fieldset:last-of-type {
+  margin-bottom: 21px;
+}
+
 .filter-catalog__legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px 0 0;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
   color: @basic-blue-light;
+  border-top: 1px solid @special-yellow-faded;
   cursor: pointer;
 
   .interactions-opacity();
@@ -34,6 +45,43 @@
   .interactions-opacity();
 }
 
+.filter-catalog__transport-list {
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.filter-catalog__number-inputs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 110px 110px;
+  width: 220px;
+  margin-bottom: 21px;
+  border: 1px solid @special-grey-border;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 102px;
+    display: block;
+    width: 16px;
+    height: 11px;
+    background-color: @white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 102px;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background-color: @special-grey-border;
+  }
+}
+
 .filter-catalog__number-input {
   padding: 13px 8px 8px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
@@ -43,4 +91,18 @@
   line-height: 13px;
   text-align: center;
   color: @basic-blue-light;
+  border: 0;
+
+  &--left {
+    border-right: 1px solid @special-grey-border;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--right {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.filter-catalog__button {
+  width: 100%;
 }
