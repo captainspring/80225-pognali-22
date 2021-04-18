@@ -10,14 +10,27 @@
   text-transform: lowercase;
   background-color: @white;
   transform: translateY(-73%);
+
+  @media (min-width: @tablet-width) {
+    left: 71px;
+  }
 }
 
 .traveler-info__list {
   margin: 0;
   list-style: none;
 
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &--padding {
     padding: 0 26px 0 65px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 35px;
+    }
   }
 }
 
@@ -30,5 +43,15 @@
 
   &:not(:last-child) {
     margin-bottom: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 48px;
+    .fontsize(20px);
+
+    &:not(:last-child) {
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
   }
 }

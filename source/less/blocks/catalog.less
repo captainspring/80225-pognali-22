@@ -3,10 +3,18 @@
   margin-bottom: 19px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
 }
 
 .catalog__item:not(:last-child) {
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
 }
 
 .catalog__more-link {
@@ -19,4 +27,9 @@
   text-align: center;
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    .fontsize(20px);
+    margin-bottom: 52px;
+  }
 }
