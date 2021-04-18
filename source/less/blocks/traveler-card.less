@@ -24,6 +24,16 @@
     width: 688px;
     padding: 35px 0 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-areas: "avatar name name countries countries"
+      "avatar tags tags countries countries"
+      "avatar button likes transport level";
+    grid-template-columns: 339px 150px 185px 172px 103px;
+    grid-template-rows: min-content min(90px) min-content;
+    width: 949px;
+    padding: 0;
+  }
 }
 
 .traveler-card__name {
@@ -37,6 +47,11 @@
     margin-bottom: 19px;
     padding-right: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+    padding: 46px 20px 0 8px;
+  }
 }
 
 .traveler-card__name-br {
@@ -48,12 +63,20 @@
   .fontsize(20px);
   color: @basic-blue-light;
 
+  @media (min-width: @tablet-width) {
+    .fontsize(30px);
+  }
+
   &--avatar {
     grid-area: avatar;
     padding-left: 18px;
 
     @media (min-width: @tablet-width) {
       padding: 0 29px 0 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
     }
   }
 }
@@ -66,6 +89,12 @@
     width: 190px;
     height: 190px;
     border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -80,6 +109,10 @@
     position: static;
     align-self: end;
     padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: start;
   }
 }
 
@@ -121,6 +154,12 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 20px 20px 0;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 20px 20px 8px;
   }
 }
 
@@ -135,6 +174,12 @@
     padding-bottom: 0;
     border-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
 }
 
 .traveler-card__transport {
@@ -142,6 +187,11 @@
 
   @media (min-width: @tablet-width) {
     padding-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 9px;
+    padding: 0;
   }
 }
 
@@ -215,5 +265,9 @@
   @media (min-width: @tablet-width) {
     align-self: end;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: start;
   }
 }
