@@ -129,7 +129,7 @@
         <div class="filter-country__tabs-container">
           <div class="filter-country__wrapper wrapper">
             <h2 class="page-main__title page-main__title--uppercase page-main__title--no-margin filter-country__title">Фильтрация по странам:</h2>
-            <button class="filter-country__button button button--blue button--fading button--dots" type="button"><span class="button__text">Показать все</span>  •••</button>
+            <button class="filter-country__button button button--blue button--fading button--dots" type="button"><span class="filter-country__button-text button__text">Показать все</span>  •••</button>
 
             <ul class="filter-country__tabs">
               <li class="filter-country__tab filter-country__tab--current">
@@ -820,7 +820,7 @@
                 </div>
               </div>
 
-              <button class="filter-country__close button button--dark-blue" type="button">Свернуть</button>
+              <button class="filter-country__close button button--dark-blue button--rectangular button--mobile-round" type="button">Свернуть</button>
             </div>
           </div>
         </div>
@@ -834,7 +834,7 @@
             <h3 class="filter-catalog__title">Подберите идеального попутчика</h3>
 
             <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-              <legend class="filter-catalog__legend">Хобби</legend>
+              <legend class="filter-catalog__legend">Хобби<span class="filter-catalog__legend-colon">:</span></legend>
 
               <ul class="filter-catalog__options filter-catalog__options--show">
                 <li class="filter-catalog__option">
@@ -853,7 +853,7 @@
             </fieldset>
 
             <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-              <legend class="filter-catalog__legend">Музыка</legend>
+              <legend class="filter-catalog__legend">Музыка<span class="filter-catalog__legend-colon">:</span></legend>
 
               <ul class="filter-catalog__options filter-catalog__options--show">
                 <li class="filter-catalog__option">
@@ -872,7 +872,7 @@
             </fieldset>
 
             <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-              <legend class="filter-catalog__legend">Еда</legend>
+              <legend class="filter-catalog__legend">Еда<span class="filter-catalog__legend-colon">:</span></legend>
 
               <ul class="filter-catalog__options filter-catalog__options--show">
                 <li class="filter-catalog__option">
@@ -894,7 +894,7 @@
             </fieldset>
 
             <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-              <legend class="filter-catalog__legend">Транспорт</legend>
+              <legend class="filter-catalog__legend">Транспорт<span class="filter-catalog__legend-colon">:</span></legend>
 
               <ul class="filter-catalog__transport-list form__list form__list--row">
                 <li class="form__item form__item--button">
@@ -928,21 +928,23 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-              <legend class="filter-catalog__legend">Левел</legend>
+            <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--level form__fieldset form__fieldset--no-border">
+              <legend class="filter-catalog__legend">Левел<span class="filter-catalog__legend-colon">:</span></legend>
 
-              <div class="filter-catalog__number-inputs">
-                <label class="visually-hidden" for="filter-level-min">Минимальный уровень</label>
-                <input class="filter-catalog__number-input filter-catalog__number-input--left" type="number" name="filter-level" value="30" id="filter-level-min"  min="1" step="1">
-                <label class="visually-hidden" for="filter-level-max">Максимальный уровень</label>
-                <input class="filter-catalog__number-input filter-catalog__number-input--right" type="number" name="filter-level" value="100" id="filter-level-max" max="100" step="1">
-              </div>
+              <div class="filter-catalog__level-filter">
+                <div class="filter-catalog__number-inputs">
+                  <label class="visually-hidden" for="filter-level-min">Минимальный уровень</label>
+                  <input class="filter-catalog__number-input filter-catalog__number-input--left" type="number" name="filter-level" value="30" id="filter-level-min"  min="1" step="1">
+                  <label class="visually-hidden" for="filter-level-max">Максимальный уровень</label>
+                  <input class="filter-catalog__number-input filter-catalog__number-input--right" type="number" name="filter-level" value="100" id="filter-level-max" max="100" step="1">
+                </div>
 
-              <div class="filter-catalog__level-range range-slider">
-                <div class="range-slider__bar">
-                  <div class="range-slider__progress"></div>
-                  <button class="range-slider__toggler range-slider__toggler--min" type="button" aria-label="Выбрать минимальный уровень"></button>
-                  <button class="range-slider__toggler range-slider__toggler--max" type="button" aria-label="Выбрать максимальный уровень"></button>
+                <div class="filter-catalog__level-range range-slider">
+                  <div class="range-slider__bar">
+                    <div class="range-slider__progress"></div>
+                    <button class="range-slider__toggler range-slider__toggler--min" type="button" aria-label="Выбрать минимальный уровень"></button>
+                    <button class="range-slider__toggler range-slider__toggler--max" type="button" aria-label="Выбрать максимальный уровень"></button>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -958,7 +960,7 @@
                 <img class="traveler-card__avatar" src="img/avatars/tanya-firsova.jpg" width="70" height="70" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
               </a>
               <h3 class="traveler-card__name">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Таня<br>Фирсова</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Таня <br class="traveler-card__name-br">Фирсова</a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -985,7 +987,7 @@
               </div>
 
               <div class="traveler-card__transport traveler-info">
-                <h4 class="traveler-info__title">Транспорт:</h4>
+                <h4 class="traveler-card__transport-title traveler-info__title">Транспорт:</h4>
 
                 <ul class="traveler-card__transport-list traveler-info__list transport-list">
                   <li class="transport-list__item transport-list__item--blue">
@@ -1058,7 +1060,7 @@
                 <img class="traveler-card__avatar" src="img/avatars/petya-demin.jpg" width="70" height="70" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
               </a>
               <h3 class="traveler-card__name">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Петя<br>Демин</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Петя <br class="traveler-card__name-br">Демин</a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1082,7 +1084,7 @@
               </div>
 
               <div class="traveler-card__transport traveler-info">
-                <h4 class="traveler-info__title">Транспорт:</h4>
+                <h4 class="traveler-card__transport-title traveler-info__title">Транспорт:</h4>
 
                 <ul class="traveler-card__transport-list traveler-info__list transport-list">
                   <li class="transport-list__item transport-list__item--blue">
@@ -1154,7 +1156,7 @@
                 <img class="traveler-card__avatar" src="img/avatars/mark-smolov-mobile.jpg" width="70" height="70" alt="Аватар Марка Смолова: татуированный молодой человек в кепке сидит на крыше автомобиля">
               </a>
               <h3 class="traveler-card__name">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Марк<br>Смолов</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Марк <br class="traveler-card__name-br">Смолов</a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1181,7 +1183,7 @@
               </div>
 
               <div class="traveler-card__transport traveler-info">
-                <h4 class="traveler-info__title">Транспорт:</h4>
+                <h4 class="traveler-card__transport-title traveler-info__title">Транспорт:</h4>
 
                 <ul class="traveler-card__transport-list traveler-info__list transport-list">
                   <li class="transport-list__item transport-list__item--blue">
@@ -1253,7 +1255,7 @@
                 <img class="traveler-card__avatar" src="img/avatars/larisa-rogovaya-mobile.jpg" width="70" height="70" alt="Аватар Ларисы Роговой: улыбающаяся девушка в синем деловом костюме">
               </a>
               <h3 class="traveler-card__name traveler-card__name--online">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Лариса<br>Роговая</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Лариса <br class="traveler-card__name-br">Роговая</a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1277,7 +1279,7 @@
               </div>
 
               <div class="traveler-card__transport traveler-info">
-                <h4 class="traveler-info__title">Транспорт:</h4>
+                <h4 class="traveler-card__transport-title traveler-info__title">Транспорт:</h4>
 
                 <ul class="traveler-card__transport-list traveler-info__list transport-list">
                   <li class="transport-list__item transport-list__item--blue">
@@ -1372,7 +1374,7 @@
       </section>
     </main>
 
-    <footer class="page-footer page-footer--index">
+    <footer class="page-footer">
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
