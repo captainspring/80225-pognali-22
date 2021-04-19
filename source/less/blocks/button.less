@@ -47,14 +47,6 @@
     }
   }
 
-  &--mobile-round {
-    @media (max-width: 767px) {
-      padding: 12px 12px 8px;
-      text-transform: uppercase;
-      border-radius: 25px;
-    }
-  }
-
   &--short {
     @media (min-width: @tablet-width) {
       width: 284px;
@@ -66,6 +58,14 @@
     padding: 24px 22px;
     border: 0;
     border-radius: 20px;
+  }
+
+  &--mobile-round {
+    @media (max-width: 767px) {
+      padding: 12px 12px 8px;
+      text-transform: uppercase;
+      border-radius: 25px;
+    }
   }
 
   &--outline {
@@ -178,6 +178,10 @@
     &:hover {
       background-color: @basic-blue-light;
     }
+  }
+
+  &--dots {
+    padding: 0;
   }
 }
 

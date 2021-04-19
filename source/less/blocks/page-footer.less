@@ -4,7 +4,15 @@
   background-color: @white;
   border-radius: 25px 25px 0 0;
 
-  &--index {
+  @media (min-width: @tablet-width) {
+    border-radius: 40px 40px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 58px 58px 0 0;
+  }
+
+  &--move-up {
     margin-top: -75px;
 
     @media (min-width: @tablet-width) {

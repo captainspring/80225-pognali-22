@@ -46,6 +46,12 @@
   }
 }
 
+.form__item {
+  &--button {
+    line-height: 0;
+  }
+}
+
 .form__label {
   display: inline-block;
   margin-bottom: 8px;
@@ -85,6 +91,13 @@
     @media (min-width: @desktop-width) {
       padding-right: 0;
     }
+  }
+
+  &--button {
+    margin: 0;
+    padding: 0;
+    .circle(31px);
+    background-color: @white;
   }
 }
 

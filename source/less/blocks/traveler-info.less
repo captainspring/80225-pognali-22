@@ -1,14 +1,51 @@
 .traveler-info__title {
+  position: relative;
+  left: 15px;
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   text-transform: lowercase;
+  background-color: @white;
+  transform: translateY(-73%);
+
+  @media (min-width: @tablet-width) {
+    left: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .traveler-info__list {
   margin: 0;
-  padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--padding {
+    padding: 0 26px 0 65px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 54px 20px 39px 0;
+    }
+  }
+
+  &--countries {
+    @media (min-width: @desktop-width) {
+      flex-direction: column;
+    }
+  }
 }
 
 .traveler-info__item {
@@ -17,4 +54,27 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 48px;
+    .fontsize(20px);
+
+    &:not(:last-child) {
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 54px;
+
+    &:not(:last-child) {
+      margin: 0;
+      margin-bottom: 16px;
+    }
+  }
 }

@@ -7,8 +7,26 @@
   list-style: none;
 }
 
-.transport-list__item:not(:last-child) {
-  margin-right: 13px;
+.transport-list__item {
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  &--blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle(32px);
+    background-color: @basic-steelblue;
+
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+    }
+  }
+}
+
+.transport-list .transport-list__item--blue {
+  margin-right: 0;
 }
 
 .transport-list__icon {
