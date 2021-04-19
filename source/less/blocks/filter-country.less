@@ -223,7 +223,7 @@
   border-top: 0;
   cursor: pointer;
 
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-width-only) {
     &:nth-child(-n+5) {
       border-top: 1px solid @special-grey-border;
     }
@@ -252,7 +252,7 @@
 }
 
 .filter-country .filter-country__first-letter--current {
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-width-only) {
     border: 1px solid @basic-blue-light;
   }
 }

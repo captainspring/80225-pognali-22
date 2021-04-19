@@ -14,7 +14,7 @@
   }
 
   &--no-side-padding {
-    @media (max-width: 767px) {
+    @media (max-width: @mobile-width-only) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -39,7 +39,7 @@
 }
 
 .step--no-side-padding .step__title {
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-width-only) {
     padding: 0 25px;
   }
 }
@@ -64,7 +64,7 @@
 }
 
 .step--no-side-padding .step__description {
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-width-only) {
     padding: 0 25px;
   }
 }
@@ -115,7 +115,7 @@
 }
 
 .step--no-side-padding .step__buttons {
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-width-only) {
     padding: 0 25px;
   }
 }
