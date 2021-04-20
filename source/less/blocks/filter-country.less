@@ -75,6 +75,10 @@
   background-color: @special-bluegrey;
   list-style: none;
 
+  @media (max-width: @mobile-width-only) {
+    z-index: @z-index-filter-country-tabs;
+  }
+
   @media (min-width: @tablet-width) {
     order: 1;
     position: static;
