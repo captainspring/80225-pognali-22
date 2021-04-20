@@ -1,0 +1,31 @@
+.lost {
+  padding: 28px 25px;
+  min-height: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 54px 131px;
+  }
+}
+
+.lost__text {
+  margin: 0 0 38px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 440px;
+  }
+}
+
+.lost__link {
+  font-weight: 700;
+  .fontsize(16px);
+  color: @special-blue;
+  .interactions(@special-blue);
+
+  @media (min-width: @tablet-width) {
+    .fontsize(20px);
+  }
+}
