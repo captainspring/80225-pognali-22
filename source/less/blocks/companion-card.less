@@ -1,4 +1,6 @@
 .companion-card {
+  display: flex;
+  flex-direction: column;
   width: 270px;
   color: @special-grey;
   background-color: @white;
@@ -11,15 +13,17 @@
 }
 
 .companion-card__avatar {
+  order: 2;
   display: block;
   border-radius: 10px 10px 0 0;
 }
 
 .companion-card__info {
+  order: 3;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 27px 45px 20px;
+  padding: 27px 45px 12px;
 
   @media (min-width: @tablet-width) {
     padding: 27px 31px 27px;
@@ -42,7 +46,7 @@
 
 .companion-card__tags {
   order: 3;
-  margin: 0 0 14px;
+  margin: 0 0 15px;
   font-weight: 400;
   line-height: 18px;
 
@@ -59,10 +63,19 @@
 .companion-card__flags {
   order: 1;
   position: relative;
-  top: -40px;
-  margin-bottom: -15px;
+  top: -38px;
+  margin-bottom: -24px;
 }
 
 .companion-card__transport-list {
   order: 4;
+  padding-left: 2px;
+}
+
+.companion-card__badge {
+  order: 1;
+  position: relative;
+  top: 77px;
+  left: 17px;
+  margin-top: -60px;
 }

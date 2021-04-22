@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
-  padding: 99px 25px 41px;
+  padding: 118px 25px 29px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -38,16 +38,36 @@
 
 .menu__toggle {
   position: fixed;
-  top: 25px;
-  right: 25px;
+  top: 23px;
+  right: 26px;
   z-index: @z-index-menu-toggle;
   align-self: flex-end;
-  width: 19px;
-  height: 19px;
-  background-image: url("../../img/ui/icon_menu_close.svg");
+  width: 25px;
+  height: 25px;
   background-repeat: no-repeat;
+  background-position: 0 0;
   background-color: transparent;
   border: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: @white;
+    border-radius: 1px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 8px;
+  }
 
   @media (min-width: @tablet-width) {
     top: 55px;
@@ -62,6 +82,12 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.menu--show .menu__toggle {
+  position: absolute;
+  right: 21px;
+  background-image: url("../../img/ui/icon_menu_close.svg");
 }
 
 .menu__navigation {
@@ -104,7 +130,7 @@
 
 .menu__contacts {
   display: none;
-  margin-bottom: 41px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -150,7 +176,7 @@
 
 .menu__user-buttons {
   position: relative;
-  top: 355px;
+  top: 339px;
 
   @media (min-width: @tablet-width) {
     position: fixed;
@@ -176,7 +202,7 @@
 /* Menu -- no JS */
 .menu--no-js {
   position: static;
-  padding: 99px 0 41px;
+  padding: 78px 0 29px;
 
   @media (min-width: @desktop-width) {
     position: relative;

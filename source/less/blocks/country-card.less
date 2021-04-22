@@ -31,7 +31,10 @@
   order: 2;
   position: relative;
   .move-up(-10px);
-  padding: 26px 24px 24px;
+  display: grid;
+  grid-template-areas: "name count"
+    "slogan count";
+  grid-template-columns: 2fr 83px;
   background-color: @white;
   border-radius: 10px;
 
@@ -49,7 +52,9 @@
 }
 
 .country-card__name {
-  margin: 0 0 2px;
+  grid-area: name;
+  margin: 0;
+  padding: 26px 24px 2px;
   font-weight: 700;
   .fontsize(21px);
   color: @black;
@@ -61,7 +66,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: -13px;
+    top: -11px;
     left: 25px;
     display: block;
     width: 35px;
@@ -79,7 +84,9 @@
 }
 
 .country-card__slogan {
+  grid-area: slogan;
   margin: 0;
+  padding: 0 25px 22px;
   font-weight: 500;
   line-height: 18px;
   color: fade(@special-grey, 30%);
@@ -87,13 +94,16 @@
   @media (min-width: @tablet-width) {
     .fontsize(20px);
   }
+
+  &--two-lines {
+    padding-bottom: 5px;
+  }
 }
 
 .country-card__counter {
-  position: absolute;
-  top: 28px;
-  right: 24px;
+  grid-area: count;
   margin: 0;
+  padding: 28px 10px 10px 17px;
   font-weight: 500;
   line-height: 20px;
   color: fade(@basic-blue, 30%);

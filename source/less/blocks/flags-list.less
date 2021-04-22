@@ -7,10 +7,18 @@
   list-style: none;
 }
 
-.flags-list__item:not(:last-child) {
-  margin-right: 20px;
+.flags-list__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 .flags-list__flag {
+  display: block;
+}
+
+.flags-list__flag:hover + .flags-list__tooltip {
   display: block;
 }

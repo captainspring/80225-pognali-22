@@ -15,6 +15,8 @@
 .level-badge__number {
   position: relative;
   top: 15px;
+  display: inline-block;
+  width: 100%;
   font-weight: 700;
   .fontsize(24px);
   color: @basic-blue-light;
@@ -30,10 +32,12 @@
 
 .level-badge__label {
   position: relative;
-  top: 30px;
+  top: 10px;
+  padding: 2px 3px 0;
   font-weight: 400;
   .fontsize(14px);
   color: @special-grey;
+  border-top: 1px solid @white;
 
   &--big {
     .fontsize(18px);
