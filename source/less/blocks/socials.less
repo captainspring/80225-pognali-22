@@ -7,6 +7,12 @@
   list-style: none;
 }
 
+.socials__item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    margin-right: 15px;
+  }
+}
+
 .socials__link {
   display: flex;
   justify-content: center;
@@ -33,11 +39,11 @@
 .socials--menu svg {
   height: 20px;
   width: 24px;
-}
 
-.socials--footer svg {
-  height: 18px;
-  width: 24px;
+  @media (min-width: @tablet-width) {
+    height: 28px;
+    width: 32px;
+  }
 }
 
 .socials__link:hover .socials__icon {
@@ -50,4 +56,23 @@
 
 .socials__link:active .socials__icon {
   opacity: 0.3;
+}
+
+// Socials in footer
+.socials--footer .socials__item {
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+
+.socials--footer svg {
+  height: 18px;
+  width: 24px;
+
+  @media (min-width: @tablet-width) {
+    height: 28px;
+  width: 30px;
+  }
 }

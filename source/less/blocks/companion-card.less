@@ -7,8 +7,10 @@
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
+    width: 285px;
     margin-left: 0;
     margin-right: 0;
+    border-radius: 20px;
   }
 }
 
@@ -16,6 +18,12 @@
   order: 2;
   display: block;
   border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .companion-card__info {
@@ -26,7 +34,7 @@
   padding: 27px 45px 12px;
 
   @media (min-width: @tablet-width) {
-    padding: 27px 31px 27px;
+    padding: 31px 31px 17px;
   }
 }
 
@@ -36,12 +44,44 @@
   font-weight: 700;
   .fontsize(21px);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 22px;
+  }
 }
 
 .companion-card__link {
+  position: relative;
+  display: inline-block;
   color: @basic-blue-light;
-
   .interactions(@basic-blue-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    display: inline-block;
+    .circle(6px);
+    vertical-align: middle;
+    background-color: @special-red-darker;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      left: -22px;
+      .circle(8px);
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: @special-green;
+    }
+  }
 }
 
 .companion-card__tags {
@@ -51,6 +91,7 @@
   line-height: 18px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -65,6 +106,10 @@
   position: relative;
   top: -38px;
   margin-bottom: -24px;
+
+  @media (min-width: @tablet-width) {
+    top: -43px;
+  }
 }
 
 .companion-card__transport-list {
@@ -78,4 +123,9 @@
   top: 77px;
   left: 17px;
   margin-top: -60px;
+
+  @media (min-width: @tablet-width) {
+    top: 80px;
+    left: 22px;
+  }
 }

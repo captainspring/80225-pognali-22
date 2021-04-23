@@ -2,10 +2,10 @@
   padding: 56px 0 0;
 
   @media (min-width: @tablet-width) {
-    padding-top: 124px;
+    padding-top: 126px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     padding-top: 121px;
   }
 }
@@ -15,6 +15,10 @@
   z-index: @z-index-address-container;
   background-color: @basic-yellow;
   border-radius: 25px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 56px;
+  }
 }
 
 .address__wrapper {
@@ -36,18 +40,37 @@
 }
 
 .address__address {
+  position: relative;
   margin: 0 0 32px;
   padding: 2px 0 0 62px;
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue-light;
-  background-image: url("../../img/backgrounds/map_mark.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("../../img/backgrounds/map_mark.svg");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 62px;
+    padding-left: 94px;
     .fontsize(28px);
+
+    &::before {
+      top: -20px;
+      width: 68px;
+      height: 68px;
+    }
   }
 
   @media (min-width: @desktop-width) {

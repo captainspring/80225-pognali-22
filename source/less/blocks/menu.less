@@ -16,7 +16,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     padding-top: 185px;
-    padding-bottom: 93px;
+    padding-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,7 +70,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 55px;
+    top: 61px;
+    right: -10px;
     align-self: flex-start;
     order: 1;
     width: 22px;
@@ -88,6 +89,15 @@
   position: absolute;
   right: 21px;
   background-image: url("../../img/ui/icon_menu_close.svg");
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: -13px;
+  }
 }
 
 .menu__navigation {
@@ -96,6 +106,7 @@
 
   @media (min-width: @tablet-width) {
     order: 3;
+    margin-bottom: 128px;
   }
 
   @media (min-width: @desktop-width) {
@@ -134,7 +145,8 @@
 
   @media (min-width: @tablet-width) {
     order: 3;
-    padding: 0 57px;
+    margin-bottom: 121px;
+    padding: 0 72px;
     .fontsize(28px);
   }
 
@@ -158,7 +170,7 @@
     order: 4;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 57px;
+    padding: 0 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -181,6 +193,7 @@
   @media (min-width: @tablet-width) {
     position: fixed;
     top: 40px;
+    right: 41px;
     order: 2;
   }
 
@@ -202,7 +215,11 @@
 /* Menu -- no JS */
 .menu--no-js {
   position: static;
-  padding: 78px 0 29px;
+  padding: 93px 0 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 82px;
+  }
 
   @media (min-width: @desktop-width) {
     position: relative;
@@ -217,6 +234,10 @@
 
 .menu--no-js .menu__navigation {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 56px;
+  }
 }
 
 .menu--no-js .menu__login {
@@ -231,6 +252,10 @@
 .menu--no-js .menu__contacts {
   display: block;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 56px;
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
@@ -238,6 +263,10 @@
 
 .menu--no-js .menu__socials {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 66px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -251,7 +280,8 @@
   margin-bottom: -40px;
 
   @media (min-width: @tablet-width) {
-    top: -140px;
+    top: -135px;
+    right: 0;
   }
 
   @media (min-width: @desktop-width) {
