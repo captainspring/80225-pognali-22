@@ -88,3 +88,21 @@
     }
   }
 }
+
+// Table in modal
+.table--modal .table__row {
+  padding: 10px 0 7px;
+
+  @media (min-width: @tablet-width) {
+    padding: 13px 0 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 12px;
+    border-top: 1px solid fade(@black, 5%);
+
+    &:last-child {
+      border-bottom: 1px solid fade(@black, 5%);
+    }
+  }
+}
