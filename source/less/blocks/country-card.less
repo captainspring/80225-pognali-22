@@ -10,6 +10,10 @@
     flex-direction: row;
     width: 616px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 558px;
+  }
 }
 
 .country-card__image {
@@ -52,6 +56,11 @@
     padding: 30px 50px 21px 30px;
     border-radius: 20px 0 0 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 374px;
+    padding-top: 24px;
+  }
 }
 
 .country-card__name {
@@ -62,12 +71,6 @@
   .fontsize(21px);
   color: @black;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 5px;
-    padding: 0;
-    .fontsize(24px);
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -77,13 +80,26 @@
     width: 35px;
     height: 24px;
     background-color: red;
+  }
 
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 5px;
+    padding: 0;
+    .fontsize(24px);
+
+    &::after {
       top: 17px;
       right: -36px;
       left: unset;
       width: 70px;
       height: 47px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      top: 23px;
+      right: -34px;
     }
   }
 }
@@ -102,6 +118,10 @@
     .fontsize(20px);
   }
 
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
+
   &--two-lines {
     padding-bottom: 5px;
 
@@ -109,6 +129,11 @@
       margin-bottom: 0;
       padding-right: 220px;
       padding-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 25px;
+      padding-right: 0;
     }
   }
 }
@@ -133,5 +158,6 @@
 
   @media (min-width: @desktop-width) {
     bottom: 27px;
+    padding-left: 31px;
   }
 }

@@ -26,7 +26,7 @@
       top: 40px;
       z-index: @z-index-about-rectangle;
       display: block;
-      width: "calc(100% - 91px)";
+      width: ~"calc(100% - 91px)";
       height: 212px;
       border-radius: 20px;
       background-color: @special-blue-darkest;
@@ -47,7 +47,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 190px 691px 163px 130px;
+    padding: 275px 691px 163px 130px;
+
+    &::before {
+      top: 213px;
+      left: 60px;
+      width: 212px;
+    }
+
+    &::after {
+      top: unset;
+      bottom: 0;
+      right: 60px;
+      width: 630px;
+      height: 665px;
+      background-image: url("../../img/backgrounds/desktop_about.png");
+    }
   }
 }
 
@@ -61,6 +76,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 57px;
+    padding-left: 0;
   }
 }
 
@@ -74,6 +90,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 38px;
+    padding-left: 0;
   }
 
   &--bold {
@@ -109,5 +126,9 @@
     display: block;
     width: 276px;
     margin-left: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }

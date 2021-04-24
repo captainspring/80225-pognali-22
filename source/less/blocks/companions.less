@@ -9,6 +9,11 @@
     background-image: url("../../img/backgrounds/tablet_companions.png");
     background-position: 35% 126px;
   }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/backgrounds/desktop_companions.png");
+    background-position: 60px 125px;
+  }
 }
 
 .companions__wrapper {
@@ -28,7 +33,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
     grid-row-gap: 0;
-    padding: 231px 60px 134px;
+    padding: 185px 57px 134px 51px;
   }
 }
 
@@ -44,6 +49,7 @@
 
   @media (min-width: @desktop-width) {
     grid-area: right-top;
+    padding: 0 78px;
   }
 }
 
@@ -61,7 +67,8 @@
 
   @media (min-width: @desktop-width) {
     grid-area: right-middle-1;
-    margin-bottom: 42px;
+    margin-bottom: 38px;
+    padding: 0 78px;
   }
 
   &--bold {
@@ -106,7 +113,7 @@
 
   @media (min-width: @desktop-width) {
     grid-area: left;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -117,7 +124,7 @@
     margin-bottom: 0;
 
     &:not(:last-child) {
-      margin-right: 50px;
+      margin-right: 60px;
     }
   }
 }
@@ -126,5 +133,7 @@
   @media (min-width: @desktop-width) {
     grid-area: right-bottom;
     align-self: end;
+    min-width: 280px;
+    margin-left: 80px;
   }
 }

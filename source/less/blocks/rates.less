@@ -9,7 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 107px;
-    padding-bottom: 165px;
+    padding-bottom: 156px;
   }
 }
 
@@ -53,6 +53,28 @@
       border-radius: 20px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 50px;
+
+    &::before {
+      right: 113px;
+      width: 446px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      display: block;
+      width: 198px;
+      height: 198px;
+      background-image: url("../../img/backgrounds/desktop_rates.png");
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .rates__link {
@@ -89,7 +111,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 73px;
+    top: -7px;
+    padding-left: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

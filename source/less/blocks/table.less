@@ -8,7 +8,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 51px 345px 51px 164px;
+    padding: 45px 271px 51px 164px;
   }
 }
 
@@ -29,12 +29,17 @@
     padding: 18px 0;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 19px 0;
-  }
-
   &:last-child {
     border-bottom: 1px solid fade(@black, 5%);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 0;
+    border: 0;
+
+    &:last-child {
+      border: 0;
+    }
   }
 
   &--counter {
@@ -52,14 +57,21 @@
       .circle(34px);
       .fontsize(16px);
       color: @white;
+    }
 
-      @media (min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
+      &::after {
         top: -2px;
-        left: -89px;
-        .circle(68px);
-        .fontsize(28px);
         right: unset;
         left: -90px;
+        .circle(68px);
+        .fontsize(28px);
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        top: 1px;
       }
     }
 

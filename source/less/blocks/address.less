@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 121px;
+    padding-top: 118px;
   }
 }
 
@@ -17,7 +17,7 @@
   border-radius: 25px;
 
   @media (min-width: @tablet-width) {
-    border-radius: 56px;
+    border-radius: 0 0 56px 56px;
   }
 }
 
@@ -74,15 +74,24 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 1px;
     margin-bottom: 0;
-    padding-left: 346px;
+    padding-top: 0;
+    padding-left: 270px;
+
+    &::before {
+      top: -32px;
+      left: 149px;
+      width: 90px;
+      height: 90px;
+    }
   }
 }
 
 .address__button {
   @media (min-width: @desktop-width) {
-    width: 324px;
-    padding-right: 63px;
+    width: 325px;
+    padding-right: 62px;
   }
 }
 
