@@ -1,7 +1,12 @@
 .about {
-  background-image: url("../../img/backgrounds/about-mobile.png");
+  background-image: url("../../img/backgrounds/mobile_about.png");
+  background-position: 70% 0;
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: -85px;
@@ -9,14 +14,55 @@
 }
 
 .about__wrapper {
-  padding: 33px 50px 82px;
+  position: relative;
+  padding: 33px 50px 81px;
 
   @media (min-width: @tablet-width) {
-    padding: 41px 385px 89px 74px;
+    padding: 81px 381px 89px 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      z-index: @z-index-about-rectangle;
+      display: block;
+      width: ~"calc(100% - 91px)";
+      height: 212px;
+      border-radius: 20px;
+      background-color: @special-blue-darkest;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 88px;
+      right: 1%;
+      z-index: @z-index-about-rectangle;
+      display: block;
+      width: 376px;
+      height: 548px;
+      background-image: url("../../img/backgrounds/tablet_about.png");
+      background-repeat: no-repeat;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 190px 691px 163px 130px;
+    padding: 275px 691px 163px 130px;
+
+    &::before {
+      top: 213px;
+      left: 60px;
+      width: 212px;
+    }
+
+    &::after {
+      top: unset;
+      bottom: 0;
+      right: 60px;
+      width: 630px;
+      height: 665px;
+      background-image: url("../../img/backgrounds/desktop_about.png");
+    }
   }
 }
 
@@ -25,10 +71,12 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
+    padding-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 57px;
+    padding-left: 0;
   }
 }
 
@@ -37,10 +85,12 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 31px;
+    padding-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 38px;
+    padding-left: 0;
   }
 
   &--bold {
@@ -61,11 +111,24 @@
   }
 }
 
+.about__text-break {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    display: block;
+  }
+}
+
 .about__button {
   display: none;
 
   @media (min-width: @tablet-width) {
     display: block;
     width: 276px;
+    margin-left: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }

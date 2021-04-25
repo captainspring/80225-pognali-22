@@ -1,7 +1,26 @@
 .tooltip {
+  position: absolute;
+  top: 37px;
+  left: 50%;
+  z-index: @z-index-tooltip;
   display: none;
   padding: 18px 25px;
   .fontsize(20px);
   color: @white;
   background-color: @special-blue-dark;
+  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 10px solid @special-blue-dark;
+    transform: translateX(-50%);
+  }
 }

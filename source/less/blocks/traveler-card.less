@@ -13,6 +13,7 @@
   padding: 15px 0 23px;
   background-color: @white;
   border-radius: 20px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     grid-template-areas: "avatar name name transport"
@@ -20,7 +21,7 @@
       "avatar button likes level"
       "countries countries countries countries";
     grid-template-columns: 250px 150px 199px 85px;
-    grid-template-rows: min-content min(85px) 60px min-content;
+    grid-template-rows: min-content minmax(85px, 100%) minmax(60px, 100%) min-content;
     width: 688px;
     padding: 35px 0 25px;
   }
@@ -30,7 +31,7 @@
       "avatar tags tags countries countries"
       "avatar button likes transport level";
     grid-template-columns: 339px 150px 185px 172px 103px;
-    grid-template-rows: min-content min(90px) min-content;
+    grid-template-rows: min-content minmax(90px, 100%) min-content;
     width: 949px;
     padding: 0;
   }

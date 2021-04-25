@@ -8,12 +8,13 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 71px;
-    padding: 0 57px;
+    padding: 0 71px;
   }
 
   @media (min-width: @desktop-width) {
     width: unset;
     .fontsize(20px);
+    padding: 0;
   }
 }
 
@@ -23,15 +24,21 @@
   list-style: none;
 
   @media (min-width: @desktop-width) {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     min-height: 50px;
+    padding-top: 2px;
+    padding-left: 105px;
 
     &::before {
       content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
       display: block;
-      width: 40px;
+      width: 60px;
       height: 2px;
       margin-right: 45px;
       background-color: @white;

@@ -5,14 +5,16 @@
   padding: 25px 25px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 40px 40px 0;
+    padding: 40px 41px 0;
   }
 
   @media (min-width: @desktop-width) {
+    position: fixed;
+    z-index: @z-index-top-bar;
     width: 1440px;
     margin-right: auto;
     margin-left: auto;
-    padding: 46px 58px 0;
+    padding: 49px 60px 0;
     background-color: transparent;
   }
 
@@ -20,6 +22,8 @@
     background-color: @white;
 
     @media (min-width: @desktop-width) {
+      position: static;
+      padding: 60px 60px 0;
       background-color: transparent;
     }
   }
@@ -27,7 +31,7 @@
 
 .top-bar__logo {
   position: fixed;
-  top: 27px;
+  top: 18px;
   left: 25px;
   z-index: @z-index-top-bar-logo;
 
@@ -35,8 +39,14 @@
     top: 45px;
     left: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    left: 60px;
+  }
 }
 
+// No JS
 .top-bar--no-js .top-bar__logo {
   position: relative;
   top: 0;

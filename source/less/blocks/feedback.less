@@ -1,12 +1,13 @@
 .feedback {
-  padding: 97px 25px 29px;
+  padding: 97px 25px 28px;
 
   @media (min-width: @tablet-width) {
-    padding: 133px 36px 60px;
+    .move-up(-55px);
+    padding: 131px 36px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 208px 75px 103px;
+    padding: 164px 75px 104px;
   }
 }
 
@@ -24,30 +25,43 @@
 }
 
 .feedback__text {
-  margin: 0 0 17px;
-  padding: 0 35px;
+  margin: 0 0 28px;
+  padding: 0 25px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
+    line-height: 31px;
   }
 
   &:nth-of-type(2) {
+    margin-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 37px;
+    }
+
     @media (min-width: @desktop-width) {
-      margin-bottom: 43px;
+      margin-bottom: 41px;
     }
   }
 }
 
+.feedback__text-break {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .feedback__form {
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 60px;
+    margin: 0 40px 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -74,6 +88,11 @@
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
+    padding-left: 40px;
     .fontsize(28px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
   }
 }

@@ -8,8 +8,10 @@
 }
 
 .transport-list__item {
+  position: relative;
+
   &:not(:last-child) {
-    margin-right: 13px;
+    margin-right: 11px;
   }
 
   &--blue {
@@ -35,4 +37,8 @@
   &--active {
     fill: @special-blue-dark;
   }
+}
+
+.transport-list__icon:hover + .transport-list__tooltip {
+  display: block;
 }

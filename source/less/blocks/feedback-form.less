@@ -2,14 +2,15 @@
   display: grid;
   grid-template-columns: 1fr 60px;
   background-color: @white;
-  border-radius: 20px;
+  border-radius: 11px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 80px;
+    border-radius: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 330px;
+    grid-template-columns: 1fr 324px;
   }
 }
 
@@ -27,7 +28,7 @@
   border-radius: 20px 0 0 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 28px 36px;
+    padding: 28px 36px 26px;
     .fontsize(24px);
   }
 

@@ -4,13 +4,12 @@
   background-color: @basic-blue-other-dark;
 
   @media (min-width: @tablet-width) {
-    padding: 0 72px;
+    padding: 0 360px 0 73px;
     background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
     width: 288px;
-    padding: 0 83px 0 0;
   }
 }
 
@@ -19,7 +18,6 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
-    padding-right: 360px;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,7 +32,6 @@
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
-    padding-right: 404px;
     font-size: 21px;
     line-height: 25px;
   }
@@ -42,5 +39,11 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     line-height: 24px;
+  }
+}
+
+.review__author-break {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }

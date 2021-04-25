@@ -9,14 +9,14 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
-  padding: 99px 25px 41px;
+  padding: 118px 25px 29px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
     padding-top: 185px;
-    padding-bottom: 93px;
+    padding-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,6 +24,7 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     padding: 0;
+    padding-left: 215px;
     background-color: transparent;
   }
 
@@ -38,19 +39,40 @@
 
 .menu__toggle {
   position: fixed;
-  top: 25px;
-  right: 25px;
+  top: 23px;
+  right: 26px;
   z-index: @z-index-menu-toggle;
   align-self: flex-end;
-  width: 19px;
-  height: 19px;
-  background-image: url("../../img/ui/icon_menu_close.svg");
+  width: 25px;
+  height: 25px;
   background-repeat: no-repeat;
+  background-position: 0 0;
   background-color: transparent;
   border: 0;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: @white;
+    border-radius: 1px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 8px;
+  }
+
   @media (min-width: @tablet-width) {
-    top: 55px;
+    top: 61px;
+    right: -10px;
     align-self: flex-start;
     order: 1;
     width: 22px;
@@ -64,20 +86,36 @@
   }
 }
 
+.menu--show .menu__toggle {
+  position: absolute;
+  right: 21px;
+  background-image: url("../../img/ui/icon_menu_close.svg");
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: -13px;
+  }
+}
+
 .menu__navigation {
   display: none;
   margin-bottom: 51px;
 
   @media (min-width: @tablet-width) {
     order: 3;
+    margin-bottom: 128px;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
     order: unset;
     margin-bottom: 0;
-    padding-left: 242px;
-    padding-right: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
@@ -104,11 +142,12 @@
 
 .menu__contacts {
   display: none;
-  margin-bottom: 41px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     order: 3;
-    padding: 0 57px;
+    margin-bottom: 121px;
+    padding: 0 72px;
     .fontsize(28px);
   }
 
@@ -132,7 +171,7 @@
     order: 4;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 57px;
+    padding: 0 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -150,17 +189,19 @@
 
 .menu__user-buttons {
   position: relative;
-  top: 355px;
+  top: 339px;
 
   @media (min-width: @tablet-width) {
     position: fixed;
     top: 40px;
+    right: 41px;
     order: 2;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     top: 0;
+    right: 0;
     display: grid;
   }
 }
@@ -176,12 +217,17 @@
 /* Menu -- no JS */
 .menu--no-js {
   position: static;
-  padding: 99px 0 41px;
+  padding: 93px 0 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 82px;
+  }
 
   @media (min-width: @desktop-width) {
     position: relative;
     .move-up(-53px);
     padding: 0;
+    padding-left: 215px;
   }
 }
 
@@ -191,6 +237,10 @@
 
 .menu--no-js .menu__navigation {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 25px;
+  }
 }
 
 .menu--no-js .menu__login {
@@ -205,6 +255,10 @@
 .menu--no-js .menu__contacts {
   display: block;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 56px;
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
@@ -212,6 +266,10 @@
 
 .menu--no-js .menu__socials {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 66px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -225,7 +283,8 @@
   margin-bottom: -40px;
 
   @media (min-width: @tablet-width) {
-    top: -140px;
+    top: -135px;
+    right: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -235,7 +294,7 @@
 
 // Inner pages
 .menu--inner-page .menu__user-buttons {
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
