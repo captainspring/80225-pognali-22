@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px 60px 150px;
+    padding: 55px 60px 199px;
   }
 }
 
@@ -42,8 +42,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    // top: 252px;
-    // right: 267px;
+    top: unset;
+    right: 207px;
+    bottom: -194px;
+    z-index: @z-index-steps-tracker;
   }
 }
 
@@ -79,4 +81,9 @@
 
 .add-plan__form {
   grid-area: form;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    .move-up(-45px);
+  }
 }

@@ -5,7 +5,7 @@
     "tags tags";
   justify-items: center;
   row-gap: 18px;
-  padding: 24px 25px 34px;
+  padding: 24px 25px 17px;
 
   @media (min-width: @tablet-width) {
     grid-template-areas: "badge empty empty avatar"
@@ -23,7 +23,7 @@
     grid-template-areas: "empty badge avatar"
       "none none button"
       "tags tags tags";
-    grid-template-columns: 860px 95px 285px;
+    grid-template-columns: 830px 140px 285px;
     grid-row-gap: 0;
     align-items: center;
     margin-bottom: -190px;
@@ -43,6 +43,11 @@
     justify-self: start;
     width: 94px;
     height: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -5px;
+    left: 0;
   }
 }
 
@@ -65,6 +70,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    justify-self: start;
     width: 190px;
     height: 190px;
     border-radius: 7px 7px 0 0;
@@ -81,8 +87,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    justify-self: start;
     width: 190px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
+    padding: 17px 15px 13px 15px;
     border-radius: 0 0 10px 10px;
   }
 }

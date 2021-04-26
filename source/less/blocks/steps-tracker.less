@@ -50,7 +50,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 27px;
+    margin-right: 0;
+    margin-bottom: 19px;
+
+    &:nth-of-type(2) {
+      left: 0;
+    }
+
+    &:nth-of-type(3) {
+      left: 0;
+    }
+
+    &::marker {
+      font-size: 27px;
+    }
   }
 
   &--current {
@@ -65,12 +78,15 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: @black;
   opacity: 0.6;
 
   @media (min-width: @desktop-width) {
-    display: inline;
+    position: relative;
+    left: 6px;
+    display: inline-block;
   }
 }
 

@@ -8,10 +8,6 @@
   @media (min-width: @tablet-width) {
     position: static;
   }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 62px;
-  }
 }
 
 // Rows of buttons
@@ -61,6 +57,23 @@
         border: 1px solid @special-grey-border;
       }
     }
+
+    @media (min-width: @desktop-width) {
+      // Add country button row on desktop
+      &:last-child {
+        grid-template-rows: 128px;
+
+        // Add country -- fake border on desktop
+        &::before {
+          background: @special-grey-border-dark;
+        }
+
+        // Add country -- circle on desktop
+        &::after {
+          left: -7px;
+        }
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -91,6 +104,10 @@
 .select-country__item:first-child .select-country__controls {
   @media (min-width: @tablet-width) {
     grid-template-rows: 112px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-rows: 132px;
   }
 }
 
@@ -126,6 +143,10 @@
     &:hover {
       border-color: @special-border-blue-fade;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 6%;
   }
 
   &--picked {
@@ -196,14 +217,14 @@
     border-left: 1px solid @special-grey-border-dark;
     border-radius: 0;
 
-    // Circle
+    // Circle on tablet
     &::before {
       bottom: 31px;
       left: -9px;
       .circle(14px);
     }
 
-    // Flag
+    // Flag on tablet
     &::after {
       content: "";
       position: absolute;
@@ -225,6 +246,18 @@
       &::after {
         display: block;
       }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    // Circle on desktop
+    &::before {
+      left: -8px;
+    }
+
+    // Flag on desktop
+    &::after {
+      left: 39px;
     }
   }
 }

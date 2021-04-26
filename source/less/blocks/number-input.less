@@ -12,8 +12,8 @@
 
   @media (min-width: @desktop-width) {
     grid-template-areas: "minus number plus units";
-    grid-template-columns: 58px min-content 58px min-content;
-    min-width: 180px;
+    grid-template-columns: 43px 96px 43px min-content;
+    min-width: 254px;
   }
 }
 
@@ -65,8 +65,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 58px;
-    padding: 26px 10px;
+    padding: 24px 10px 22px 22px;
     line-height: 18px;
   }
 }
@@ -96,7 +95,8 @@
 
   @media (min-width: @desktop-width) {
     align-self: center;
-    margin-left: 35px;
+    margin-left: 34px;
+    letter-spacing: unset;
     color: @basic-blue-light;
   }
 
@@ -107,7 +107,7 @@
   }
 
   &--days {
-    @media (min-width: @tablet-width) {
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
       position: relative;
       right: -3px;
       justify-self: end;

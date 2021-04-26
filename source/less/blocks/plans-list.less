@@ -60,6 +60,11 @@
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    &::after {
+      top: 40px;
+      left: 43px;
+    }
   }
 }
 
@@ -81,7 +86,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 36px 36px 36px 95px;
+    padding: 36px 36px 37px 95px;
     border: 0;
   }
 }
@@ -118,7 +123,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 40px;
-    padding-bottom: 38px;
+    padding-bottom: 37px;
     text-align: left;
   }
 
@@ -128,6 +133,10 @@
       padding-left: 40px;
       letter-spacing: 0.1em;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 15px;
+    }
   }
 
   &--dates {
@@ -135,6 +144,10 @@
       grid-area: dates;
       padding-left: 13px;
       letter-spacing: 0.06em;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 16px;
     }
   }
 }
@@ -163,7 +176,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 40px 42px 38px;
+    padding: 40px 39px 37px;
     text-align: right;
   }
 }

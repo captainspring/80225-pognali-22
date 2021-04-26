@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 775px;
+    max-width: 776px;
   }
 }
 
@@ -70,7 +70,7 @@
 
   @media (min-width: @desktop-width) {
     &:not(:last-child) {
-      padding-bottom: 47px;
+      padding-bottom: 63px;
     }
   }
 }
@@ -86,6 +86,7 @@
   transform: translateY(-50%);
   white-space: nowrap;
 
+  // Dot
   &::before {
     content: "";
     position: absolute;
@@ -97,6 +98,7 @@
     .gradient-white(28%);
   }
 
+  // Flag
   &::after {
     content: "";
     position: absolute;
@@ -115,6 +117,11 @@
     font-weight: 700;
     .fontsize(30px);
 
+    &:last-of-type {
+      margin-bottom: 19px;
+    }
+
+    // Flag on tablet
     &::after {
       top: -9px;
       width: 70px;
@@ -124,6 +131,12 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 37px;
+
+    // Flag on desktop
+    &::after {
+      top: -5px;
+      right: -136px;
+    }
   }
 }
 
@@ -163,7 +176,7 @@
 
   @media (min-width: @desktop-width) {
     width: 730px;
-    padding: 26px 25px;
+    padding: 26px 19px 26px 25px;
     line-height: 20px;
   }
 
