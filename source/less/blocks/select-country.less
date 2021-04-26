@@ -119,6 +119,7 @@
     top: 1px;
     grid-column-end: 2;
     min-width: 369px;
+    min-height: 70px;
     margin-right: 7%;
     padding-right: 63px;
 
@@ -238,7 +239,9 @@
 
 // Circle -- if dropdown menu is open
 .select-country__controls--active .select-country__flag {
-  display: none;
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
 
 // Circle -- specific positioning
@@ -310,12 +313,13 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    top: 70px;
+    top: 84px;
     grid-template-areas: "close close"
       "letters countries";
-    grid-template-columns: minmax(373px, 489px) minmax(206px, 241px);
+    grid-template-columns: minmax(366px, 489px) minmax(201px, 241px);
     width: unset;
-    min-width: 578px;
+    min-width: 575px;
+    box-shadow: 0 8px 16px @special-shadow-darker;
   }
 
   &--show {
@@ -336,7 +340,8 @@
   background-color: @white;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 79px 33px 27px;
+    grid-template-rows: repeat(5, 69px);
+    padding: 35px 80px 33px 27px;
     border-right: 1px solid @special-grey-border-other;
   }
 
@@ -364,8 +369,6 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    min-width: 55px;
-    min-height: 70px;
     .fontsize(20px);
 
     &:nth-child(-n+5) {
@@ -423,7 +426,7 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding: 37px 11px 33px 25px;
+    padding: 36px 11px 33px 24px;
     border: 0;
   }
 
@@ -436,7 +439,7 @@
   margin-bottom: 4px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 }
 
