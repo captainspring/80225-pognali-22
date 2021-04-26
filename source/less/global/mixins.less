@@ -33,3 +33,10 @@
   top: @value;
   margin-bottom: @value;
 }
+
+.gradient-white(@end) {
+  background: svg-gradient(to right, fade(@white, 0%) 0%, @white @end);
+  background-position: 100% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
