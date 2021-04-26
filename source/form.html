@@ -140,7 +140,7 @@
             <fieldset class="info__fieldset info__fieldset--tags form__fieldset">
               <legend class="info__legend form__legend">Тэги</legend>
               <label class="form__label form__label--container">
-                <textarea class="form__textarea" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко расскажите о себе с помощью 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+                <textarea class="form__textarea form__textarea--tags" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко расскажите о себе с помощью 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
               </label>
             </fieldset>
 
@@ -221,7 +221,7 @@
 
           <form class="add-plan__form form" id="add-plan" method="POST" action="https://echo.htmlacademy.ru/">
             <ul class="add-plan__steps">
-              <li class="add-plan__step step step--current">
+              <li class="add-plan__step step step--first step--current">
                 <h3 class="step__title" id="step1"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
 
                 <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
@@ -234,7 +234,7 @@
                     <button class="number-input__button number-input__button--minus" type="button" aria-label="На одного попутчика меньше"></button>
                     <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
                     <button class="number-input__button number-input__button--plus" type="button" aria-label="На одного попутчика больше"></button>
-                    <span class="number-input__units" aria-hidden="true">Чел.</span>
+                    <span class="number-input__units number-input__units--people" aria-hidden="true">Чел.</span>
                   </div>
 
                   <div class="form__checkbox-kids">
@@ -252,7 +252,7 @@
                       <button class="number-input__button number-input__button--minus" type="button" aria-label="На один день меньше"></button>
                       <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1" step="1">
                       <button class="number-input__button number-input__button--plus" type="button" aria-label="На один день больше"></button>
-                      <span class="number-input__units" aria-hidden="true">Дн.</span>
+                      <span class="number-input__units number-input__units--days" aria-hidden="true">Дн.</span>
                     </div>
                   </div>
 
@@ -323,10 +323,10 @@
                 <a class="form__button button button--index button--mobile-round button--short" href="#step2">Следующий шаг</a>
               </li>
 
-              <li class="add-plan__step step">
+              <li class="add-plan__step step step--second">
                 <h3 class="step__title" id="step2"><span class="step__number">Шаг 2.</span> Маршрут</h3>
 
-                <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+                <p class="step__description">Укажите страны, которые вы хотели бы посетить. <br class="step_description-break">Это может быть одна или сразу несколько.</p>
 
                 <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--countries">
                   <legend class="visually-hidden">Страны</legend>
@@ -453,7 +453,7 @@
                 </div>
               </li>
 
-              <li class="add-plan__step step step--no-side-padding">
+              <li class="add-plan__step step step--third step--no-side-padding">
                 <h3 class="step__title" id="step3"><span class="step__number">Шаг 3.</span> Развлечения</h3>
 
                 <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
@@ -470,7 +470,7 @@
 
                     <li class="form__item descriptions__item">
                       <label class="descriptions__country descriptions__country--czech">Чехия</label>
-                      <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" required aria-label="Ваш план действий в этой стране">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" required aria-label="Ваш план действий в этой стране">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
                     </li>
                   </ul>
                 </fieldset>
