@@ -186,7 +186,7 @@
 // Country -- choice popup
 .select-country__choice-container {
   position: absolute;
-  top: 42px;
+  top: 64px;
   z-index: @z-index-country-choice-container;
   display: none;
   box-sizing: border-box;
@@ -231,7 +231,7 @@
 }
 
 .select-country__first-letter {
-  padding: 12px;
+  padding: 12px 12px 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -298,7 +298,7 @@
 .select-country__list {
   grid-area: countries;
   margin: 0;
-  padding: 20px 19px;
+  padding: 19px 18px 10px;
   background-color: @white;
   border: 1px solid @special-grey-border;
   border-top: 0;
@@ -316,6 +316,8 @@
 }
 
 .select-country__list-item {
+  margin-bottom: 4px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 10px;
   }
@@ -356,6 +358,7 @@
 
 // Add country button
 .select-country__add-button {
+  position: relative;
   width: 100%;
   padding: 13px 65px 11px 12px;
   text-align: left;
@@ -364,6 +367,16 @@
 
   &:hover {
     background-color: @special-blue-light;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    right: 49px;
+    display: block;
+    .circle(8px);
+    border: 1px solid @special-grey-border;
   }
 
   @media (min-width: @tablet-width) {
