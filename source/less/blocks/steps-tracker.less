@@ -25,8 +25,19 @@
 }
 
 .steps-tracker__item {
+  position: relative;
+
+  &:nth-of-type(2) {
+    left: -5px;
+  }
+
+  &:nth-of-type(3) {
+    left: -10px;
+  }
+
   &::marker {
     display: inline;
+    font-size: 20px;
     color: fade(@basic-blue-light, 30%);
   }
 

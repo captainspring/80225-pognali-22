@@ -31,11 +31,19 @@
   }
 }
 
+.number-input:hover .number-input__button {
+  border-color: @special-border-blue-fade;
+}
+
+.number-input:active .number-input__button {
+  border-color: @basic-blue;
+}
+
 .number-input__input {
   grid-area: number;
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 16px 13px;
+  padding: 15px 16px 11px 31px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -57,10 +65,20 @@
   }
 }
 
+.number-input:hover .number-input__input {
+  border-color: @special-border-blue-fade;
+}
+
+.number-input:active .number-input__input {
+  border-color: @basic-blue;
+}
+
 .number-input__units {
   grid-area: units;
+  justify-self: end;
   font-weight: 500;
   .fontsize(16px);
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: fade(@basic-blue-light, 30%);
 

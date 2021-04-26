@@ -1,6 +1,10 @@
 .app-plan__wrapper {
   position: relative;
-  padding: 30px 25px 100px;
+  display: grid;
+  grid-template-areas: "title steps"
+    "form form";
+  grid-template-columns: 1fr min-content;
+  padding: 30px 25px 108px;
 
   @media (min-width: @tablet-width) {
     padding: 53px 75px 114px;
@@ -12,7 +16,8 @@
 }
 
 .add-plan__title {
-  padding-right: 60px;
+  grid-area: title;
+  padding-right: 20px;
 }
 
 .add-plan .add-plan__title {
@@ -22,18 +27,18 @@
 }
 
 .add-plan__steps-tracker {
-  position: absolute;
-  top: 30px;
-  right: 43px;
+  grid-area: steps;
+  margin-top: 1px;
+  margin-right: 18px;
 
   @media (min-width: @tablet-width) {
-    top: 66px;
-    right: 73px;
+    // top: 66px;
+    // right: 73px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 252px;
-    right: 267px;
+    // top: 252px;
+    // right: 267px;
   }
 }
 
@@ -53,4 +58,8 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 44px;
   }
+}
+
+.add-plan__form {
+  grid-area: form;
 }
