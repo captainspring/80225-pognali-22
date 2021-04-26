@@ -217,9 +217,10 @@
 /* Menu -- no JS */
 .menu--no-js {
   position: static;
-  padding: 93px 0 29px;
+  padding: 78px 0 29px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 93px;
     padding-bottom: 82px;
   }
 
@@ -239,7 +240,11 @@
   display: block;
 
   @media (min-width: @tablet-width) {
-    padding: 0 25px;
+    padding: 0 25px 0 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 25px;
   }
 }
 
