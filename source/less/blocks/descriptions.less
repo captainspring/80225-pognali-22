@@ -128,8 +128,14 @@
   border-radius: 4px;
   resize: none;
 
+  &:hover {
+    border-color: @special-border-blue-fade;
+  }
+
+  &:active,
   &:focus {
     color: @special-grey;
+    border-color: @black;
   }
 
   @media (min-width: @tablet-width) {
