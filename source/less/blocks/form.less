@@ -7,14 +7,14 @@
   border: 1px solid @special-grey-border;
   border-radius: 10px;
 
+  &:not(:last-of-type) {
+    margin-bottom: 17px;
+  }
+
   &--no-border {
     padding: 0;
     border: 0;
   }
-}
-
-.form__fieldset:not(:last-of-type) {
-  margin-bottom: 19px;
 }
 
 .form__legend {
@@ -65,6 +65,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 18px;
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: @tablet-width) {
@@ -103,6 +104,7 @@
 }
 
 .form__textarea {
+  box-sizing: border-box;
   width: 100%;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -122,12 +124,24 @@
     font-size: 20px;
     line-height: 22px;
   }
+
+  &--tags {
+    padding: 17px 24px 22px;
+
+    @media (min-width: @tablet-width) {
+      padding: 35px 39px 10px;
+    }
+  }
 }
 
 .form__input {
   &--number {
     position: relative;
     .move-up(-24px);
+
+    @media (min-width: @tablet-width) {
+      .move-up(-21px);
+    }
 
     @media (min-width: @desktop-width) {
       .move-up(0);
@@ -142,7 +156,7 @@
 
   @media (min-width: @tablet-width) {
     position: static;
-    padding-top: 25px;
+    padding-top: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -197,10 +211,6 @@
   font-size: 17px;
   line-height: 20px;
 
-  &::after {
-    display: none;
-  }
-
   @media (max-width: @mobile-width-only) {
     display: flex;
     justify-content: center;
@@ -208,6 +218,14 @@
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 13px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .fontsize(24px);
   }
 }
 
@@ -223,10 +241,27 @@
   color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: 2px;
+    right: -4px;
     width: unset;
     padding-left: 50px;
     font-size: 24px;
     line-height: 22px;
     text-transform: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-right: 12px solid @special-blue-dark;
+      transform: translateY(-73%);
+    }
   }
 }

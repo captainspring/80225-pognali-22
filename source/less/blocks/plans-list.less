@@ -2,12 +2,20 @@
   margin: 0;
   padding: 0;
   list-style-position: inside;
+
+  @media (min-width: @tablet-width) {
+    counter-reset: listCounter;
+  }
 }
 
 .plans-list__item {
   padding: 21px 25px 19px;
   background-color: @white;
   border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
   &::marker {
     display: inline;
@@ -19,28 +27,39 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
     display: grid;
     grid-template-areas: "title title title"
       "companions dates edit";
     grid-template-columns: repeat(3, 1fr);
     padding: 0;
+    counter-increment: listCounter;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+
+    &::after {
+      content: counter(listCounter) ".";
+      position: absolute;
+      top: 43px;
+      right: 33px;
+      display: block;
+      font-family: "Blogger Sans", "Tahoma", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      .fontsize(20px);
+      color: @basic-blue-light;
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-template-areas: "title companions dates edit";
     grid-template-columns: 1fr 176px 282px 186px;
-  }
-}
 
-.plans-list__item:not(:last-child) {
-  margin-bottom: 10px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 11px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 15px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -56,7 +75,7 @@
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 0;
-    padding: 40px 40px 34px;
+    padding: 40px 70px 33px 40px;
     .fontsize(24px);
     border-bottom: 1px solid @special-grey-border;
   }
@@ -75,6 +94,10 @@
   text-transform: uppercase;
   color: @basic-blue-light;
 
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+
   &:last-of-type {
     margin-bottom: 20px;
 
@@ -87,7 +110,10 @@
     box-sizing: border-box;
     padding: 20px 10px 14px;
     .fontsize(20px);
-    text-align: center;
+
+    &:not(:last-of-type) {
+      margin: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -99,21 +125,17 @@
   &--companions {
     @media (min-width: @tablet-width) {
       grid-area: companions;
+      padding-left: 40px;
+      letter-spacing: 0.1em;
     }
   }
 
   &--dates {
     @media (min-width: @tablet-width) {
       grid-area: dates;
+      padding-left: 13px;
+      letter-spacing: 0.06em;
     }
-  }
-}
-
-.plans-list__details:not(:last-of-type) {
-  margin-bottom: 5px;
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
   }
 }
 
@@ -134,8 +156,9 @@
 
   @media (min-width: @tablet-width) {
     grid-area: edit;
-    padding: 20px 10px 14px;
+    padding: 20px 10px 14px 30px;
     .fontsize(20px);
+    letter-spacing: 0.1em;
     text-align: center;
   }
 

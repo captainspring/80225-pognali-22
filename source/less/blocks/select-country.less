@@ -6,7 +6,7 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding-top: 42px;
+    position: static;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,43 +14,63 @@
   }
 }
 
+// Rows of buttons
 .select-country__item {
   position: relative;
 
-  &:last-child {
-    margin-top: 22px;
+  @media (max-width: @mobile-width-only) {
+    &:last-child {
+      margin-top: 22px;
+    }
+  }
 
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+    // Add country button row
+    &:last-child {
       display: grid;
+      grid-template-areas: "add-button decoration empty";
       grid-template-columns: minmax(396px, 775px) minmax(117px, 198px) 22px;
-      grid-template-rows: 70px;
+      grid-template-rows: 114px;
+      align-items: start;
 
+      // Add country -- fake border
+      &::before {
+        content: "";
+        grid-area: decoration;
+        display: block;
+        width: 1px;
+        height: 100%;
+        background: svg-gradient(to bottom, @special-grey-border-dark 60%, fade(@special-grey-border-dark, 0%) 100%);
+        background-position: 100% 0%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      // Add country -- circle
       &::after {
         content: "";
+        grid-area: decoration;
         position: relative;
-        top: 26px;
-        left: -7px;
+        top: 27px;
+        left: -8px;
         display: block;
         grid-column-start: 2;
         grid-column-end: 3;
-        .circle(14px);
+        .circle(12px);
         background-color: @basic-steelblue;
         border: 1px solid @special-grey-border;
       }
     }
   }
-}
-
-.select-country__item:not(:last-child) {
-  @media (min-width: @tablet-width) {
-    margin-bottom: 16px;
-  }
 
   @media (min-width: @desktop-width) {
-    width: 997px;
+    &:not(:last-child) {
+      width: 997px;
+    }
   }
 }
 
+// Inner container
 .select-country__controls {
   position: relative;
   display: grid;
@@ -60,8 +80,25 @@
   grid-template-rows: 22px 42px;
 
   @media (min-width: @tablet-width) {
+    grid-template-areas: "name flag deselect";
     grid-template-columns: minmax(396px, 776px) minmax(117px, 198px) 22px;
-    grid-template-rows: 70px;
+    grid-template-rows: 86px;
+    align-items: end;
+  }
+}
+
+// First row container
+.select-country__item:first-child .select-country__controls {
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 112px;
+  }
+}
+
+// Pick country container
+.select-country__item:nth-last-child(2) .select-country__controls {
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 98px;
+    align-items: center;
   }
 }
 
@@ -78,16 +115,21 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: 1px;
     grid-column-end: 2;
     min-width: 369px;
-    margin-right: 6%;
+    margin-right: 7%;
+    padding-right: 63px;
+
+    &:hover {
+      border-color: @special-border-blue-fade;
+    }
   }
 
   &--picked {
     grid-column-start: 1;
     grid-column-end: 2;
-    padding-right: 33px;
-    padding-left: 9px;
     letter-spacing: 0.09em;
 
     &::after {
@@ -100,9 +142,26 @@
       height: 100%;
       .gradient-white(33%);
     }
+
+    @media (max-width: @mobile-width-only) {
+      padding-right: 33px;
+      padding-left: 9px;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      letter-spacing: 0.1em;
+    }
   }
 }
 
+.select-country__controls:hover .select-country__pick-button {
+  @media (max-width: @mobile-width-only) {
+    border-color: @special-border-blue-fade;
+  }
+}
+
+// Inner parts
 .select-country__name {
   grid-area: name;
   display: inline-block;
@@ -116,6 +175,7 @@
   border-left: 0;
   border-radius: 4px;
 
+  // Circle
   &::before {
     content: "";
     position: absolute;
@@ -124,20 +184,51 @@
     display: block;
     .circle(8px);
     border: 1px solid @special-grey-border;
+    background-color: @white;
   }
 
   @media (min-width: @tablet-width) {
     position: relative;
+    align-self: stretch;
     display: block;
     border: 0;
+    border-left: 1px solid @special-grey-border-dark;
+    border-radius: 0;
 
+    // Circle
     &::before {
+      bottom: 31px;
+      left: -9px;
       .circle(14px);
-      left: -7px;
+    }
+
+    // Flag
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 11px;
+      left: 24px;
+      display: none;
+      width: 70px;
+      height: 47px;
+      background-color: @red;
+    }
+
+    &--bosnia {
+      &::after {
+        display: block;
+      }
+    }
+
+    &--czech {
+      &::after {
+        display: block;
+      }
     }
   }
 }
 
+// Circle -- if country is picked
 .select-country__pick-button--picked + .select-country__flag {
   &::before {
     background-color: @basic-blue-light;
@@ -145,18 +236,36 @@
   }
 }
 
+// Circle -- if dropdown menu is open
 .select-country__controls--active .select-country__flag {
   display: none;
 }
 
-.select-country__controls:hover .select-country__pick-button {
-  border-color: @special-border-blue-fade;
+// Circle -- specific positioning
+.select-country__item:first-child .select-country__flag {
+  @media (min-width: @tablet-width) {
+    &::before {
+      bottom: 30px;
+    }
+  }
+}
+
+.select-country__item:nth-last-child(2) .select-country__flag {
+  @media (min-width: @tablet-width) {
+    &::before {
+      bottom: 43px;
+      .circle(12px);
+    }
+  }
 }
 
 .select-country__controls:hover .select-country__flag {
-  border-color: @special-border-blue-fade;
+  @media (max-width: @mobile-width-only) {
+    border-color: @special-border-blue-fade;
+  }
 }
 
+// Deselect button
 .select-country__deselect {
   position: relative;
   top: 12px;
@@ -168,12 +277,20 @@
   border: 0;
 
   @media (min-width: @tablet-width) {
-    position: static;
-    place-self: center;
+    position: relative;
+    top: unset;
+    right: -1px;
+    bottom: 25px;
     width: 22px;
     height: 24px;
     background-color: red;
     border-radius: 0;
+  }
+}
+
+.select-country__item:nth-last-child(2) .select-country__deselect {
+  @media (min-width: @tablet-width) {
+    bottom: -1px;
   }
 }
 
@@ -369,20 +486,26 @@
     background-color: @special-blue-light;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 17px;
-    right: 49px;
-    display: block;
-    .circle(8px);
-    border: 1px solid @special-grey-border;
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 17px;
+      right: 49px;
+      display: block;
+      .circle(8px);
+      border: 1px solid @special-grey-border;
+    }
   }
 
   @media (min-width: @tablet-width) {
+    grid-area: add-button;
     position: relative;
     width: unset;
     min-width: 369px;
+    min-height: 70px;
     margin-right: 6%;
+    padding-left: 26px;
+    letter-spacing: 0.09em;
   }
 }

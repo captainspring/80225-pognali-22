@@ -6,6 +6,10 @@
   border-left: 0;
   border-right: 0;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 29px;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0;
   }
@@ -19,7 +23,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 27px 0 23px;
+    padding: 27px 0 22px;
     .fontsize(36px);
   }
 
@@ -41,7 +45,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    min-height: 45px;
+    min-height: 37px;
   }
 
   @media (min-width: @desktop-width) {
@@ -109,8 +113,12 @@
 
   @media (min-width: @tablet-width) {
     min-height: 69px;
-    padding: 27px;
+    padding: 25px 29px 26px;
     .fontsize(18px);
+
+    &:hover {
+      outline-width: 4px;
+    }
   }
 
   @media (min-width: @desktop-width) {

@@ -122,6 +122,12 @@
       color: fade(@basic-blue, 30%);
       background-color: @special-blue-light;
     }
+
+    @media (min-width: @tablet-width) {
+      padding: 22px 21px 20px;
+      letter-spacing: 0.09em;
+      border-radius: 10px;
+    }
   }
 
   &--fading {
@@ -221,7 +227,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      padding: 27px 25px 23px;
+      padding: 27px 25px 21px;
       .fontsize(20px);
     }
   }

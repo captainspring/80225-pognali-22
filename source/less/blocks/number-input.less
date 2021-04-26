@@ -5,6 +5,11 @@
   grid-template-columns: 42px 1fr 42px;
   grid-row-gap: 9px;
 
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 50px 1fr 50px;
+    grid-row-gap: 24px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-areas: "minus number plus units";
     grid-template-columns: 58px min-content 58px min-content;
@@ -55,6 +60,7 @@
   border-left: 0;
 
   @media (min-width: @tablet-width) {
+    padding: 24px 23px 22px 31px;
     .fontsize(20px);
   }
 
@@ -83,6 +89,7 @@
   color: fade(@basic-blue-light, 30%);
 
   @media (min-width: @tablet-width) {
+    justify-self: start;
     font-size: 20px;
     line-height: 18px;
   }
@@ -91,5 +98,19 @@
     align-self: center;
     margin-left: 35px;
     color: @basic-blue-light;
+  }
+
+  &--people {
+    @media (min-width: @tablet-width) {
+      justify-self: start;
+    }
+  }
+
+  &--days {
+    @media (min-width: @tablet-width) {
+      position: relative;
+      right: -3px;
+      justify-self: end;
+    }
   }
 }

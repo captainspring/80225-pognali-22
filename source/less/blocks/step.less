@@ -1,10 +1,10 @@
 .step {
-  padding: 24px 25px 10px;
+  padding: 24px 25px 9px;
   background-color: @white;
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
-    padding: 48px 40px 56px;
+    padding: 48px 46px 54px 43px;
     border-radius: 30px;
   }
 
@@ -17,6 +17,26 @@
     @media (max-width: @mobile-width-only) {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+
+  &--first {
+    padding-bottom: 10px;
+
+    @media (min-width: @tablet-width) {
+      padding: 48px 40px 56px;
+    }
+  }
+
+  &--second {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 51px;
+    }
+  }
+
+  &--third {
+    @media (min-width: @tablet-width) {
+      padding-bottom: 53px;
     }
   }
 }
@@ -49,11 +69,11 @@
 }
 
 .step__description {
-  margin: 0 0 17px;
+  margin: 0 0 19px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 31px;
     padding-right: 11px;
   }
 
@@ -69,6 +89,26 @@
   }
 }
 
+.step--first .step__description {
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.step--third .step__description {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
+}
+
+.step_description-break {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
 .step__fieldset {
   &:not(:last-of-type) {
     margin-bottom: 15px;
@@ -79,9 +119,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 26px;
+    padding-top: 23px;
     border-top: 1px solid @special-grey-border-dark;
     border-radius: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: 31px;
+    }
 
     &:last-of-type {
       margin-bottom: 47px;
@@ -106,28 +150,30 @@
   }
 
   &--countries {
-    position: relative;
-    top: 2px;
-
     &:last-of-type {
-      margin-bottom: 5px;
+      margin-bottom: 3px;
     }
 
     @media (min-width: @tablet-width) {
       padding-top: 0;
+
+      &:last-of-type {
+        margin-bottom: 6px;
+      }
     }
   }
 
   &--descriptions {
-    position: relative;
-    top: 2px;
-
     &:last-of-type {
-      margin-bottom: 21px;
+      margin-bottom: 19px;
     }
 
     @media (min-width: @tablet-width) {
-      padding-top: 75px;
+      padding-top: 51px;
+
+      &:last-of-type {
+        margin-bottom: 44px;
+      }
     }
   }
 }
