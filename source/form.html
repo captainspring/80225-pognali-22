@@ -120,13 +120,13 @@
       <section class="user-profile wrapper">
         <h2 class="visually-hidden">Ваш профиль</h2>
 
-        <div class="user-profile__badge level-badge">
+        <div class="user-profile__badge level-badge level-badge--user-profile">
           <p class="level-badge__text">
             <span class="user-profile__badge-text level-badge__number level-badge__number--big">80</span>
             <span class="user-profile__badge-text level-badge__label level-badge__label--big">level</span>
           </p>
-          <svg class="level-badge__level-bar level-bar" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
-            <circle class="level-bar__progress level-bar__progress--user-profile" r="47" cx="50" cy="50" fill="transparent" stroke-dasharray="270" stroke-dashoffset="25" stroke="#FF8D30" stroke-width="3" transform="rotate(-90, 50, 50)" stroke-linecap="round">
+          <svg class="level-badge__level-bar level-bar" width="102" height="102" viewBox="0 0 102 102" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+            <circle class="level-bar__progress" r="48" cx="51" cy="51" fill="transparent" stroke-dasharray="270" stroke-dashoffset="25" stroke="#FF8D30" stroke-width="3" transform="rotate(-90, 50, 50)" stroke-linecap="round">
             </circle>
           </svg>
         </div>
@@ -140,7 +140,7 @@
             <fieldset class="info__fieldset info__fieldset--tags form__fieldset">
               <legend class="info__legend form__legend">Тэги</legend>
               <label class="form__label form__label--container">
-                <textarea class="form__textarea" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко расскажите о себе с помощью 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+                <textarea class="form__textarea form__textarea--tags" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко расскажите о себе с помощью 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
               </label>
             </fieldset>
 
@@ -221,10 +221,10 @@
 
           <form class="add-plan__form form" id="add-plan" method="POST" action="https://echo.htmlacademy.ru/">
             <ul class="add-plan__steps">
-              <li class="add-plan__step step step--current">
+              <li class="add-plan__step step step--first step--current">
                 <h3 class="step__title" id="step1"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
 
-                <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+                <p class="step__description">Укажите предпочтительное количество попутчиков, которых<br>вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
                 <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
                   <legend class="visually-hidden">Попутчики</legend>
@@ -234,7 +234,7 @@
                     <button class="number-input__button number-input__button--minus" type="button" aria-label="На одного попутчика меньше"></button>
                     <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
                     <button class="number-input__button number-input__button--plus" type="button" aria-label="На одного попутчика больше"></button>
-                    <span class="number-input__units" aria-hidden="true">Чел.</span>
+                    <span class="number-input__units number-input__units--people" aria-hidden="true">Чел.</span>
                   </div>
 
                   <div class="form__checkbox-kids">
@@ -252,7 +252,7 @@
                       <button class="number-input__button number-input__button--minus" type="button" aria-label="На один день меньше"></button>
                       <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1" step="1">
                       <button class="number-input__button number-input__button--plus" type="button" aria-label="На один день больше"></button>
-                      <span class="number-input__units" aria-hidden="true">Дн.</span>
+                      <span class="number-input__units number-input__units--days" aria-hidden="true">Дн.</span>
                     </div>
                   </div>
 
@@ -323,10 +323,10 @@
                 <a class="form__button button button--index button--mobile-round button--short" href="#step2">Следующий шаг</a>
               </li>
 
-              <li class="add-plan__step step">
+              <li class="add-plan__step step step--second">
                 <h3 class="step__title" id="step2"><span class="step__number">Шаг 2.</span> Маршрут</h3>
 
-                <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+                <p class="step__description">Укажите страны, которые вы хотели бы посетить. <br class="step__description-break">Это может быть одна или сразу несколько.</p>
 
                 <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--countries">
                   <legend class="visually-hidden">Страны</legend>
@@ -447,16 +447,16 @@
                   </ul>
                 </fieldset>
 
-                <div class="form__buttons">
+                <div class="step__buttons form__buttons">
                   <a class="form__button button button--index button--mobile-round button--short" href="#step3">Следующий шаг</a>
                   <a class="form__back-link" href="#step1">На шаг назад</a>
                 </div>
               </li>
 
-              <li class="add-plan__step step step--no-side-padding">
+              <li class="add-plan__step step step--third step--no-side-padding">
                 <h3 class="step__title" id="step3"><span class="step__number">Шаг 3.</span> Развлечения</h3>
 
-                <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+                <p class="step__description">Наконец, расскажите о своих планах времяпровождения.<br>Можно писать в свободной форме и ставить тэги.
                 </p>
 
                 <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--descriptions">
@@ -470,7 +470,7 @@
 
                     <li class="form__item descriptions__item">
                       <label class="descriptions__country descriptions__country--czech">Чехия</label>
-                      <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" required aria-label="Ваш план действий в этой стране">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" required aria-label="Ваш план действий в этой стране">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
                     </li>
                   </ul>
                 </fieldset>
@@ -492,11 +492,12 @@
           <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
         </a>
 
-        <ul class="page-footer__socials socials">
+        <ul class="page-footer__socials socials socials--footer">
           <li class="socials__item">
             <a class="socials__link socials__link--yellow-bg" href="#" target="_blank"
               aria-label="Перейти на страницу «Погнали» в Фейсбуке">
-              <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+              <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-hidden="true" focusable="false">
                 <path class="socials__icon"
                   d="M9.5 27.8H2.7v-13H0V8.6h2.6c-.2-3 .3-5 1.6-6.5a6.2 6.2 0 014.5-2h4.8v6.2H9.8c-.3.7-.3 1.5-.3 2.3h4v6.3h-4v13zm-5.3-1.6H8V13.4h4V10H8v-.8c0-2 0-3.7 1-4.4l.2-.1H12V1.5H8.8A4.7 4.7 0 005.3 3c-1 1.2-1.4 3.3-1.1 6.1v.9H1.6v3.3h2.7v13z"
                   fill="#192144" />

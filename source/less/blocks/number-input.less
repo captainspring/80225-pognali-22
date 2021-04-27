@@ -5,10 +5,15 @@
   grid-template-columns: 42px 1fr 42px;
   grid-row-gap: 9px;
 
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 50px 1fr 50px;
+    grid-row-gap: 24px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-areas: "minus number plus units";
-    grid-template-columns: 58px min-content 58px min-content;
-    min-width: 180px;
+    grid-template-columns: 43px 96px 43px min-content;
+    min-width: 254px;
   }
 }
 
@@ -31,11 +36,19 @@
   }
 }
 
+.number-input:hover .number-input__button {
+  border-color: @special-border-blue-fade;
+}
+
+.number-input:active .number-input__button {
+  border-color: @basic-blue;
+}
+
 .number-input__input {
   grid-area: number;
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 16px 13px;
+  padding: 15px 16px 11px 31px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -47,31 +60,57 @@
   border-left: 0;
 
   @media (min-width: @tablet-width) {
+    padding: 24px 23px 22px 31px;
     .fontsize(20px);
   }
 
   @media (min-width: @desktop-width) {
-    width: 58px;
-    padding: 26px 10px;
+    padding: 24px 10px 22px 22px;
     line-height: 18px;
   }
 }
 
+.number-input:hover .number-input__input {
+  border-color: @special-border-blue-fade;
+}
+
+.number-input:active .number-input__input {
+  border-color: @basic-blue;
+}
+
 .number-input__units {
   grid-area: units;
+  justify-self: end;
   font-weight: 500;
   .fontsize(16px);
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: fade(@basic-blue-light, 30%);
 
   @media (min-width: @tablet-width) {
+    justify-self: start;
     font-size: 20px;
     line-height: 18px;
   }
 
   @media (min-width: @desktop-width) {
     align-self: center;
-    margin-left: 35px;
+    margin-left: 34px;
+    letter-spacing: unset;
     color: @basic-blue-light;
+  }
+
+  &--people {
+    @media (min-width: @tablet-width) {
+      justify-self: start;
+    }
+  }
+
+  &--days {
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      position: relative;
+      right: -3px;
+      justify-self: end;
+    }
   }
 }

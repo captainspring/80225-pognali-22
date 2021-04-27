@@ -1,18 +1,27 @@
 .app-plan__wrapper {
   position: relative;
-  padding: 30px 25px 100px;
+  display: grid;
+  grid-template-areas: "title steps"
+    "form form";
+  grid-template-columns: 1fr min-content;
+  padding: 30px 25px 109px;
 
   @media (min-width: @tablet-width) {
-    padding: 53px 75px 114px;
+    padding: 53px 75px 158px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px 60px 150px;
+    padding: 55px 60px 199px;
   }
 }
 
 .add-plan__title {
-  padding-right: 60px;
+  grid-area: title;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .add-plan .add-plan__title {
@@ -22,18 +31,21 @@
 }
 
 .add-plan__steps-tracker {
-  position: absolute;
-  top: 30px;
-  right: 43px;
+  grid-area: steps;
+  position: relative;
+  top: 1px;
+  right: 18px;
 
   @media (min-width: @tablet-width) {
-    top: 66px;
-    right: 73px;
+    top: 4px;
+    right: -2px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 252px;
-    right: 267px;
+    top: unset;
+    right: 207px;
+    bottom: -194px;
+    z-index: @z-index-steps-tracker;
   }
 }
 
@@ -43,14 +55,35 @@
   list-style: none;
 }
 
-.add-plan__step:not(:last-child) {
+.add-plan__step {
   margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 39px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 44px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.add-plan__form {
+  grid-area: form;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    .move-up(-45px);
   }
 }

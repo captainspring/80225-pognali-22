@@ -5,7 +5,6 @@
 
 @basic-blue: #161C35;
 @basic-blue-other: #192144;
-@basic-blue-other-dark: #161C35;
 @basic-blue-inner: #182044;
 @basic-blue-light: #1D2E5B;
 @basic-steelblue: #EDEFF6;
@@ -36,7 +35,9 @@
 @special-orange-dark: #F26926;
 @special-pink: #F9EAEA;
 @special-green: #81E31E;
+@special-border-blue-fade: #959BB2;
 @special-shadow: rgba(29, 46, 91, 0.14);
+@special-shadow-darker: rgba(54, 80, 148, 0.18);
 
 // Viewports
 @mobile-width-only: 767px;
@@ -44,25 +45,32 @@
 @tablet-width-only: 1439px;
 @desktop-width: 1440px;
 
-// Z-index
+// Z-INDEX
+// Global
+@z-index-page-main-dark: 2;
+@z-index-page-main-light: 3;
+@z-index-page-main-special: 1;
+@z-index-page-main-title-container: 2;
+@z-index-tooltip: 3;
+@z-index-page-footer: 3;
+// Menu
 @z-index-top-bar-logo: 5;
 @z-index-menu: 4;
 @z-index-menu-toggle: 3;
 @z-index-menu-nojs-user-buttons: 2;
-@z-index-page-main-dark: 2;
-@z-index-page-main-light: 3;
-@z-index-page-main-special: 1;
+@z-index-top-bar: 5;
+// Index page
 @z-index-promo: 3;
+@z-index-about-rectangle: -1;
 @z-index-address-container: 2;
 @z-index-address-map-container: 1;
-@z-index-page-footer: 3;
-@z-index-calendar-day-hover: 2;
-@z-index-country-choice-container: 2;
-@z-index-filter-country: 1;
-@z-index-page-main-title-container: 2;
-@z-index-filter-country-menu: -1;
+// Form page
 @z-index-user-profile: 3;
+@z-index-calendar-day-hover: 2;
+@z-index-steps-tracker: 3;
+@z-index-country-choice-container: 2;
+@z-index-checkbox-kids: 2;
+// Catalog page
+@z-index-filter-country: 1;
+@z-index-filter-country-menu: -1;
 @z-index-filter-country-tabs: -1;
-@z-index-tooltip: 3;
-@z-index-about-rectangle: -1;
-@z-index-top-bar: 5;

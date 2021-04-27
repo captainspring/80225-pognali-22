@@ -122,6 +122,12 @@
       color: fade(@basic-blue, 30%);
       background-color: @special-blue-light;
     }
+
+    @media (min-width: @tablet-width) {
+      padding: 22px 21px 20px;
+      letter-spacing: 0.09em;
+      border-radius: 10px;
+    }
   }
 
   &--fading {
@@ -207,11 +213,12 @@
   }
 
   &--select {
-    padding: 11px 13px 11px;
+    padding: 12px 65px 11px 10px;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
     text-align: left;
+    letter-spacing: 0.1em;
     background-color: @white;
     border-radius: 4px;
 
@@ -220,12 +227,18 @@
     }
 
     @media (min-width: @tablet-width) {
-      padding: 27px 25px 23px;
+      padding: 27px 25px 21px;
       .fontsize(20px);
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 25px;
     }
   }
 
   &--select-clicked {
+    padding-left: 17px;
+    letter-spacing: 0.02em;
     color: @white;
     background-color: @basic-blue-light;
     border-color: @basic-blue-light;
@@ -233,6 +246,11 @@
 
     &:hover {
       background-color: @basic-blue-light;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 23px 25px 21px;
+      letter-spacing: 0.1em;
     }
   }
 

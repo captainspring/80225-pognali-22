@@ -1,153 +1,332 @@
 .select-country {
+  position: relative;
+  .move-up(-22px);
   margin: 0;
   padding: 0;
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding-top: 42px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 62px;
+    position: static;
   }
 }
 
+// Rows of buttons
 .select-country__item {
   position: relative;
-}
 
-.select-country__item:not(:last-child) {
-  margin-bottom: 22px;
+  @media (max-width: @mobile-width-only) {
+    &:last-child {
+      margin-top: 22px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 16px;
+    // Add country button row
+    &:last-child {
+      display: grid;
+      grid-template-areas: "add-button decoration empty";
+      grid-template-columns: minmax(396px, 775px) minmax(117px, 198px) 22px;
+      grid-template-rows: 114px;
+      align-items: start;
+
+      // Add country -- fake border
+      &::before {
+        content: "";
+        grid-area: decoration;
+        display: block;
+        width: 1px;
+        height: 100%;
+        background: svg-gradient(to bottom, @special-grey-border-dark 60%, fade(@special-grey-border-dark, 0%) 100%);
+        background-position: 100% 0%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      // Add country -- circle
+      &::after {
+        content: "";
+        grid-area: decoration;
+        position: relative;
+        top: 27px;
+        left: -8px;
+        display: block;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        .circle(12px);
+        background-color: @basic-steelblue;
+        border: 1px solid @special-grey-border;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      // Add country button row on desktop
+      &:last-child {
+        grid-template-rows: 128px;
+
+        // Add country -- fake border on desktop
+        &::before {
+          background: @special-grey-border-dark;
+        }
+
+        // Add country -- circle on desktop
+        &::after {
+          left: -7px;
+        }
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 997px;
-  }
-}
-
-.select-country__item:last-child {
-  @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: minmax(396px, 775px) minmax(117px, 198px) 22px;
-    grid-template-rows: 70px;
-
-    &::after {
-      content: "";
-      position: relative;
-      top: 26px;
-      left: -7px;
-      display: block;
-      grid-column-start: 2;
-      grid-column-end: 3;
-      .circle(14px);
-      background-color: @basic-steelblue;
-      border: 1px solid @special-grey-border;
+    &:not(:last-child) {
+      width: 997px;
     }
   }
 }
 
+// Inner container
 .select-country__controls {
   position: relative;
   display: grid;
+  grid-template-areas: "empty deselect"
+    "name flag";
   grid-template-columns: 1fr 53px;
-  grid-template-rows: 42px;
+  grid-template-rows: 22px 42px;
 
   @media (min-width: @tablet-width) {
+    grid-template-areas: "name flag deselect";
     grid-template-columns: minmax(396px, 776px) minmax(117px, 198px) 22px;
-    grid-template-rows: 70px;
+    grid-template-rows: 86px;
+    align-items: end;
+  }
+}
+
+// First row container
+.select-country__item:first-child .select-country__controls {
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 112px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-rows: 132px;
+  }
+}
+
+// Pick country container
+.select-country__item:nth-last-child(2) .select-country__controls {
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 98px;
+    align-items: center;
   }
 }
 
 .select-country__pick-button {
   position: relative;
+  grid-area: name;
   grid-column-start: 1;
   grid-column-end: -1;
   overflow: hidden;
 
+  &:not(.button--select-clicked) {
+    border: 1px solid @special-grey-border;
+    border-radius: 4px;
+  }
+
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: 1px;
     grid-column-end: 2;
     min-width: 369px;
+    min-height: 70px;
+    margin-right: 7%;
+    padding-right: 63px;
+
+    &:hover {
+      border-color: @special-border-blue-fade;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     margin-right: 6%;
   }
 
   &--picked {
     grid-column-start: 1;
     grid-column-end: 2;
+    letter-spacing: 0.09em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 55px;
+      height: 100%;
+      .gradient-white(33%);
+    }
+
+    @media (max-width: @mobile-width-only) {
+      padding-right: 33px;
+      padding-left: 9px;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      letter-spacing: 0.1em;
+    }
   }
 }
 
-.select-country__pick-button:not(.button--select-clicked) {
-  border: 1px solid @special-grey-border;
-  border-radius: 4px;
+.select-country__controls:hover .select-country__pick-button {
+  @media (max-width: @mobile-width-only) {
+    border-color: @special-border-blue-fade;
+  }
 }
 
+// Inner parts
 .select-country__name {
+  grid-area: name;
   display: inline-block;
   width: 150%;
   text-align: left;
 }
 
 .select-country__flag {
+  grid-area: flag;
   border: 1px solid @special-grey-border;
   border-left: 0;
   border-radius: 4px;
 
+  // Circle
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    right: 49px;
+    display: block;
+    .circle(8px);
+    border: 1px solid @special-grey-border;
+    background-color: @white;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
+    align-self: stretch;
     display: block;
     border: 0;
+    border-left: 1px solid @special-grey-border-dark;
+    border-radius: 0;
 
+    // Circle on tablet
     &::before {
+      bottom: 31px;
+      left: -9px;
+      .circle(14px);
+    }
+
+    // Flag on tablet
+    &::after {
       content: "";
       position: absolute;
-      top: 26px;
-      left: -7px;
-      display: block;
-      .circle(14px);
-      border: 1px solid @special-grey-border;
+      bottom: 11px;
+      left: 24px;
+      display: none;
+      width: 70px;
+      height: 47px;
+      background-color: @red;
+    }
+
+    &--bosnia {
+      &::after {
+        display: block;
+      }
+    }
+
+    &--czech {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    // Circle on desktop
+    &::before {
+      left: -8px;
+    }
+
+    // Flag on desktop
+    &::after {
+      left: 39px;
     }
   }
 }
 
+// Circle -- if country is picked
 .select-country__pick-button--picked + .select-country__flag {
+  &::before {
+    background-color: @basic-blue-light;
+    border: 0;
+  }
+}
+
+// Circle -- if dropdown menu is open
+.select-country__controls--active .select-country__flag {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+// Circle -- specific positioning
+.select-country__item:first-child .select-country__flag {
   @media (min-width: @tablet-width) {
     &::before {
-      background-color: @basic-blue-light;
-      border: 0;
+      bottom: 30px;
     }
   }
 }
 
-.select-country__controls--active .select-country__flag {
-  display: none;
-}
-
-.select-country__pick-button:not(.select-country__pick-button--picked) + .select-country__flag {
-  display: none;
-
+.select-country__item:nth-last-child(2) .select-country__flag {
   @media (min-width: @tablet-width) {
-    display: block;
+    &::before {
+      bottom: 43px;
+      .circle(12px);
+    }
   }
 }
 
+.select-country__controls:hover .select-country__flag {
+  @media (max-width: @mobile-width-only) {
+    border-color: @special-border-blue-fade;
+  }
+}
+
+// Deselect button
 .select-country__deselect {
-  position: absolute;
-  top: -10px;
+  position: relative;
+  top: 12px;
   right: -10px;
+  grid-area: deselect;
+  justify-self: end;
   .circle(21px);
   background-color: @basic-steelblue;
   border: 0;
 
   @media (min-width: @tablet-width) {
-    position: static;
-    place-self: center;
+    position: relative;
+    top: unset;
+    right: -1px;
+    bottom: 25px;
     width: 22px;
     height: 24px;
     background-color: red;
     border-radius: 0;
+  }
+}
+
+.select-country__item:nth-last-child(2) .select-country__deselect {
+  @media (min-width: @tablet-width) {
+    bottom: -1px;
   }
 }
 
@@ -160,19 +339,23 @@
 // Country -- choice popup
 .select-country__choice-container {
   position: absolute;
-  top: 42px;
+  top: 64px;
   z-index: @z-index-country-choice-container;
   display: none;
   box-sizing: border-box;
   width: 100%;
+  background-color: @white;
+  border-radius: 0 0 4px 4px;
 
   @media (min-width: @tablet-width) {
-    top: 70px;
+    top: 84px;
     grid-template-areas: "close close"
       "letters countries";
-    grid-template-columns: minmax(373px, 489px) minmax(206px, 241px);
+    grid-template-columns: minmax(366px, 489px) minmax(201px, 241px);
     width: unset;
-    min-width: 578px;
+    min-width: 575px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 8px 16px @special-shadow-darker;
   }
 
   &--show {
@@ -190,22 +373,21 @@
   grid-template-columns: repeat(5, 1fr);
   box-sizing: border-box;
   width: 100%;
-  background-color: @white;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 79px 33px 27px;
+    grid-template-rows: repeat(5, 69px);
+    padding: 35px 80px 33px 27px;
     border-right: 1px solid @special-grey-border-other;
   }
 
   @media (min-width: @desktop-width) {
     grid-gap: 16px;
-    grid-row-gap: 14px;
-    padding: 34px 102px 36px 27px;
+    padding: 34px 100px 36px 28px;
   }
 }
 
 .select-country__first-letter {
-  padding: 12px;
+  padding: 12px 12px 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -221,8 +403,6 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    min-width: 55px;
-    min-height: 70px;
     .fontsize(20px);
 
     &:nth-child(-n+5) {
@@ -272,16 +452,16 @@
 .select-country__list {
   grid-area: countries;
   margin: 0;
-  padding: 20px 19px;
-  background-color: @white;
+  padding: 19px 18px 10px;
   border: 1px solid @special-grey-border;
   border-top: 0;
   border-radius: 0 0 4px 4px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding: 37px 11px 33px 25px;
+    padding: 36px 11px 33px 24px;
     border: 0;
+    border-radius: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -290,8 +470,10 @@
 }
 
 .select-country__list-item {
+  margin-bottom: 4px;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 }
 
@@ -330,18 +512,37 @@
 
 // Add country button
 .select-country__add-button {
+  position: relative;
   width: 100%;
+  padding: 13px 65px 11px 12px;
   text-align: left;
+  letter-spacing: 0.1em;
   background-color: @basic-steelblue;
 
   &:hover {
     background-color: @special-blue-light;
   }
 
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 17px;
+      right: 49px;
+      display: block;
+      .circle(8px);
+      border: 1px solid @special-grey-border;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    grid-area: add-button;
     position: relative;
     width: unset;
     min-width: 369px;
+    min-height: 70px;
     margin-right: 6%;
+    padding-left: 26px;
+    letter-spacing: 0.09em;
   }
 }
