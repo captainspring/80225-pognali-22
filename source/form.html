@@ -226,16 +226,18 @@
 
                 <p class="step__description">Укажите предпочтительное количество попутчиков, которых<br>вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
-                <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
+                <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--companions">
                   <legend class="visually-hidden">Попутчики</legend>
 
-                  <label class="form__label" for="quantity-companions">Ищу попутчиков:</label>
-                  <div class="form__input form__input--number number-input">
-                    <button class="number-input__button number-input__button--minus" type="button" aria-label="На одного попутчика меньше"></button>
-                    <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
-                    <button class="number-input__button number-input__button--plus" type="button" aria-label="На одного попутчика больше"></button>
-                    <span class="number-input__units number-input__units--people" aria-hidden="true">Чел.</span>
-                  </div>
+                  <label class="form__label form__label--number-input-container" for="quantity-companions">
+                    <span class="form__label-text">Ищу попутчиков:</span>
+                    <div class="form__input form__input--number number-input">
+                      <button class="number-input__button number-input__button--minus" type="button" aria-label="На одного попутчика меньше"></button>
+                      <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
+                      <button class="number-input__button number-input__button--plus" type="button" aria-label="На одного попутчика больше"></button>
+                    </div>
+                    <span class="form__units form__units--people" aria-hidden="true">Чел.</span>
+                  </label>
 
                   <div class="form__checkbox-kids">
                     <input class="form__checkbox" type="checkbox" name="kids-ok" id="kids-ok" checked>
@@ -243,17 +245,19 @@
                   </div>
                 </fieldset>
 
-                <fieldset class="form__fieldset form__fieldset--no-border step__fieldset">
+                <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--dates">
                   <legend class="visually-hidden">Даты</legend>
 
                   <div class="form__input-days">
-                    <label class="form__label" for="quantity-days">Длительность:</label>
-                    <div class="form__input form__input--number number-input">
-                      <button class="number-input__button number-input__button--minus" type="button" aria-label="На один день меньше"></button>
-                      <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1" step="1">
-                      <button class="number-input__button number-input__button--plus" type="button" aria-label="На один день больше"></button>
-                      <span class="number-input__units number-input__units--days" aria-hidden="true">Дн.</span>
-                    </div>
+                    <label class="form__label form__label--number-input-container" for="quantity-days">
+                      <span class="form__label-text">Длительность:</span>
+                      <div class="form__input form__input--number number-input">
+                        <button class="number-input__button number-input__button--minus" type="button" aria-label="На один день меньше"></button>
+                        <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1" step="1">
+                        <button class="number-input__button number-input__button--plus" type="button" aria-label="На один день больше"></button>
+                      </div>
+                      <span class="form__units form__units--days" aria-hidden="true">Дн.</span>
+                    </label>
                   </div>
 
                   <div class="form__calendar calendar">
