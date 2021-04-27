@@ -298,16 +298,20 @@
   }
 }
 
+.form__checkbox:focus + .form__label {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 .form__checkbox-kids:hover .form__label::before {
   border-color: @special-border-blue-fade;
 }
 
-.form__checkbox:focus + .form__label::before {
-  border-color: @special-border-blue-fade;
-  outline: auto 1px;
+.form__checkbox:active + .form__label::before {
+  background-color: @special-bluegrey;
+  border-color: @special-bluegrey;
 }
 
-.form__checkbox:active + .form__label::before {
+.form__label:active::before {
   background-color: @special-bluegrey;
   border-color: @special-bluegrey;
 }
