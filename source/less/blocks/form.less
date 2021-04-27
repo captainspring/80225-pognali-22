@@ -105,6 +105,35 @@
     .circle(31px);
     background-color: @white;
   }
+
+  &--number-input-container {
+    display: grid;
+    grid-template-areas: "label units"
+      "number number";
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content;
+    grid-row-gap: 8px;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      grid-row-gap: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-areas: "label number units";
+      grid-template-columns: 221px 180px min-content;
+      grid-row-gap: 0;
+      align-items: center;
+    }
+  }
+}
+
+.form__label-text {
+  grid-area: label;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+  }
 }
 
 .form__textarea {
@@ -140,8 +169,7 @@
 
 .form__input {
   &--number {
-    position: relative;
-    .move-up(-20px);
+    grid-area: number;
 
     @media (min-width: @tablet-width) {
       .move-up(-21px);
@@ -150,6 +178,48 @@
     @media (min-width: @desktop-width) {
       .move-up(0);
       margin-right: auto;
+    }
+  }
+}
+
+.form__units {
+  grid-area: units;
+  justify-self: end;
+  font-weight: 500;
+  .fontsize(16px);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: fade(@basic-blue-light, 30%);
+
+  @media (min-width: @tablet-width) {
+    justify-self: start;
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    margin-left: 36px;
+    letter-spacing: unset;
+    color: @basic-blue-light;
+  }
+
+  &--people {
+    @media (min-width: @tablet-width) {
+      position: relative;
+      right: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: static;
+    }
+  }
+
+  &--days {
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      position: relative;
+      right: -3px;
+      justify-self: end;
     }
   }
 }
@@ -164,7 +234,7 @@
     padding-top: 14px;
 
     &:last-of-type {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
   }
 
@@ -237,7 +307,7 @@
   outline: auto 1px;
 }
 
-.form__checkbox:disabled + .form__label::before {
+.form__checkbox:active + .form__label::before {
   background-color: @special-bluegrey;
   border-color: @special-bluegrey;
 }
@@ -245,11 +315,11 @@
 .form__input-days {
   position: relative;
   top: -25px;
-  margin-bottom: 24px;
+  margin-bottom: 44px;
 
   @media (min-width: @tablet-width) {
     position: static;
-    margin-bottom: 38px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: @desktop-width) {
