@@ -1,1 +1,14 @@
-// country block
+.country {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    display: block;
+    width: 26px;
+    height: 18px;
+    background-color: @red;
+  }
+}

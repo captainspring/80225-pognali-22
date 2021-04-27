@@ -27,8 +27,8 @@
   }
 }
 
-.transport-list .transport-list__item--blue {
-  margin-right: 0;
+.transport-list--catalog .transport-list__item {
+  margin-right: 1px;
 }
 
 .transport-list__icon {
@@ -37,6 +37,11 @@
   &--active {
     fill: @special-blue-dark;
   }
+}
+
+.transport-list--catalog .transport-list__icon {
+  width: 16px;
+  height: 17px;
 }
 
 .transport-list__icon:hover + .transport-list__tooltip {

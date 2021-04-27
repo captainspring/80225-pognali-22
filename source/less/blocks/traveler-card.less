@@ -13,7 +13,7 @@
   padding: 15px 0 23px;
   background-color: @white;
   border-radius: 20px;
-  overflow: hidden;
+  // overflow: hidden;
 
   @media (min-width: @tablet-width) {
     grid-template-areas: "avatar name name transport"
@@ -38,10 +38,22 @@
 }
 
 .traveler-card__name {
+  position: relative;
+  top: -2px;
   grid-area: name;
   margin: 0;
-  padding-right: 45px;
+  padding-right: 35px;
   .interactions-opacity();
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: block;
+    .circle(6px);
+    background-color: @special-red-darker;
+  }
 
   @media (min-width: @tablet-width) {
     align-self: start;
@@ -53,11 +65,17 @@
     margin-bottom: 20px;
     padding: 46px 20px 0 8px;
   }
+
+  &--online {
+    &::after {
+      background-color: @special-green;
+    }
+  }
 }
 
-.traveler-card__name-br {
-  display: none;
-}
+// .traveler-card__name-br {
+//   display: none;
+// }
 
 .traveler-card__profile-link {
   font-weight: 700;
@@ -101,7 +119,8 @@
 
 .traveler-card__likes {
   position: relative;
-  left: -40px;
+  top: -4px;
+  left: -37px;
   grid-area: likes;
   display: flex;
   align-items: center;
@@ -119,7 +138,7 @@
 
 .traveler-card__like-button {
   .circle(30px);
-  margin-right: 12px;
+  margin-right: 6px;
   border: 0;
   background-color: @special-bluegrey;
 
@@ -148,7 +167,7 @@
 .traveler-card__tags {
   grid-area: tags;
   margin: 0;
-  padding: 12px 26px 24px;
+  padding: 10px 70px 20px 26px;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
@@ -166,7 +185,7 @@
 
 .traveler-card__countries {
   grid-area: countries;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
   border-top: 1px solid @basic-steelblue;
   border-bottom: 1px solid @basic-steelblue;
 
@@ -203,14 +222,16 @@
 }
 
 .traveler-card__transport-list {
+  position: relative;
+  top: -7px;
   justify-content: flex-start;
-  padding-left: 20px;
+  padding-left: 21px;
 }
 
 .traveler-card__level {
   grid-area: level;
   min-height: 61px;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .traveler-card__level-title {
@@ -232,7 +253,7 @@
 
 .traveler-card__badge {
   position: relative;
-  top: -30px;
+  top: -13px;
   left: 10px;
 
   @media (min-width: @tablet-width) {
@@ -244,6 +265,9 @@
 }
 
 .traveler-card__level-bar {
+  width: 45px;
+  height: 45px;
+
   @media (min-width: @tablet-width) {
     width: 60px;
     height: 60px;
@@ -262,6 +286,7 @@
 .traveler-card__send-message {
   grid-area: button;
   margin: 0 20px;
+  padding: 8px 20px 2px;
 
   @media (min-width: @tablet-width) {
     align-self: end;

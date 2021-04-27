@@ -65,7 +65,33 @@
   }
 }
 
-.pagination__previous {
-  box-sizing: border-box;
-  border-right: 1px solid @basic-steelblue;
+.pagination__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .interactions-opacity();
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+
+  &--previous {
+    box-sizing: border-box;
+    border-right: 1px solid @basic-steelblue;
+
+    &::before {
+      border-right: 10px solid @special-blue-dark;
+    }
+  }
+
+  &--next {
+    &::before {
+      border-left: 10px solid @special-blue-dark;
+    }
+  }
 }
