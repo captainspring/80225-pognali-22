@@ -13,7 +13,6 @@
   padding: 15px 0 23px;
   background-color: @white;
   border-radius: 20px;
-  // overflow: hidden;
 
   @media (min-width: @tablet-width) {
     grid-template-areas: "avatar name name transport"
@@ -31,7 +30,7 @@
       "avatar tags tags countries countries"
       "avatar button likes transport level";
     grid-template-columns: 339px 150px 185px 172px 103px;
-    grid-template-rows: min-content minmax(90px, 100%) min-content;
+    grid-template-rows: minmax(97px, min-content) minmax(90px, 100%) min-content;
     width: 949px;
     padding: 0;
   }
@@ -72,7 +71,13 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 20px;
-    padding: 46px 20px 0 8px;
+    padding: 48px 20px 0 4px;
+
+    &::after {
+      position: absolute;
+      top: 59px;
+      left: -22px;
+    }
   }
 
   &--online {
@@ -225,7 +230,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 20px 20px 8px;
+    padding: 0 70px 20px 8px;
   }
 }
 
@@ -277,6 +282,13 @@
     top: -3px;
     padding-left: 14px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    left: -5px;
+    padding-right: 15px;
+    padding-left: 0;
+  }
 }
 
 .traveler-card__level {
@@ -316,6 +328,10 @@
     left: -1px;
     width: 60px;
     height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -6px;
   }
 }
 
