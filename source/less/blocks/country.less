@@ -11,4 +11,13 @@
     height: 18px;
     background-color: @red;
   }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: -5px;
+      left: -46px;
+      width: 35px;
+      height: 24px;
+    }
+  }
 }

@@ -20,7 +20,7 @@
       "avatar tags tags transport"
       "avatar button likes level"
       "countries countries countries countries";
-    grid-template-columns: 250px 150px 199px 85px;
+    grid-template-columns: 254px 150px 199px 85px;
     grid-template-rows: min-content minmax(85px, 100%) minmax(60px, 100%) min-content;
     width: 688px;
     padding: 35px 0 25px;
@@ -56,9 +56,18 @@
   }
 
   @media (min-width: @tablet-width) {
+    left: 4px;
     align-self: start;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
     padding-right: 20px;
+
+    &::after {
+      position: relative;
+      top: -4px;
+      right: -16px;
+      display: inline-block;
+      .circle(8px);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -73,9 +82,11 @@
   }
 }
 
-// .traveler-card__name-br {
-//   display: none;
-// }
+.traveler-card__name-br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
 
 .traveler-card__profile-link {
   font-weight: 700;
@@ -91,7 +102,7 @@
     padding-left: 18px;
 
     @media (min-width: @tablet-width) {
-      padding: 0 29px 0 35px;
+      padding: 0 25px 0 35px;
     }
 
     @media (min-width: @desktop-width) {
@@ -127,7 +138,7 @@
 
   @media (min-width: @tablet-width) {
     position: static;
-    align-self: end;
+    align-self: center;
     padding-right: 20px;
   }
 
@@ -137,18 +148,53 @@
 }
 
 .traveler-card__like-button {
+  position: relative;
   .circle(30px);
   margin-right: 6px;
   border: 0;
-  background-color: @special-bluegrey;
+  background-color: @basic-steelblue;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @special-bluegrey;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 12px;
+    height: 10px;
+    background-color: @red;
+    transform: translate(-50%, -50%);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 
   &--liked {
     background-color: @special-pink;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @special-pink-saturated;
+    }
   }
 
   @media (min-width: @tablet-width) {
     .circle(50px);
-    margin-right: 5px;
+    margin-right: 7px;
+
+    &::before {
+      width: 21px;
+      height: 18px;
+    }
   }
 }
 
@@ -173,7 +219,7 @@
   line-height: 18px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 20px 20px 0;
+    padding: 0 90px 20px 7px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -190,7 +236,7 @@
   border-bottom: 1px solid @basic-steelblue;
 
   @media (min-width: @tablet-width) {
-    margin-top: 31px;
+    margin-top: 23px;
     padding-bottom: 0;
     border-bottom: 0;
   }
@@ -226,12 +272,21 @@
   top: -7px;
   justify-content: flex-start;
   padding-left: 21px;
+
+  @media (min-width: @tablet-width) {
+    top: -3px;
+    padding-left: 14px;
+  }
 }
 
 .traveler-card__level {
   grid-area: level;
   min-height: 61px;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .traveler-card__level-title {
@@ -257,8 +312,8 @@
   left: 10px;
 
   @media (min-width: @tablet-width) {
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -1px;
     width: 60px;
     height: 60px;
   }
@@ -269,8 +324,8 @@
   height: 45px;
 
   @media (min-width: @tablet-width) {
-    width: 60px;
-    height: 60px;
+    width: 62px;
+    height: 62px;
   }
 }
 
@@ -278,7 +333,7 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: block;
+    display: inline;
     color: fade(@black, 40%);
   }
 }
@@ -289,7 +344,8 @@
   padding: 8px 20px 2px;
 
   @media (min-width: @tablet-width) {
-    align-self: end;
+    align-self: center;
+    padding: 16px 20px 12px;
     margin: 0;
   }
 

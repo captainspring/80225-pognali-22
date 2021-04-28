@@ -100,4 +100,17 @@
 .level-badge--traveler-card .level-badge__number {
   top: 13px;
   left: -15px;
+
+  @media (max-width: @tablet-width) {
+    top: 15px;
+    left: 2px;
+  }
+}
+
+.level-badge--traveler-card .level-badge__label {
+  @media (max-width: @tablet-width) {
+    top: 9px;
+    left: 1px;
+    border-color: fade(@black, 10%);
+  }
 }

@@ -5,8 +5,8 @@
   border-radius: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
-    padding: 37px 35px 37px;
+    margin-bottom: 41px;
+    padding: 37px 36px 37px 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,8 +22,11 @@
   color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 38px;
+    margin-bottom: 38px;
+    margin-left: 0;
+    padding-bottom: 37px;
     .fontsize(30px);
+    letter-spacing: 0;
     border-bottom: 1px solid @special-yellow-faded;
   }
 
@@ -34,11 +37,17 @@
   }
 }
 
+// Fieldsets container
 .filter-catalog__fieldsets {
   box-sizing: border-box;
   padding: 0 4px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
+// Fieldset
 .filter-catalog__fieldset {
   margin-bottom: 10px;
 
@@ -47,25 +56,21 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    padding-left: 127px;
-
-    &:not(:last-of-type) {
-      margin-bottom: -15px;
-    }
-
-    &:first-of-type {
-      margin-bottom: -47px;
-      padding-top: 34px;
-    }
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: start;
+    margin-bottom: 11px;
 
     &:last-of-type {
+      position: relative;
+      top: -12px;
+      margin-bottom: 26px;
       border-bottom: 1px solid @special-yellow-faded;
-      margin-bottom: 36px;
-      padding-bottom: 15px;
     }
   }
 }
 
+// Legend
 .filter-catalog__legend {
   position: relative;
   display: block;
@@ -79,20 +84,27 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    left: -127px;
     box-sizing: border-box;
     width: 127px;
     margin-bottom: 0;
+    padding: 0;
     padding-right: 10px;
     font-weight: 500;
     .fontsize(20px);
     border: 0;
+    cursor: default;
   }
 
   @media (min-width: @desktop-width) {
     position: static;
     padding: 0;
+    cursor: pointer;
+  }
+
+  &--transport {
+    @media (min-width: @tablet-width) {
+      top: 6px;
+    }
   }
 }
 
@@ -114,6 +126,19 @@
     border-top: 6px solid @special-blue-dark;
     transform: translateY(-50%);
   }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    margin-left: 0;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .filter-catalog__fieldset--open .filter-catalog__legend-text {
@@ -134,6 +159,7 @@
   }
 }
 
+// Filter options containers
 .filter-catalog__options {
   position: relative;
   top: 12px;
@@ -147,11 +173,15 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    position: relative;
-    top: -23px;
+    top: -22px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
     align-items: center;
+
+    &:last-of-type {
+      margin-bottom: -22px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -163,12 +193,6 @@
   display: grid;
 }
 
-.filter-catalog__fieldset:first-of-type .filter-catalog__options {
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    top: -53px;
-  }
-}
-
 .filter-catalog__option {
   margin-bottom: 7px;
 
@@ -176,14 +200,29 @@
     margin-bottom: 0;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+
+    &:last-of-type {
+      position: relative;
+      left: 4px;
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 }
 
+// Checkboxes
 .filter-catalog__checkbox {
   margin-right: 6px;
   opacity: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 13px;
+  }
 }
 
 .filter-catalog__label {
@@ -208,6 +247,12 @@
 
   @media (min-width: @tablet-width) {
     .fontsize(20px);
+
+    &::before {
+      left: -36px;
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -215,6 +260,7 @@
   outline: -webkit-focus-ring-color auto 1px;
 }
 
+// Transport filter
 .filter-catalog__transport-list {
   position: relative;
   top: 15px;
@@ -228,9 +274,12 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    top: -27px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    top: -30px;
+    left: -5px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -250,6 +299,7 @@
   }
 }
 
+// Level filter
 .filter-catalog__level-filter {
   position: relative;
   top: 12px;
@@ -257,7 +307,7 @@
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     position: relative;
-    top: -29px;
+    top: -34px;
     display: grid;
     grid-template-areas: "range numbers";
     grid-template-columns: 1fr 150px;
@@ -269,6 +319,10 @@
 
 .filter-catalog__fieldset--open .filter-catalog__level-filter {
   display: block;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    display: grid;
+  }
 }
 
 .filter-catalog__number-inputs {
@@ -277,14 +331,13 @@
   grid-template-columns: 110px 110px;
   width: 220px;
   margin-bottom: 24px;
-  border: 1px solid @special-grey-border;
-  border-radius: 4px;
 
   &::before {
     content: "";
     position: absolute;
     top: 12px;
     left: 102px;
+    z-index: @z-index-number-input-decor;
     display: block;
     width: 16px;
     height: 11px;
@@ -294,8 +347,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 15px;
+    top: 16px;
     left: 102px;
+    z-index: @z-index-number-input-decor;
     display: block;
     width: 16px;
     height: 1px;
@@ -305,16 +359,20 @@
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-area: numbers;
     grid-template-columns: 74px 74px;
+    justify-self: end;
     width: 148px;
     margin-bottom: 0;
 
     &::before {
+      top: 14px;
       left: 63px;
       width: 21px;
+      height: 15px;
     }
 
     &::after {
-      left: 63px;
+      top: 21px;
+      left: 65px;
       width: 21px;
     }
   }
@@ -344,17 +402,57 @@
   line-height: 13px;
   text-align: center;
   color: @basic-blue-light;
-  border: 0;
+  border: 1px solid @special-grey-border;
+
+  &:hover,
+  &:focus {
+    border-color: @special-border-blue-fade;
+  }
+
+  &:active {
+    border-color: @basic-blue;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 13px 15px 9px;
+    .fontsize(20px);
+  }
 
   &--left {
-    padding-left: 31px;
-    border-right: 1px solid @special-grey-border;
+    padding-left: 32px;
     border-radius: 4px 0 0 4px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 17px;
+    }
   }
 
   &--right {
-    padding-left: 25px;
+    position: relative;
+    left: -1px;
+    padding-left: 30px;
     border-radius: 0 4px 4px 0;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.filter-catalog__number-input--left:hover ~ .filter-catalog__number-input--right,
+.filter-catalog__number-input--left:focus ~ .filter-catalog__number-input--right {
+  border-left-color: @special-border-blue-fade;
+}
+
+.filter-catalog__number-input--left:active ~ .filter-catalog__number-input--right {
+  border-left-color: @basic-blue;
+}
+
+.filter-catalog__number-input::-webkit-inner-spin-button,
+.filter-catalog__number-input::-webkit-outer-spin-button {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    appearance: none;
+    margin: 0;
   }
 }
 
@@ -363,6 +461,7 @@
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-area: range;
+    width: 96%;
   }
 }
 

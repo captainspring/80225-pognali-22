@@ -22,6 +22,21 @@
   border: 0;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+  }
+
+  &:active {
+    transform: scale(1.25);
+    box-shadow: 0 3px 7px fade(@black, 24%);
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -6px;
+    .circle(13px);
+  }
+
   &--min {
     left: 32%;
   }

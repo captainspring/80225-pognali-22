@@ -17,7 +17,7 @@
   border-radius: 0 0 25px 25px;
 
   @media (min-width: @tablet-width) {
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0 55px 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -35,7 +35,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 90px 72px 59px;
+    padding: 118px 72px 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -138,7 +138,11 @@
 }
 
 .filter-country__button {
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: -3px;
     order: 2;
     .fontsize(30px);
   }
@@ -157,13 +161,30 @@
 .filter-country__button-text {
   @media (min-width: @tablet-width) {
     display: inline-block;
-    margin-right: 20px;
+    padding-right: 85px;
     .fontsize(20px);
+    letter-spacing: 0;
+
+    &--show-all {
+      padding-right: 57px;
+    }
+
+    &--collapse {
+      display: none;
+    }
   }
 }
 
+.filter-country--open .filter-country__button-text--show-all {
+  display: none;
+}
+
+.filter-country--open .filter-country__button-text--collapse {
+  display: inline;
+}
+
 // Menu
-.filter-country__menu-container {
+.filter-country__menu {
   position: absolute;
   top: 192px;
   left: 0;
@@ -175,6 +196,7 @@
 
   @media (min-width: @tablet-width) {
     top: 130px;
+    border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -183,7 +205,7 @@
   }
 }
 
-.filter-country--open .filter-country__menu-container {
+.filter-country--open .filter-country__menu {
   display: block;
 }
 
@@ -191,7 +213,9 @@
   padding: 26px 25px 28px;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 72px 79px;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 54px 79px;
   }
 
   @media (min-width: @desktop-width) {
@@ -205,8 +229,8 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 378px 1fr;
-    margin-bottom: 79px;
+    grid-template-columns: 382px 1fr;
+    margin-bottom: 53px;
     padding: 0;
   }
 
@@ -221,7 +245,6 @@
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 32px;
     margin-bottom: 0;
   }
 
@@ -232,7 +255,7 @@
 
 .filter-country__first-letter {
   position: relative;
-  padding: 13px;
+  padding: 13px 7px 10px 13px;
   font-weight: 500;
   .fontsize(14px);
   text-align: center;
@@ -241,22 +264,25 @@
   background-color: @white;
   cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    z-index: @z-index-pseudo-hover;
-    display: none;
-    box-sizing: border-box;
-    width: ~"calc(100% + 2px)";
-    height: ~"calc(100% + 2px)";
-    border: 1px solid @special-grey-border;
-  }
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      z-index: @z-index-pseudo-hover;
+      display: none;
+      box-sizing: border-box;
+      width: ~"calc(100% + 2px)";
+      height: ~"calc(100% + 2px)";
+      border: 1px solid @special-grey-border;
+    }
 
-  &:hover::before {
-    display: block;
-    border-color: @basic-blue-light;
+    &:hover::before,
+    &:focus::before {
+      display: block;
+      border-color: @basic-blue-light;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -264,6 +290,11 @@
     color: fade(@basic-blue-light, 30%);
     background-color: transparent;
     border: 0;
+
+    &:hover,
+    &:focus {
+      color: fade(@basic-blue-light, 60%);
+    }
   }
 
   &--current {
@@ -281,10 +312,6 @@
   }
 }
 
-.filter-country__first-letter:not(:nth-of-type(5n)) {
-  border-right: 0;
-}
-
 .filter-country .filter-country__first-letter--current {
   @media (max-width: @mobile-width-only) {
     border: 1px solid @basic-blue-light;
@@ -295,7 +322,7 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 0 0 68px;
+    padding: 8px 0 0 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -331,7 +358,8 @@
   font-weight: 400;
   color: @special-grey;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @basic-blue-light;
   }
 
@@ -347,7 +375,6 @@
 
 .filter-country__close {
   width: 100%;
-  letter-spacing: 0.05em;
 
   &::before {
     content: "";
@@ -361,8 +388,23 @@
     background-color: @red;
   }
 
+  @media (max-width: @mobile-width-only) {
+    letter-spacing: 0.05em;
+  }
+
   @media (min-width: @tablet-width) {
+    align-self: center;
+    width: 93%;
+    padding: 33px 22px 38px;
     .fontsize(20px);
+
+    &::before {
+      top: 5px;
+      left: -2px;
+      width: 24px;
+      height: 24px;
+      margin-right: 17px;
+    }
   }
 
   @media (min-width: @desktop-width) {

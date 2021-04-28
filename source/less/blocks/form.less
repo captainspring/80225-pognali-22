@@ -104,6 +104,10 @@
     padding: 0;
     .circle(31px);
     background-color: @white;
+
+    @media (min-width: @tablet-width) {
+      .circle(43px);
+    }
   }
 
   &--number-input-container {
@@ -302,7 +306,8 @@
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.form__checkbox-kids:hover .form__label::before {
+.form__checkbox-kids:hover .form__label::before,
+.form__checkbox-kids:focus .form__label::before {
   border-color: @special-border-blue-fade;
 }
 
