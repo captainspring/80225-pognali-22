@@ -159,7 +159,10 @@
 
           <ul class="countries__list">
             <li class="countries__item country-card">
-              <img class="country-card__image" src="img/country-photos/thailand-mobile.jpg" width="270" height="110" alt="Фотография зеленого тропического острова в насыщенно синей воде">
+              <picture>
+                <!-- <source media="(min-width: 768px)" srcset=""> -->
+                <img class="country-card__image" src="img/country-photos/thailand-mobile.jpg" srcset="img/country-photos/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография зеленого тропического острова в насыщенно синей воде">
+              </picture>
               <div class="country-card__container">
                 <h3 class="country-card__name country-card__name--thailand">Таиланд</h3>
                 <p class="country-card__slogan">Джунгли зовут!</p>
@@ -168,8 +171,10 @@
             </li>
 
             <li class="countries__item country-card">
-              <img class="country-card__image" src="img/country-photos/france-mobile.jpg" width="270" height="110"
-                alt="Фотография парижской улочки, слева пятиэтажные дома, справа аллея с деревьями">
+              <picture>
+                <!-- <source media="(min-width: 768px)" srcset=""> -->
+                <img class="country-card__image" src="img/country-photos/france-mobile.jpg" srcset="img/country-photos/france-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография парижской улочки, слева пятиэтажные дома, справа аллея с деревьями">
+              </picture>
               <div class="country-card__container">
                 <h3 class="country-card__name country-card__name--france">Франция</h3>
                 <p class="country-card__slogan">Трэ бьен, манифик!</p>
@@ -178,8 +183,10 @@
             </li>
 
             <li class="countries__item country-card">
-              <img class="country-card__image" src="img/country-photos/czech-mobile.jpg" width="270" height="110"
-                alt="Фотография с Карловым мостом и пражской архитектурой на заднем плане, на переднем плане плывет красно-белый речной трамвай">
+              <picture>
+                <!-- <source media="(min-width: 768px)" srcset=""> -->
+                <img class="country-card__image" src="img/country-photos/czech-mobile.jpg" srcset="img/country-photos/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография с Карловым мостом и пражской архитектурой на заднем плане, на переднем плане плывет красно-белый речной трамвай">
+              </picture>
               <div class="country-card__container">
                 <h3 class="country-card__name country-card__name--czech">Чехия</h3>
                 <p class="country-card__slogan country-card__slogan--two-lines">Закоулки старой Европы</p>
@@ -201,7 +208,12 @@
 
           <ul class="companions__list">
             <li class="companions__item companion-card">
-              <img class="companion-card__avatar" src="img/avatars/tanya-firsova.jpg" width="270" height="270" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+              <div class="companion-card__avatar-container">
+                <picture>
+                  <!-- <source media="(min-width: 768px)" srcset=""> -->
+                  <img class="companion-card__avatar" src="img/avatars/tanya-firsova_mobile.jpg" srcset="img/avatars/tanya-firsova_mobile@2x.jpg 2x" width="270" height="270" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+                </picture>
+              </div>
 
               <div class="companion-card__info">
                 <h3 class="companion-card__name">
@@ -212,19 +224,34 @@
 
                 <ul class="companion-card__flags flags-list">
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Sri-Lanka.png" width="35" height="25" alt="Флаг Шри-Ланки">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <!-- <source media="(min-width: 768px)" srcset=""> -->
+                        <img class="flags-list__flag" src="img/flags/Sri-Lanka.png" srcset="img/flags/Sri-Lanka@2x.png 2x" width="35" height="25" alt="Флаг Шри-Ланки">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Шри&#8209;Ланка</span>
                     </div>
                   </li>
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Thailand.png" width="35" height="25" alt="Флаг Таиланда">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <!-- <source media="(min-width: 768px)" srcset=""> -->
+                        <img class="flags-list__flag" src="img/flags/Thailand.png" srcset="img/flags/Thailand@2x.png 2x" width="35" height="25" alt="Флаг Таиланда">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Таиланд</span>
                     </div>
                   </li>
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Seychelles.png" width="35" height="25" alt="Флаг Сейшелл">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <!-- <source media="(min-width: 768px)" srcset=""> -->
+                        <img class="flags-list__flag" src="img/flags/Seychelles.png" srcset="img/flags/Seychelles@2x.png 2x" width="35" height="25" alt="Флаг Сейшелл">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Сейшеллы</span>
                     </div>
@@ -285,7 +312,12 @@
             </li>
 
             <li class="companions__item companion-card">
-              <img class="companion-card__avatar" src="img/avatars/petya-demin.jpg" width="270" height="270" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+              <div class="companion-card__avatar-container">
+                <picture>
+                  <!-- <source media="(min-width: 768px)" srcset=""> -->
+                  <img class="companion-card__avatar" src="img/avatars/petya-demin_mobile.jpg" srcset="img/avatars/petya-demin_mobile@2x.jpg 2x" width="270" height="270" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+                </picture>
+              </div>
 
               <div class="companion-card__info">
                 <h3 class="companion-card__name">
@@ -296,13 +328,23 @@
 
                 <ul class="companion-card__flags flags-list">
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Belgium.png" width="35" height="25" alt="Флаг Бельгии">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <!-- <source media="(min-width: 768px)" srcset=""> -->
+                        <img class="flags-list__flag" src="img/flags/Belgium.png" srcset="img/flags/Belgium@2x.png 2x" width="35" height="25" alt="Флаг Бельгии">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Бельгия</span>
                     </div>
                   </li>
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Czechia.png" width="35" height="25" alt="Флаг Чехии">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <!-- <source media="(min-width: 768px)" srcset=""> -->
+                        <img class="flags-list__flag" src="img/flags/Czechia.png" srcset="img/flags/Czechia@2x.png 2x" width="35" height="25" alt="Флаг Чехии">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Чехия</span>
                     </div>
