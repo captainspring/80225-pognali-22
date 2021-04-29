@@ -27,6 +27,7 @@
     right: -2px;
     z-index: 1;
     order: 2;
+    width: 559px;
     border-radius: 0 20px 20px 0;
   }
 }
@@ -101,6 +102,10 @@
       left: unset;
       width: 70px;
       height: 47px;
+
+      @media (min-resolution: 2dppx) {
+      background-size: 310px auto;
+    }
     }
   }
 
@@ -114,18 +119,30 @@
   &--thailand {
     &::after {
       background-position: -80px 0;
+
+      @media (min-width: @tablet-width) {
+        background-position: -160px 0;
+      }
     }
   }
 
   &--france {
     &::after {
       background-position: -120px -28px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -240px -58px;
+      }
     }
   }
 
   &--czech {
     &::after {
       background-position: -40px -28px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -80px -58px;
+      }
     }
   }
 }

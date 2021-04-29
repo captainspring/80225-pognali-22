@@ -14,7 +14,6 @@
 }
 
 .rates__title {
-  min-height: 72px;
   margin-bottom: 25px;
   padding: 16px 110px 15px 25px;
   background-image: url("../../img/backgrounds/rates.png");
@@ -24,6 +23,10 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/backgrounds/rates@2x.png");
     background-size: 100px 100px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    min-height: 72px;
   }
 
   @media (min-width: @tablet-width) {
@@ -113,6 +116,11 @@
       background-image: url("../../img/backgrounds/rates.png");
       background-position: 0 0;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/backgrounds/rates@2x.png");
+        background-size: 100px 100px;
+      }
     }
   }
 
