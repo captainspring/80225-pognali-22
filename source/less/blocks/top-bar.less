@@ -7,7 +7,7 @@
   padding: 19px 25px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 40px 41px 0;
+    padding: 30px 41px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,6 +45,12 @@
       background-color: @white;
     }
 
+    @media (min-width: @tablet-width) {
+      &::after {
+        height: 132px;
+      }
+    }
+
     // position: fixed;
     // padding-top: 27px;
     // background-color: @white;
@@ -58,8 +64,8 @@
   z-index: @z-index-top-bar-logo;
 
   @media (min-width: @tablet-width) {
-    top: 45px;
-    left: 40px;
+    top: 15px;
+    left: -1px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,16 +74,16 @@
   }
 }
 
+.top-bar--menu-open .top-bar__logo,
+.top-bar--no-js .top-bar__logo {
+  @media (min-width: @tablet-width) {
+    top: 18px;
+  }
+}
+
 .top-bar__logo-image--blue {
   display: none;
 }
-
-// No JS
-// .top-bar--no-js .top-bar__logo {
-//   position: relative;
-//   top: 0;
-//   left: 0;
-// }
 
 // Switch logos on states
 .top-bar--menu-open .top-bar__logo-image,
@@ -97,6 +103,11 @@
   position: fixed;
   top: 27px;
   left: 25px;
+
+  @media (min-width: @tablet-width) {
+    top: 45px;
+    left: 39px;
+  }
 }
 
 .top-bar--scroll .top-bar__menu {
@@ -112,8 +123,21 @@
   &::after {
     background-color: @special-grey-ui;
   }
+
+    @media (min-width: @tablet-width) {
+    top: 50px;
+    right: 50%;
+  }
+
 }
 
 .top-bar--scroll .top-bar__user-buttons {
   top: 457px;
+
+  @media (min-width: @tablet-width) {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: @z-index-user-buttons-scroll;
+  }
 }
