@@ -26,13 +26,23 @@ if (mainMenuToggle) {
   // Menu -- open
   mainMenuToggle.addEventListener('click', function() {
     let menuOpen = mainMenu.classList.contains('menu--show');
+    let topBarScrolled = topBar.classList.contains('top-bar--scroll');
+    let scrollPosition = window.scrollY;
 
     if (menuOpen) {
       mainMenu.classList.remove('menu--show');
       topBar.classList.remove('top-bar--menu-open');
+
+      if (scrollPosition >= topBar.offsetHeight) {
+        topBar.classList.add('top-bar--scroll');
+      }
     } else {
       mainMenu.classList.add('menu--show');
       topBar.classList.add('top-bar--menu-open');
+
+      if (topBarScrolled) {
+        topBar.classList.remove('top-bar--scroll');
+      }
     }
   })
 
