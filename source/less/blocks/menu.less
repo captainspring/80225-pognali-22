@@ -27,7 +27,8 @@
   }
 
   &--show {
-    padding: 118px 25px 29px;
+    position: fixed;
+    padding: 83px 25px 29px;
     background-color: @white;
 
     @media (min-width: @tablet-width) {
@@ -87,9 +88,9 @@
 }
 
 .menu--show .menu__toggle {
-  position: absolute;
-  top: 18px;
-  right: 19px;
+  position: relative;
+  top: -65px;
+  right: -6px;
   background-image: url("../../img/ui/icon_menu_close.svg");
   background-repeat: no-repeat;
   background-position: 8px 7px;
@@ -100,8 +101,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 50px;
-    right: 50%;
+    top: -85px;
+    right: -13%;
   }
 }
 
