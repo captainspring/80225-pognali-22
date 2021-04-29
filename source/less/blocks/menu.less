@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
-  padding: 118px 25px 29px;
+  padding: 0 25px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -27,6 +27,7 @@
   }
 
   &--show {
+    padding: 118px 25px 29px;
     background-color: @white;
 
     @media (min-width: @tablet-width) {
@@ -41,9 +42,9 @@
 }
 
 .menu__toggle {
-  position: fixed;
+  position: relative;
   top: 12px;
-  right: 20px;
+  right: -4px;
   z-index: @z-index-menu-toggle;
   align-self: flex-end;
   width: 35px;
@@ -193,7 +194,7 @@
 
 .menu__user-buttons {
   position: relative;
-  top: 339px;
+  top: 457px;
 
   @media (min-width: @tablet-width) {
     position: fixed;
@@ -221,7 +222,7 @@
 /* Menu -- no JS */
 .menu--no-js {
   position: static;
-  padding: 78px 0 29px;
+  padding: 76px 0 29px;
 
   @media (min-width: @tablet-width) {
     padding-top: 93px;
@@ -287,7 +288,7 @@
 
 .menu--no-js .menu__user-buttons {
   position: relative;
-  top: 495px;
+  top: 485px;
   z-index: @z-index-menu-nojs-user-buttons;
   margin-bottom: -40px;
 

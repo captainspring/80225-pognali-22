@@ -1,16 +1,16 @@
 .top-bar {
+  position: relative;
+  z-index: @z-index-top-bar;
   box-sizing: border-box;
   width: 100%;
   min-height: 73px;
-  padding: 25px 25px 0;
+  padding: 19px 25px 0;
 
   @media (min-width: @tablet-width) {
     padding: 40px 41px 0;
   }
 
   @media (min-width: @desktop-width) {
-    position: fixed;
-    z-index: @z-index-top-bar;
     width: 1440px;
     margin-right: auto;
     margin-left: auto;
@@ -19,20 +19,42 @@
   }
 
   &--no-js {
+    padding-top: 27px;
     background-color: @white;
 
     @media (min-width: @desktop-width) {
-      position: static;
       padding: 60px 60px 0;
       background-color: transparent;
     }
   }
+
+  &--menu-open {
+    padding-top: 27px;
+    background-color: @white;
+  }
+
+  &--scroll {
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 73px;
+      background-color: @white;
+    }
+
+    // position: fixed;
+    // padding-top: 27px;
+    // background-color: @white;
+  }
 }
 
 .top-bar__logo {
-  position: fixed;
-  top: 18px;
-  left: 25px;
+  position: relative;
+  top: 0;
+  left: 0;
   z-index: @z-index-top-bar-logo;
 
   @media (min-width: @tablet-width) {
@@ -46,9 +68,48 @@
   }
 }
 
+.top-bar__logo-image--blue {
+  display: none;
+}
+
 // No JS
-.top-bar--no-js .top-bar__logo {
-  position: relative;
-  top: 0;
-  left: 0;
+// .top-bar--no-js .top-bar__logo {
+//   position: relative;
+//   top: 0;
+//   left: 0;
+// }
+
+// Switch logos on states
+.top-bar--menu-open .top-bar__logo-image,
+.top-bar--scroll .top-bar__logo-image,
+.top-bar--no-js .top-bar__logo-image {
+  &--white {
+    display: none;
+  }
+
+  &--blue {
+    display: block;
+  }
+}
+
+// On scroll
+.top-bar--scroll .top-bar__logo {
+  position: fixed;
+  top: 27px;
+  left: 25px;
+}
+
+.top-bar--scroll .top-bar__menu {
+  z-index: unset;
+}
+
+.top-bar--scroll .top-bar__menu-toggle {
+  position: fixed;
+  top: 18px;
+  right: 19px;
+
+  &::before,
+  &::after {
+    background-color: @special-grey-ui;
+  }
 }
