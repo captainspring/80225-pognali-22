@@ -41,12 +41,20 @@
     background-color: @basic-blue-other;
   }
 
-  &:invalid {
-    color: @red;
-    background-color: @white;
-  }
-
   &::placeholder {
     color: fade(@special-grey, 30%);
+  }
+
+  &:hover::placeholder {
+    color: fade(@special-grey, 50%);
+  }
+
+  &:focus::placeholder {
+    color: @white;
+  }
+
+  &--invalid {
+    color: @red;
+    background-color: @white;
   }
 }
