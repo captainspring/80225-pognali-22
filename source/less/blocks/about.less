@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/backgrounds/mobile_about@2x.png");
+    background-size: 292px auto;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: none;
   }

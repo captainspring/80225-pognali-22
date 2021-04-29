@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/backgrounds/mobile_companions@2x.png");
+    background-size: 297px auto;
+  }
+
   @media (min-width: @tablet-width) {
     .move-up(-55px);
     background-image: url("../../img/backgrounds/tablet_companions.png");
@@ -118,7 +123,13 @@
 }
 
 .companions__item {
+  position: relative;
+  z-index: @z-index-companion-card;
   margin-bottom: 9px;
+
+  &:hover {
+    z-index: @z-index-companion-card-hover;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;

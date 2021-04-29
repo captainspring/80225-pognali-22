@@ -4,6 +4,11 @@
   background-position: 62% 222px, 0% 0%;
   background-repeat: no-repeat, no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/backgrounds/mobile_traveller-illustration@2x.png"), url("../../img/backgrounds/mobile_globe-back@2x.jpg");
+    background-size: 192px auto, 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 162px 0 96px;
     background-image: url("../../img/backgrounds/tablet_traveller-illustration.png"), url("../../img/backgrounds/tablet_globe-back.jpg");
@@ -33,6 +38,7 @@
 }
 
 .promo__slogan {
+  min-height: 120px;
   margin: 0 0 263px;
   font-weight: 700;
   font-size: 36px;
