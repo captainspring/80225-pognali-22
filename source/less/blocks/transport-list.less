@@ -27,10 +27,6 @@
   }
 }
 
-.transport-list .transport-list__item--blue {
-  margin-right: 0;
-}
-
 .transport-list__icon {
   fill: fade(@basic-blue-light, 15%);
 
@@ -39,6 +35,26 @@
   }
 }
 
-.transport-list__icon:hover + .transport-list__tooltip {
+// Transport list in catalog
+.transport-list--catalog .transport-list__item {
+  margin-right: 1px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.transport-list--catalog .transport-list__icon {
+  width: 16px;
+  height: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 24px;
+  }
+}
+
+.transport-list__icon:hover + .transport-list__tooltip,
+.transport-list__icon:focus + .transport-list__tooltip {
   display: block;
 }

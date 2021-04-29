@@ -22,7 +22,8 @@
   &--yellow-bg {
     background-color: @basic-yellow;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: @special-yellow-dark;
     }
 
@@ -46,11 +47,13 @@
   }
 }
 
-.socials__link:hover .socials__icon {
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon {
   opacity: 0.6;
 }
 
-.socials__link--yellow-bg:hover .socials__icon {
+.socials__link--yellow-bg:hover .socials__icon,
+.socials__link--yellow-bg:focus .socials__icon {
   opacity: 1;
 }
 

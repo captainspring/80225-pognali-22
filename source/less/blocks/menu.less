@@ -15,8 +15,6 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-top: 185px;
-    padding-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,6 +29,11 @@
   &--show {
     background-color: @white;
 
+    @media (min-width: @tablet-width) {
+      padding-top: 185px;
+      padding-bottom: 82px;
+    }
+
     @media (min-width: @desktop-width) {
       background-color: transparent;
     }
@@ -39,22 +42,21 @@
 
 .menu__toggle {
   position: fixed;
-  top: 23px;
-  right: 26px;
+  top: 12px;
+  right: 20px;
   z-index: @z-index-menu-toggle;
   align-self: flex-end;
-  width: 25px;
-  height: 25px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  width: 35px;
+  height: 35px;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 4px;
     display: block;
     width: 25px;
     height: 3px;
@@ -63,20 +65,18 @@
   }
 
   &::before {
-    top: 0;
+    top: 11px;
   }
 
   &::after {
-    top: 8px;
+    top: 19px;
   }
 
   @media (min-width: @tablet-width) {
-    top: 61px;
-    right: -10px;
+    top: 50px;
+    right: -19px;
     align-self: flex-start;
     order: 1;
-    width: 22px;
-    height: 22px;
     margin-left: 50%;
     margin-right: 50%;
   }
@@ -88,8 +88,11 @@
 
 .menu--show .menu__toggle {
   position: absolute;
-  right: 21px;
+  top: 18px;
+  right: 19px;
   background-image: url("../../img/ui/icon_menu_close.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 7px;
 
   &::before,
   &::after {
@@ -97,7 +100,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    right: -13px;
+    top: 50px;
+    right: -18px;
   }
 }
 

@@ -41,10 +41,14 @@
   font-weight: 400;
   .fontsize(14px);
   color: @special-grey;
-  border-top: 1px solid @white;
+  border-top: 1px solid @special-grey;
 
   @media (min-width: @tablet-width) {
     top: -6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-color: @white;
   }
 
   &--big {
@@ -89,5 +93,28 @@
 
   @media (min-width: @desktop-width) {
     top: 23px;
+  }
+}
+
+// Traveler card badge
+.level-badge--traveler-card .level-badge__number {
+  top: 13px;
+  left: -15px;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    left: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+  }
+}
+
+.level-badge--traveler-card .level-badge__label {
+  @media (min-width: @tablet-width) {
+    top: 9px;
+    left: 1px;
+    border-color: fade(@black, 10%);
   }
 }
