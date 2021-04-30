@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   padding: 94px 0 22px;
   background-image: url("../../img/backgrounds/mobile_traveller-illustration.png"), url("../../img/backgrounds/mobile_globe-back.jpg");
   background-position: 62% 222px, 0% 0%;
@@ -79,6 +80,18 @@
 }
 
 .promo__features {
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 236px;
+      background-color: @basic-blue-inner;
+    }
+  }
   @media (min-width: @desktop-width) {
     width: 100%;
   }
