@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     padding: 0;
-    padding-left: 215px;
+    padding-left: 15px;
     background-color: transparent;
   }
 
@@ -37,6 +37,8 @@
     }
 
     @media (min-width: @desktop-width) {
+      padding-top: 0;
+      padding-bottom: 0;
       background-color: transparent;
     }
   }
@@ -217,6 +219,11 @@
     display: grid;
     top: -95px;
   }
+
+  // @media (min-width: @desktop-width) {
+  //   top: 2px;
+  //   right: 37px;
+  // }
 }
 
 /* Menu -- no JS */
@@ -231,9 +238,9 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    .move-up(-53px);
+    .move-up(-11px);
     padding: 0;
-    padding-left: 215px;
+    padding-left: 15px;
   }
 }
 

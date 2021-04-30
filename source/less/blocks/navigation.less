@@ -76,3 +76,30 @@
     color: @white;
   }
 }
+
+// On desktop on scroll
+.navigation--scroll .navigation__list {
+  @media (min-width: @desktop-width) {
+    padding-left: 89px;
+
+    &::before {
+      width: 44px;
+      background-color: @basic-blue-other;
+    }
+  }
+}
+
+.navigation--scroll .navigation__link {
+  @media (min-width: @desktop-width) {
+    color: @basic-blue-other;
+
+    &:hover,
+    &:focus {
+      color: @basic-yellow;
+    }
+
+    &:active {
+      color: fade(@basic-yellow, 30%);
+    }
+  }
+}

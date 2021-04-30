@@ -11,7 +11,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
     width: 1440px;
+    min-height: 101px;
     margin-right: auto;
     margin-left: auto;
     padding: 49px 60px 0;
@@ -45,6 +48,13 @@
         height: 132px;
       }
     }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        width: 100vw;
+        height: 90px;
+      }
+    }
   }
 
   &--menu-open {
@@ -68,15 +78,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 47px;
-    left: 60px;
-  }
-}
-
-.top-bar--menu-open .top-bar__logo,
-.top-bar--no-js .top-bar__logo {
-  @media (min-width: @tablet-width) {
-    top: 18px;
+    top: -2px;
+    left: 0;
   }
 }
 
@@ -86,8 +89,7 @@
 
 // Switch logos on states
 .top-bar--menu-open .top-bar__logo-image,
-.top-bar--scroll .top-bar__logo-image,
-.top-bar--no-js .top-bar__logo-image {
+.top-bar--scroll .top-bar__logo-image {
   &--white {
     display: none;
   }
@@ -109,6 +111,17 @@
   }
 }
 
+// No JS
+.top-bar--no-js .top-bar__logo {
+  @media (min-width: @tablet-width) {
+    top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -13px;
+  }
+}
+
 // On scroll
 .top-bar--scroll .top-bar__logo {
   position: fixed;
@@ -119,6 +132,13 @@
     top: 45px;
     left: 39px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 21px;
+    left: ~"calc((100vw - 1440px) / 2 + 59px)";
+    width: 198px;
+    height: 60px;
+  }
 }
 
 .top-bar--scroll .top-bar__menu {
@@ -126,6 +146,15 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: fixed;
+    top: 20px;
+    left: ~"calc((100vw - 1440px) / 2 + 276px)";
+    z-index: @z-index-menu-desktop;
+    width: 1080px;
+    padding-top: 0;
   }
 }
 
@@ -143,7 +172,6 @@
     top: 50px;
     right: 47.5%;
   }
-
 }
 
 .top-bar--scroll .top-bar__user-buttons {
@@ -154,5 +182,10 @@
     top: 40px;
     right: 40px;
     z-index: @z-index-user-buttons-scroll;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 21px;
+    right: ~"calc((100vw - 1440px) / 2 + 61px)";
   }
 }
