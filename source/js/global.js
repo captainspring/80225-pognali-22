@@ -1,5 +1,6 @@
 const topBar = document.querySelector('.top-bar');
 const mainMenu = topBar.querySelector('.menu');
+const mainNav = mainMenu.querySelector('.navigation');
 const pageMain = document.querySelector('.page-main');
 
 //////// If JS is enabled, remove fallback classes
@@ -59,10 +60,21 @@ if (mainMenuToggle) {
   })
 }
 
+// No menu classes on desktop
+window.addEventListener('resize', function () {
+  let windowWidth = window.innerWidth;
+
+  if (windowWidth >= 1440) {
+    topBar.classList.remove('top-bar--menu-open');
+    mainMenu.classList.remove('menu--show');
+  }
+})
+
 //////// Top bar scroll
 let scrollPosition = window.scrollY;
 const topBarHeight = topBar.offsetHeight;
 
+// Show scroll top-bar on scroll
 window.addEventListener('scroll', function() {
   scrollPosition = window.scrollY;
   let menuOpen = mainMenu.classList.contains('menu--show');
@@ -70,8 +82,10 @@ window.addEventListener('scroll', function() {
   if (!menuOpen) {
     if (scrollPosition >= topBarHeight) {
       topBar.classList.add('top-bar--scroll');
+      mainNav.classList.add('navigation--scroll');
     } else {
       topBar.classList.remove('top-bar--scroll');
+      mainNav.classList.remove('navigation--scroll');
     }
   }
 })
