@@ -1,23 +1,13 @@
 .companions {
-  background-image: url("../../img/backgrounds/mobile_companions.png");
+  .bg-image("../../img/backgrounds/mobile_companions.png", 297px, auto);
   background-position: 0 59px;
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/backgrounds/mobile_companions@2x.png");
-    background-size: 297px auto;
-  }
-
   @media (min-width: @tablet-width) {
     .move-up(-55px);
-    background-image: url("../../img/backgrounds/tablet_companions.png");
+    .bg-image("../../img/backgrounds/tablet_companions.png", 654px, auto);
     background-position: 35% 126px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/backgrounds/tablet_companions@2x.png");
-      background-size: 654px auto;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -43,14 +33,9 @@
     grid-gap: 60px;
     grid-row-gap: 0;
     padding: 185px 57px 134px 51px;
-    background-image: url("../../img/backgrounds/desktop_companions.png");
+    .bg-image("../../img/backgrounds/desktop_companions.png", 630px, auto);
     background-position: 60px 125px;
     background-repeat: no-repeat;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/backgrounds/desktop_companions@2x.png");
-      background-size: 630px auto;
-    }
   }
 }
 

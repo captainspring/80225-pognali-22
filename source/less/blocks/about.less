@@ -1,13 +1,8 @@
 .about {
-  background-image: url("../../img/backgrounds/mobile_about.png");
+  .bg-image("../../img/backgrounds/mobile_about.png", 292px, auto);
   background-position: 70% 0;
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/backgrounds/mobile_about@2x.png");
-    background-size: 292px auto;
-  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -46,13 +41,8 @@
       display: block;
       width: 376px;
       height: 548px;
-      background-image: url("../../img/backgrounds/tablet_about.png");
+      .bg-image("../../img/backgrounds/tablet_about.png", 376px, auto);
       background-repeat: no-repeat;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/backgrounds/tablet_about@2x.png");
-        background-size: 376px auto;
-      }
     }
   }
 
@@ -71,12 +61,8 @@
       right: 60px;
       width: 630px;
       height: 665px;
-      background-image: url("../../img/backgrounds/desktop_about.png");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/backgrounds/desktop_about@2x.png");
-        background-size: 630px auto;
-      }
+      .bg-image("../../img/backgrounds/desktop_about.png", 630px, auto);
+      background-repeat: no-repeat;
     }
   }
 }
