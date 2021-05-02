@@ -10,5 +10,5 @@ if(registerForm) {
       registerEmail.classList.add('feedback-form__input--error');
       registerEmail.placeholder = 'Введите e-mail';
     }
-  })
+  });
 }
