@@ -39,6 +39,7 @@
   &:focus {
     color: @white;
     background-color: @basic-blue-other;
+    border: 4px solid @white;
   }
 
   &::placeholder {
@@ -53,8 +54,11 @@
     color: @white;
   }
 
-  &--invalid {
-    color: @red;
+  &--error {
     background-color: @white;
+
+    &::placeholder {
+      color: @red;
+    }
   }
 }
