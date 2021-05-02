@@ -48,7 +48,7 @@ if (mainMenuToggle) {
   })
 
   // Menu -- close on Esc
-  window.addEventListener('keydown', function (evt) {
+  window.addEventListener('keydown', function(evt) {
     let menuOpen = mainMenu.classList.contains('menu--show');
 
     if (menuOpen) {
@@ -61,7 +61,7 @@ if (mainMenuToggle) {
 }
 
 // No menu classes on desktop
-window.addEventListener('resize', function () {
+window.addEventListener('resize', function() {
   let windowWidth = window.innerWidth;
 
   if (windowWidth >= 1440) {
