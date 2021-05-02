@@ -1,7 +1,11 @@
 .user-buttons {
   display: grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: min-content min-content 1fr;
   align-items: start;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, min-content);
+  }
 }
 
 .user-buttons__item {
@@ -57,6 +61,7 @@
 }
 
 .user-buttons .button {
+  width: 100%;
   padding: 7px 40px 3px;
 
   @media (min-width: @tablet-width) {
