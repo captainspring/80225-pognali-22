@@ -17,6 +17,7 @@
 .feedback-form__input {
   box-sizing: border-box;
   min-width: 210px;
+  height: 62px;
   padding: 22px 45px 22px 25px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -27,11 +28,6 @@
   border: 0;
   border-radius: 20px 0 0 20px;
 
-  @media (min-width: @tablet-width) {
-    padding: 28px 36px 26px;
-    .fontsize(24px);
-  }
-
   &:hover {
     color: fade(@special-grey, 50%);
   }
@@ -39,14 +35,36 @@
   &:focus {
     color: @white;
     background-color: @basic-blue-other;
+    border: 4px solid @white;
   }
 
-  &:invalid {
-    color: @red;
-    background-color: @white;
+  @media (min-width: @tablet-width) {
+    min-width: 536px;
+    height: 80px;
+    padding: 28px 36px 26px;
+    .fontsize(24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 850px;
+    height: 81px;
   }
 
   &::placeholder {
     color: fade(@special-grey, 30%);
+  }
+
+  &:hover::placeholder {
+    color: fade(@special-grey, 50%);
+  }
+
+  &:focus::placeholder {
+    color: @white;
+  }
+
+  &--error {
+    &::placeholder {
+      color: @red;
+    }
   }
 }

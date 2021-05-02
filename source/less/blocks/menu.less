@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
-  padding: 118px 25px 29px;
+  padding: 0 25px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -22,28 +22,32 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     padding: 0;
-    padding-left: 215px;
+    padding-left: 15px;
     background-color: transparent;
   }
 
   &--show {
+    position: fixed;
+    padding: 83px 25px 29px;
     background-color: @white;
 
     @media (min-width: @tablet-width) {
-      padding-top: 185px;
+      padding-top: 135px;
       padding-bottom: 82px;
     }
 
     @media (min-width: @desktop-width) {
+      padding-top: 0;
+      padding-bottom: 0;
       background-color: transparent;
     }
   }
 }
 
 .menu__toggle {
-  position: fixed;
+  position: relative;
   top: 12px;
-  right: 20px;
+  right: -4px;
   z-index: @z-index-menu-toggle;
   align-self: flex-end;
   width: 35px;
@@ -74,11 +78,10 @@
 
   @media (min-width: @tablet-width) {
     top: 50px;
-    right: -19px;
+    right: -13%;
     align-self: flex-start;
+    margin: 0 auto;
     order: 1;
-    margin-left: 50%;
-    margin-right: 50%;
   }
 
   @media (min-width: @desktop-width) {
@@ -87,9 +90,9 @@
 }
 
 .menu--show .menu__toggle {
-  position: absolute;
-  top: 18px;
-  right: 19px;
+  position: relative;
+  top: -65px;
+  right: -6px;
   background-image: url("../../img/ui/icon_menu_close.svg");
   background-repeat: no-repeat;
   background-position: 8px 7px;
@@ -100,8 +103,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 50px;
-    right: -18px;
+    top: -85px;
+    right: -13%;
   }
 }
 
@@ -193,12 +196,11 @@
 
 .menu__user-buttons {
   position: relative;
-  top: 339px;
+  top: 422px;
 
   @media (min-width: @tablet-width) {
-    position: fixed;
     top: 40px;
-    right: 41px;
+    right: 16px;
     order: 2;
   }
 
@@ -215,24 +217,25 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    top: -95px;
   }
 }
 
 /* Menu -- no JS */
 .menu--no-js {
   position: static;
-  padding: 78px 0 29px;
+  padding: 76px 0 29px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 93px;
+    padding-top: 106px;
     padding-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    .move-up(-53px);
+    .move-up(-11px);
     padding: 0;
-    padding-left: 215px;
+    padding-left: 15px;
   }
 }
 
@@ -287,7 +290,7 @@
 
 .menu--no-js .menu__user-buttons {
   position: relative;
-  top: 495px;
+  top: 485px;
   z-index: @z-index-menu-nojs-user-buttons;
   margin-bottom: -40px;
 

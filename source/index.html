@@ -17,22 +17,37 @@
     <header class="page-body__header page-header">
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png" srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <div class="top-bar__menu menu menu--no-js">
-          <button class="menu__toggle" type="button" aria-label="Показать меню навигации"></button>
+          <button class="top-bar__menu-toggle menu__toggle" type="button" aria-label="Показать меню навигации"></button>
 
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link" href="blank.html">О сервисе</a>
+                <a class="navigation__link" href="blank.html">
+                  <span class="navigation__link-text" data-hover="О сервисе">О сервисе</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Направления</a>
+                <a class="navigation__link" href="form.html">
+                  <span class="navigation__link-text" data-hover="Направления">Направления</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Попутчики</a>
+                <a class="navigation__link" href="catalog.html">
+                  <span class="navigation__link-text" data-hover="Попутчики">Попутчики</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -97,7 +112,7 @@
             </li>
           </ul>
 
-          <div class="menu__user-buttons user-buttons">
+          <div class="top-bar__user-buttons menu__user-buttons user-buttons">
             <a class="user-buttons__item user-buttons__item--phone" href="tel:88005558628" aria-label="Позвонить нам">
               <img class="user-buttons__icon" src="img/icons/icon_call.svg" width="18" height="18" alt="Иконка звонящей трубки">
             </a>
@@ -152,7 +167,10 @@
 
           <ul class="countries__list">
             <li class="countries__item country-card">
-              <img class="country-card__image" src="img/country-photos/thailand-mobile.jpg" width="270" height="110" alt="Фотография зеленого тропического острова в насыщенно синей воде">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/country-photos/thailand-tablet.jpg 1x, img/country-photos/thailand-tablet@2x.jpg 2x">
+                <img class="country-card__image" src="img/country-photos/thailand-mobile.jpg" srcset="img/country-photos/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография зеленого тропического острова в насыщенно синей воде">
+              </picture>
               <div class="country-card__container">
                 <h3 class="country-card__name country-card__name--thailand">Таиланд</h3>
                 <p class="country-card__slogan">Джунгли зовут!</p>
@@ -161,8 +179,10 @@
             </li>
 
             <li class="countries__item country-card">
-              <img class="country-card__image" src="img/country-photos/france-mobile.jpg" width="270" height="110"
-                alt="Фотография парижской улочки, слева пятиэтажные дома, справа аллея с деревьями">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/country-photos/france-tablet.jpg 1x, img/country-photos/france-tablet@2x.jpg 2x">
+                <img class="country-card__image" src="img/country-photos/france-mobile.jpg" srcset="img/country-photos/france-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография парижской улочки, слева пятиэтажные дома, справа аллея с деревьями">
+              </picture>
               <div class="country-card__container">
                 <h3 class="country-card__name country-card__name--france">Франция</h3>
                 <p class="country-card__slogan">Трэ бьен, манифик!</p>
@@ -171,8 +191,10 @@
             </li>
 
             <li class="countries__item country-card">
-              <img class="country-card__image" src="img/country-photos/czech-mobile.jpg" width="270" height="110"
-                alt="Фотография с Карловым мостом и пражской архитектурой на заднем плане, на переднем плане плывет красно-белый речной трамвай">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/country-photos/czech-tablet.jpg 1x, img/country-photos/czech-tablet@2x.jpg 2x">
+                <img class="country-card__image" src="img/country-photos/czech-mobile.jpg" srcset="img/country-photos/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография с Карловым мостом и пражской архитектурой на заднем плане, на переднем плане плывет красно-белый речной трамвай">
+              </picture>
               <div class="country-card__container">
                 <h3 class="country-card__name country-card__name--czech">Чехия</h3>
                 <p class="country-card__slogan country-card__slogan--two-lines">Закоулки старой Европы</p>
@@ -194,7 +216,12 @@
 
           <ul class="companions__list">
             <li class="companions__item companion-card">
-              <img class="companion-card__avatar" src="img/avatars/tanya-firsova.jpg" width="270" height="270" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+              <div class="companion-card__avatar-container">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet.jpg 1x, img/avatars/tanya-firsova_tablet@2x.jpg 2x">
+                  <img class="companion-card__avatar" src="img/avatars/tanya-firsova_mobile.jpg" srcset="img/avatars/tanya-firsova_mobile@2x.jpg 2x" width="270" height="270" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+                </picture>
+              </div>
 
               <div class="companion-card__info">
                 <h3 class="companion-card__name">
@@ -205,19 +232,31 @@
 
                 <ul class="companion-card__flags flags-list">
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Sri-Lanka.png" width="35" height="25" alt="Флаг Шри-Ланки">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <img class="flags-list__flag" src="img/flags/Sri-Lanka.png" srcset="img/flags/Sri-Lanka@2x.png 2x" width="35" height="25" alt="Флаг Шри-Ланки">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Шри&#8209;Ланка</span>
                     </div>
                   </li>
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Thailand.png" width="35" height="25" alt="Флаг Таиланда">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <img class="flags-list__flag" src="img/flags/Thailand.png" srcset="img/flags/Thailand@2x.png 2x" width="35" height="25" alt="Флаг Таиланда">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Таиланд</span>
                     </div>
                   </li>
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Seychelles.png" width="35" height="25" alt="Флаг Сейшелл">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <img class="flags-list__flag" src="img/flags/Seychelles.png" srcset="img/flags/Seychelles@2x.png 2x" width="35" height="25" alt="Флаг Сейшелл">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Сейшеллы</span>
                     </div>
@@ -278,7 +317,12 @@
             </li>
 
             <li class="companions__item companion-card">
-              <img class="companion-card__avatar" src="img/avatars/petya-demin.jpg" width="270" height="270" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+              <div class="companion-card__avatar-container">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet.jpg 1x, img/avatars/petya-demin_tablet@2x.jpg 2x">
+                  <img class="companion-card__avatar" src="img/avatars/petya-demin_mobile.jpg" srcset="img/avatars/petya-demin_mobile@2x.jpg 2x" width="270" height="270" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+                </picture>
+              </div>
 
               <div class="companion-card__info">
                 <h3 class="companion-card__name">
@@ -289,13 +333,21 @@
 
                 <ul class="companion-card__flags flags-list">
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Belgium.png" width="35" height="25" alt="Флаг Бельгии">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <img class="flags-list__flag" src="img/flags/Belgium.png" srcset="img/flags/Belgium@2x.png 2x" width="35" height="25" alt="Флаг Бельгии">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Бельгия</span>
                     </div>
                   </li>
                   <li class="flags-list__item">
-                    <img class="flags-list__flag" src="img/flags/Czechia.png" width="35" height="25" alt="Флаг Чехии">
+                    <div class="flags-list__flag-container">
+                      <picture>
+                        <img class="flags-list__flag" src="img/flags/Czechia.png" srcset="img/flags/Czechia@2x.png 2x" width="35" height="25" alt="Флаг Чехии">
+                      </picture>
+                    </div>
                     <div class="flags-list__tooltip tooltip" aria-hidden="true">
                       <span class="tooltip__text">Чехия</span>
                     </div>
@@ -450,7 +502,11 @@
     <footer class="page-body__footer page-footer page-footer--move-up">
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <ul class="page-footer__socials socials socials--footer">
@@ -519,5 +575,9 @@
 
       <button class="modal__button-close" type="button">Закрыть окно</button>
     </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/register-form.js"></script>
   </body>
 </html>

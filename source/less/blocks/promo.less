@@ -1,20 +1,31 @@
 .promo {
+  position: relative;
   padding: 94px 0 22px;
   background-image: url("../../img/backgrounds/mobile_traveller-illustration.png"), url("../../img/backgrounds/mobile_globe-back.jpg");
   background-position: 62% 222px, 0% 0%;
   background-repeat: no-repeat, no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/backgrounds/mobile_traveller-illustration@2x.png"), url("../../img/backgrounds/mobile_globe-back@2x.jpg");
+    background-size: 192px auto, 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 162px 0 96px;
     background-image: url("../../img/backgrounds/tablet_traveller-illustration.png"), url("../../img/backgrounds/tablet_globe-back.jpg");
     background-position: 72% 404px, 0% 382px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/backgrounds/tablet_traveller-illustration@2x.png"), url("../../img/backgrounds/tablet_globe-back@2x.jpg");
+      background-size: 372px auto, 100vw auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     z-index: @z-index-promo;
     padding: 0;
-    background-image: url("../../img/backgrounds/desktop_globe-back.png");
+    .bg-image("../../img/backgrounds/desktop_globe-back.png", 1440px, auto);
     background-position: center top;
     background-color: @basic-blue-other;
   }
@@ -26,14 +37,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 209px 0 123px;
-    background-image: url("../../img/backgrounds/desktop_traveller-illustration.png");
+    .bg-image("../../img/backgrounds/desktop_traveller-illustration.png", 431px, auto);
     background-position: 604px 110px;
     background-repeat: no-repeat;
   }
 }
 
 .promo__slogan {
+  min-height: 120px;
   margin: 0 0 263px;
+  padding: 0 25px;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
@@ -67,6 +80,19 @@
 }
 
 .promo__features {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 236px;
+      background-color: @basic-blue-inner;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     width: 100%;
   }

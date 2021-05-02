@@ -37,7 +37,17 @@
 
 .gradient-white(@end) {
   background: svg-gradient(to right, fade(@white, 0%) 0%, @white @end);
-  background-position: 100% 0%;
+  background-position: 100% 0;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bg-image(@path, @width, @height) {
+  background-image: url(@path);
+
+  @media (min-resolution: 2dppx) {
+    @retina: replace(@path, "(\.[0-9a-z]+)$", "@2x$1", "i");
+    background-image: url(@retina);
+    background-size: @width @height;
+  }
 }

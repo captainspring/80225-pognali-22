@@ -1,5 +1,5 @@
 .about {
-  background-image: url("../../img/backgrounds/mobile_about.png");
+  .bg-image("../../img/backgrounds/mobile_about.png", 292px, auto);
   background-position: 70% 0;
   background-repeat: no-repeat;
   background-color: @basic-blue-other;
@@ -41,7 +41,7 @@
       display: block;
       width: 376px;
       height: 548px;
-      background-image: url("../../img/backgrounds/tablet_about.png");
+      .bg-image("../../img/backgrounds/tablet_about.png", 376px, auto);
       background-repeat: no-repeat;
     }
   }
@@ -61,7 +61,8 @@
       right: 60px;
       width: 630px;
       height: 665px;
-      background-image: url("../../img/backgrounds/desktop_about.png");
+      .bg-image("../../img/backgrounds/desktop_about.png", 630px, auto);
+      background-repeat: no-repeat;
     }
   }
 }

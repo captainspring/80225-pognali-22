@@ -6,6 +6,11 @@
   background-color: @white;
   border-radius: 10px;
 
+  &:hover,
+  &:focus-within {
+    filter: drop-shadow(0 4px 9px fade(@black, 16%));
+  }
+
   @media (min-width: @tablet-width) {
     width: 285px;
     margin-left: 0;
@@ -14,16 +19,31 @@
   }
 }
 
-.companion-card__avatar {
+.companion-card__avatar-container {
   order: 2;
-  display: block;
   border-radius: 10px 10px 0 0;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     width: 285px;
     height: 285px;
     border-radius: 20px 20px 0 0;
   }
+}
+
+.companion-card__avatar {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    height: 285px;
+  }
+}
+
+.companion-card:hover .companion-card__avatar,
+.companion-card:focus-within .companion-card__avatar {
+  transform: scale(1.25);
+  transition: transform 0.9s ease;
 }
 
 .companion-card__info {
