@@ -168,27 +168,27 @@
             <fieldset class="info__fieldset info__fieldset--transport form__fieldset">
               <legend class="info__legend form__legend">Транспорт</legend>
               <ul class="form__list form__list--row">
-                <li class="info__transport form__item">
-                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="plane" id="transport-plane" checked>
-                  <label class="form__label form__label--container form__label--plane" for="transport-plane">
+                <li class="info__transport form__item form__item--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="transport-type" value="plane" id="transport-plane" checked>
+                  <label class="form__label form__label--checkbox form__label--plane" for="transport-plane">
                     <span class="visually-hidden">Путешествия самолётом</span>
                   </label>
                 </li>
-                <li class="info__transport form__item">
-                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car" checked>
-                  <label class="form__label form__label--container form__label--car" for="transport-car">
+                <li class="info__transport form__item form__item--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car" checked>
+                  <label class="form__label form__label--checkbox form__label--car" for="transport-car">
                     <span class="visually-hidden">Путешествия автотранспортом</span>
                   </label>
                 </li>
-                <li class="info__transport form__item">
-                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="bicycle" id="transport-bicycle">
-                  <label class="form__label form__label--container form__label--bicycle" for="transport-bicycle">
+                <li class="info__transport form__item form__item--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="transport-type" value="bicycle" id="transport-bicycle">
+                  <label class="form__label form__label--checkbox form__label--bicycle" for="transport-bicycle">
                     <span class="visually-hidden">Путешествия на велосипеде</span>
                   </label>
                 </li>
-                <li class="info__transport form__item">
-                  <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="afoot" id="transport-afoot" checked>
-                  <label class="form__label form__label--container form__label--afoot" for="transport-afoot">
+                <li class="info__transport form__item form__item--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="transport-type" value="afoot" id="transport-afoot" checked>
+                  <label class="form__label form__label--checkbox form__label--afoot" for="transport-afoot">
                     <span class="visually-hidden">Путешествия пешком</span>
                   </label>
                 </li>
@@ -229,20 +229,20 @@
           <div class="add-plan__steps-tracker steps-tracker">
             <ul class="steps-tracker__list">
               <li class="steps-tracker__item steps-tracker__item--current">
-                <a class="steps-tracker__link" href="#step1">Даты</a>
+                <span class="steps-tracker__text">Даты</span>
               </li>
               <li class="steps-tracker__item">
-                <a class="steps-tracker__link" href="#step2">Маршрут</a>
+                <span class="steps-tracker__text">Маршрут</span>
               </li>
               <li class="steps-tracker__item">
-                <a class="steps-tracker__link" href="#step3">Развлечения</a>
+                <span class="steps-tracker__text">Развлечения</span>
               </li>
             </ul>
           </div>
 
           <form class="add-plan__form form" id="add-plan" method="POST" action="https://echo.htmlacademy.ru/">
             <ul class="add-plan__steps">
-              <li class="add-plan__step step step--first step--current">
+              <li class="add-plan__step step step--first step--no-js step--current">
                 <h3 class="step__title" id="step1"><span class="step__number">Шаг 1.</span> Даты пребывания</h3>
 
                 <p class="step__description">Укажите предпочтительное количество попутчиков, которых<br>вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
@@ -348,7 +348,7 @@
                 <a class="form__button button button--index button--mobile-round button--short" href="#step2">Следующий шаг</a>
               </li>
 
-              <li class="add-plan__step step step--second">
+              <li class="add-plan__step step step--second step--no-js step--second-no-js">
                 <h3 class="step__title" id="step2"><span class="step__number">Шаг 2.</span> Маршрут</h3>
 
                 <p class="step__description">Укажите страны, которые вы хотели бы посетить. <br class="step__description-break">Это может быть одна или сразу несколько.</p>
@@ -378,15 +378,15 @@
                     </li>
 
                     <li class="form__item select-country__item">
-                      <div class="select-country__controls select-country__controls--active">
-                        <button class="select-country__pick-button button button--select button--select-clicked" type="button">
+                      <div class="select-country__controls select-country__controls--unpicked">
+                        <button class="select-country__pick-button button button--select" type="button">
                           Выберите страну
                         </button>
                         <span class="select-country__flag"></span>
                         <button class="select-country__deselect" type="button" aria-label="Убрать страну из списка"></button>
                       </div>
 
-                      <div class="select-country__choice-container select-country__choice-container--show">
+                      <div class="select-country__choice-container">
                         <div class="select-country__first-letters">
                           <span class="select-country__first-letter select-country__first-letter--selected" tabindex="0">А</span>
                           <span class="select-country__first-letter" tabindex="0">Б</span>
@@ -478,7 +478,7 @@
                 </div>
               </li>
 
-              <li class="add-plan__step step step--third step--no-side-padding">
+              <li class="add-plan__step step step--third step--no-side-padding step--no-js">
                 <h3 class="step__title" id="step3"><span class="step__number">Шаг 3.</span> Развлечения</h3>
 
                 <p class="step__description">Наконец, расскажите о своих планах времяпровождения.<br>Можно писать в свободной форме и ставить тэги.
@@ -491,11 +491,13 @@
                     <li class="form__item descriptions__item">
                       <label class="descriptions__country descriptions__country--bosnia">Босния и Герцеговина</label>
                       <textarea class="descriptions__textarea" name="entertainment-description-1" id="entertainment-description-1" placeholder="План действий" required aria-label="Ваш план действий в этой стране"></textarea>
+                      <span class="descriptions__error-message">Это поле должно быть заполнено</span>
                     </li>
 
                     <li class="form__item descriptions__item">
                       <label class="descriptions__country descriptions__country--czech">Чехия</label>
                       <textarea class="descriptions__textarea" name="entertainment-description-2" id="entertainment-description-2" placeholder="План действий" required aria-label="Ваш план действий в этой стране">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                      <span class="descriptions__error-message">Это поле должно быть заполнено</span>
                     </li>
                   </ul>
                 </fieldset>
@@ -564,5 +566,7 @@
     </footer>
 
     <script src="js/global.js"></script>
+    <script src="js/pick-country.js"></script>
+    <script src="js/plans-form.js"></script>
   </body>
 </html>
