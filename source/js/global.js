@@ -2,6 +2,7 @@ const topBar = document.querySelector('.top-bar');
 const mainMenu = topBar.querySelector('.menu');
 const mainNav = mainMenu.querySelector('.navigation');
 const pageMain = document.querySelector('.page-main');
+const userInfo = pageMain.querySelector('.info');
 
 //////// If JS is enabled, remove fallback classes
 const topBarNoJS = topBar.classList.contains('top-bar--no-js');
@@ -18,6 +19,14 @@ if (mainMenuNoJS) {
 
 if (pageMainNoJS) {
   pageMain.classList.remove('page-main--no-js');
+}
+
+if (userInfo) {
+  const userInfoNoJS = userInfo.classList.contains('info--no-js');
+
+  if (userInfoNoJS) {
+    userInfo.classList.remove('info--no-js');
+  }
 }
 
 //////// Menu
