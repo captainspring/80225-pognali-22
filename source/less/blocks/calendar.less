@@ -1,6 +1,6 @@
 .calendar__month {
   display: grid;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: 35px 1fr 35px;
   margin-bottom: 15px;
   border: 1px solid @special-grey-border-other;
   border-left: 0;
@@ -33,8 +33,118 @@
 }
 
 .calendar__arrow {
+  position: relative;
+  margin: 0;
   background-color: transparent;
   border: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 2px;
+    background-color: @ui-arrows;
+    border-radius: 1px;
+  }
+
+  &::before {
+    top: 24px;
+    left: -2px;
+    transform: rotate(49deg);
+  }
+
+  &::after {
+    top: 15px;
+    left: -2px;
+    transform: rotate(-49deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: @ui-arrows-hover;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @ui-down;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before,
+    &::after {
+      width: 25px;
+      height: 4px;
+      border-radius: 20px;
+    }
+
+    &::before {
+      top: 49px;
+      left: 15px;
+      transform: rotate(46deg);
+    }
+
+    &::after {
+      top: 33px;
+      left: 15px;
+      transform: rotate(-46deg);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before,
+    &::after {
+      width: 20px;
+      height: 3px;
+      border-radius: 20px;
+    }
+
+    &::before {
+      top: 50px;
+      left: -1px;
+    }
+
+    &::after {
+      top: 37px;
+      left: -1px;
+    }
+  }
+
+  &--right {
+    &::before {
+      right: -2px;
+      left: unset;
+      transform: rotate(133deg);
+    }
+
+    &::after {
+      right: -2px;
+      left: unset;
+      transform: rotate(-133deg);
+    }
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        right: 14px;
+        transform: rotate(134deg);
+      }
+
+      &::after {
+        right: 14px;
+        transform: rotate(-134deg);
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before,
+      &::after {
+        right: -3px;
+      }
+    }
+  }
 }
 
 .calendar__weekdays {
