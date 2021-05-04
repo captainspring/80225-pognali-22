@@ -51,6 +51,17 @@
   &--button {
     line-height: 0;
   }
+
+  &--checkbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:focus-within {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
 }
 
 .form__label {
@@ -107,6 +118,29 @@
 
     @media (min-width: @tablet-width) {
       .circle(43px);
+    }
+  }
+
+  &--checkbox {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 31px;
+      height: 31px;
+      background-color: @red;
+      opacity: 0.15;
+
+      @media (min-width: @tablet-width) {
+        width: 43px;
+        height: 43px;
+      }
     }
   }
 
@@ -172,6 +206,8 @@
 }
 
 .form__input {
+  margin: 0;
+
   &--number {
     grid-area: number;
 
@@ -226,6 +262,15 @@
       justify-self: end;
     }
   }
+}
+
+.form__checkbox {
+  position: relative;
+  z-index: @z-index-checkbox;
+}
+
+.form__checkbox:checked + .form__label::before {
+  opacity: 1;
 }
 
 .form__checkbox-kids {
@@ -358,6 +403,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;

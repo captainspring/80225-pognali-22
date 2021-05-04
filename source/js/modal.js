@@ -4,13 +4,13 @@ const closeButtonModal = ratesModal.querySelector('.modal__button-close');
 
 if(ratesModal) {
   //Modal -- open
-  ratesLink.addEventListener('click', function (evt) {
+  ratesLink.addEventListener('click', function(evt) {
     evt.preventDefault();
 
     ratesModal.classList.add('modal--show');
   });
 
-  ratesLink.addEventListener('keydown', function (evt) {
+  ratesLink.addEventListener('keydown', function(evt) {
     evt.preventDefault();
 
     if (evt.key === 'Enter') {
@@ -23,13 +23,13 @@ if(ratesModal) {
   });
 
   // Modal -- close
-  closeButtonModal.addEventListener('click', function (evt) {
+  closeButtonModal.addEventListener('click', function(evt) {
     evt.preventDefault();
 
     ratesModal.classList.remove('modal--show');
   });
 
-  window.addEventListener('keydown', function (evt) {
+  window.addEventListener('keydown', function(evt) {
     let ratesModalOpen = ratesModal.classList.contains('modal--show');
 
     if (evt.key === 'Escape' && ratesModalOpen) {

@@ -2,6 +2,7 @@ const topBar = document.querySelector('.top-bar');
 const mainMenu = topBar.querySelector('.menu');
 const mainNav = mainMenu.querySelector('.navigation');
 const pageMain = document.querySelector('.page-main');
+const userInfo = pageMain.querySelector('.info');
 
 //////// If JS is enabled, remove fallback classes
 const topBarNoJS = topBar.classList.contains('top-bar--no-js');
@@ -18,6 +19,14 @@ if (mainMenuNoJS) {
 
 if (pageMainNoJS) {
   pageMain.classList.remove('page-main--no-js');
+}
+
+if (userInfo) {
+  const userInfoNoJS = userInfo.classList.contains('info--no-js');
+
+  if (userInfoNoJS) {
+    userInfo.classList.remove('info--no-js');
+  }
 }
 
 //////// Menu
@@ -48,7 +57,7 @@ if (mainMenuToggle) {
   })
 
   // Menu -- close on Esc
-  window.addEventListener('keydown', function (evt) {
+  window.addEventListener('keydown', function(evt) {
     let menuOpen = mainMenu.classList.contains('menu--show');
 
     if (menuOpen) {
@@ -61,7 +70,7 @@ if (mainMenuToggle) {
 }
 
 // No menu classes on desktop
-window.addEventListener('resize', function () {
+window.addEventListener('resize', function() {
   let windowWidth = window.innerWidth;
 
   if (windowWidth >= 1440) {

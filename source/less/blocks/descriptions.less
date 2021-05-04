@@ -107,7 +107,9 @@
     display: block;
     width: 35px;
     height: 24px;
-    background-color: @red;
+    .bg-image("../../img/flags/flags-sprite.png", 155px, auto);
+    background-size: 155px auto;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @tablet-width) {
@@ -126,6 +128,11 @@
       top: -9px;
       width: 70px;
       height: 47px;
+      background-size: 310px auto;
+
+      @media (min-resolution: 2dppx) {
+        background-size: 310px auto;
+      }
     }
   }
 
@@ -136,6 +143,26 @@
     &::after {
       top: -5px;
       right: -136px;
+    }
+  }
+
+  &--czech {
+    &::after {
+      background-position: -40px -28px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -80px -58px;
+      }
+    }
+  }
+
+  &--bosnia {
+    &::after {
+      background-position: -120px -57px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -240px -114px;
+      }
     }
   }
 }
@@ -162,7 +189,8 @@
     border-color: @special-border-blue-fade;
   }
 
-  &:active {
+  &:active,
+  &:focus-within {
     color: @special-grey;
     border-color: @black;
   }
@@ -183,4 +211,40 @@
   &::placeholder {
     color: fade(@special-grey, 30%);
   }
+
+  &--error {
+    padding-bottom: 90px;
+    border-color: @special-red;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 70px;
+    }
+  }
+}
+
+.descriptions__error-message {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 21px 16px;
+  font-weight: 400;
+  color: @red;
+  background-color: @special-pink-mistake;
+  border: 1px solid @special-red;
+  border-radius: 0 0 4px 4px;
+  border-top: 0;
+  transform: translateY(-100%);
+
+  &:last-of-type {
+    margin-bottom: -81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 97.5%;
+  }
+}
+
+.descriptions__textarea--error + .descriptions__error-message {
+  display: block;
 }

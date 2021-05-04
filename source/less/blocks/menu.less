@@ -93,13 +93,21 @@
   position: relative;
   top: -65px;
   right: -6px;
-  background-image: url("../../img/ui/icon_menu_close.svg");
-  background-repeat: no-repeat;
-  background-position: 8px 7px;
 
-  &::before,
+  &::before {
+    top: 16px;
+    left: 5px;
+    height: 2px;
+    background-color: @special-grey-ui;
+    transform: rotate(45deg);
+  }
+
   &::after {
-    display: none;
+    top: 16px;
+    left: 5px;
+    height: 2px;
+    background-color: @special-grey-ui;
+    transform: rotate(-45deg);
   }
 
   @media (min-width: @tablet-width) {
