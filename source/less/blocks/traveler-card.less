@@ -1,35 +1,42 @@
 .traveler-card {
   display: grid;
-  grid-template-areas: "avatar name name"
-    "avatar likes likes"
-    "tags tags tags"
-    "countries countries countries"
-    "transport transport level"
-    "button button button";
-  grid-template-columns: 105px 89px 74px;
+  grid-template-areas: "empty avatar gap name name"
+    "empty avatar gap likes likes"
+    "tags tags tags tags tags"
+    "countries countries countries countries countries"
+    "transport transport transport transport level"
+    "button button button button button";
+  grid-template-columns: 18px 70px 17px 89px 74px;
   box-sizing: border-box;
   width: 270px;
   margin: 0 auto;
   padding: 15px 0 23px;
   background-color: @white;
   border-radius: 20px;
+  filter: drop-shadow(0 0 0 fade(@black, 16%));
+  transition: filter 0.4s ease;
+
+  &:hover,
+  &:focus-within {
+    filter: drop-shadow(0 4px 9px fade(@black, 16%));
+  }
 
   @media (min-width: @tablet-width) {
-    grid-template-areas: "avatar name name transport"
-      "avatar tags tags transport"
-      "avatar button likes level"
-      "countries countries countries countries";
-    grid-template-columns: 254px 150px 199px 85px;
+    grid-template-areas: "empty avatar gap name name transport"
+      "empty avatar gap tags tags transport"
+      "emoty avatar gap button likes level"
+      "countries countries countries countries countries countries";
+    grid-template-columns: 35px 190px 25px 150px 199px 85px;
     grid-template-rows: min-content minmax(85px, 100%) minmax(60px, 100%) min-content;
     width: 688px;
     padding: 35px 0 25px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-areas: "avatar name name countries countries"
-      "avatar tags tags countries countries"
-      "avatar button likes transport level";
-    grid-template-columns: 339px 150px 185px 172px 103px;
+    grid-template-areas: "avatar empty name name countries countries"
+      "avatar empty tags tags countries countries"
+      "avatar empty button likes transport level";
+    grid-template-columns: 285px 54px 150px 185px 172px 103px;
     grid-template-rows: minmax(97px, min-content) minmax(90px, 100%) min-content;
     width: 949px;
     padding: 0;
@@ -104,14 +111,18 @@
 
   &--avatar {
     grid-area: avatar;
-    padding-left: 18px;
+    .circle(70px);
+    overflow: hidden;
 
     @media (min-width: @tablet-width) {
-      padding: 0 25px 0 35px;
+      width: unset;
+      height: unset;
+      border-radius: 20px;
     }
 
     @media (min-width: @desktop-width) {
       padding: 0;
+      border-radius: 20px 0 0 20px;
     }
   }
 }
@@ -119,6 +130,8 @@
 .traveler-card__avatar {
   display: block;
   .circle(70px);
+  transform: scale(1);
+  transition: transform 0.9s ease;
 
   @media (min-width: @tablet-width) {
     width: 190px;
@@ -131,6 +144,11 @@
     height: 285px;
     border-radius: 20px 0 0 20px;
   }
+}
+
+.traveler-card:hover .traveler-card__avatar,
+.traveler-card:focus-within .traveler-card__avatar {
+  transform: scale(1.25);
 }
 
 .traveler-card__likes {
