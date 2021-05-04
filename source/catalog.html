@@ -14,25 +14,48 @@
   </head>
 
   <body class="page-body page-body--inner">
-    <header class="page-body__header page-header">
+    <header class="page-body__header page-header page-header--inner">
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png"
+              srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15"
+              alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
+              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
+              alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <div class="top-bar__menu menu menu--inner-page menu--no-js">
-          <button class="menu__toggle" type="button" aria-label="Показать меню навигации"></button>
+          <button class="top-bar__menu-toggle menu__toggle" type="button" aria-label="Показать меню навигации"></button>
 
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link" href="blank.html">О сервисе</a>
+                <a class="navigation__link" href="blank.html">
+                  <span class="navigation__link-text" data-hover="О сервисе">О сервисе</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Направления</a>
+                <a class="navigation__link" href="form.html">
+                  <span class="navigation__link-text" data-hover="Направления">Направления</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Попутчики</a>
+                <a class="navigation__link" href="catalog.html">
+                  <span class="navigation__link-text" data-hover="Попутчики">Попутчики</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -66,7 +89,7 @@
             </li>
           </ul>
 
-          <ul class="menu__socials socials">
+          <ul class="menu__socials socials socials--menu">
             <li class="socials__item">
               <a class="socials__link" href="#" target="_blank" aria-label="Перейти на страницу «Погнали» в Фейсбуке">
                 <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -102,7 +125,7 @@
             </li>
           </ul>
 
-          <div class="menu__user-buttons user-buttons">
+          <div class="top-bar__user-buttons menu__user-buttons user-buttons">
             <a class="user-buttons__item user-buttons__item--phone" href="tel:88005558628" aria-label="Позвонить нам">
               <img class="user-buttons__icon" src="img/icons/icon_call.svg" width="18" height="18"
                 alt="Иконка звонящей трубки">
@@ -1369,7 +1392,15 @@
     <footer class="page-body__footer page-footer">
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
+              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
+              alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <ul class="page-footer__socials socials socials--footer">
