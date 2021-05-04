@@ -853,13 +853,13 @@
       <section class="page-main__content wrapper">
         <h2 class="visually-hidden">Каталог попутчиков</h2>
 
-        <div class="filter-catalog">
+        <div class="filter-catalog filter-catalog--no-js">
           <form class="filter-catalog__form form" id="filter-catalog" method="GET" action="https://echo.htmlacademy.ru/">
             <h3 class="filter-catalog__title">Подберите идеального попутчика</h3>
 
             <div class="filter-catalog__fieldsets">
               <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Хобби<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -880,7 +880,7 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--open form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Музыка<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -901,7 +901,7 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Еда<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -925,36 +925,36 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--open form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend filter-catalog__legend--transport">
+                <legend class="filter-catalog__legend filter-catalog__legend--transport" tabindex="0">
                   <span class="filter-catalog__legend-text">Транспорт<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
                 <ul class="filter-catalog__transport-list form__list form__list--row">
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="plane"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="plane"
                       id="transport-plane" checked>
-                    <label class="form__label form__label--button form__label--plane" for="transport-plane">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--plane" for="transport-plane">
                       <span class="visually-hidden">Путешествия самолётом</span>
                     </label>
                   </li>
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car"
                       checked>
-                    <label class="form__label form__label--button form__label--car" for="transport-car">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--car" for="transport-car">
                       <span class="visually-hidden">Путешествия автотранспортом</span>
                     </label>
                   </li>
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="bicycle"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="bicycle"
                       id="transport-bicycle">
-                    <label class="form__label form__label--button form__label--bicycle" for="transport-bicycle">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--bicycle" for="transport-bicycle">
                       <span class="visually-hidden">Путешествия на велосипеде</span>
                     </label>
                   </li>
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="afoot"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="afoot"
                       id="transport-afoot" checked>
-                    <label class="form__label form__label--button form__label--afoot" for="transport-afoot">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--afoot" for="transport-afoot">
                       <span class="visually-hidden">Путешествия пешком</span>
                     </label>
                   </li>
@@ -962,7 +962,7 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--open form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Левел<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -993,7 +993,11 @@
           <ul class="catalog__list">
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/tanya-firsova.jpg" width="70" height="70" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/avatars/tanya-firsova_desktop-catalog.jpg 1x, img/avatars/tanya-firsova_desktop-catalog@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet-catalog.jpg 1x, img/avatars/tanya-firsova_tablet-catalog@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/tanya-firsova_mobile-catalog.jpg" srcset="img/avatars/tanya-firsova_mobile-catalog@2x.jpg 2x" width="70" height="70" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+                </picture>
               </a>
               <h3 class="traveler-card__name">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Таня <br class="traveler-card__name-br">Фирсова</a>
@@ -1087,7 +1091,11 @@
 
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/petya-demin.jpg" width="70" height="70" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+                <picture>
+                  <source media="(min-width: 1440px" srcset="img/avatars/petya-demin_desktop-catalog.jpg 1x, img/avatars/petya-demin_desktop-catalog@2x.jpg 2x">
+                  <source media="(min-width: 768px" srcset="img/avatars/petya-demin_tablet-catalog.jpg 1x, img/avatars/petya-demin_tablet-catalog@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/petya-demin_mobile-catalog.jpg" srcset="img/avatars/petya-demin_mobile-catalog@2x.jpg 2x" width="70" height="70" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+                </picture>
               </a>
               <h3 class="traveler-card__name">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Петя <br class="traveler-card__name-br">Демин</a>
@@ -1178,7 +1186,11 @@
 
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/mark-smolov-mobile.jpg" width="70" height="70" alt="Аватар Марка Смолова: татуированный молодой человек в кепке сидит на крыше автомобиля">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/avatars/mark-smolov_desktop.jpg 1x, img/avatars/mark-smolov_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/mark-smolov_tablet.jpg 1x, img/avatars/mark-smolov_tablet@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/mark-smolov_mobile.jpg" srcset="img/avatars/mark-smolov_mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Марка Смолова: татуированный молодой человек в кепке сидит на крыше автомобиля">
+                </picture>
               </a>
               <h3 class="traveler-card__name">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Марк <br class="traveler-card__name-br">Смолов</a>
@@ -1272,7 +1284,11 @@
 
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/larisa-rogovaya-mobile.jpg" width="70" height="70" alt="Аватар Ларисы Роговой: улыбающаяся девушка в синем деловом костюме">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/avatars/larisa-rogovaya_desktop.jpg 1x, img/avatars/larisa-rogovaya_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/larisa-rogovaya_tablet.jpg 1x, img/avatars/larisa-rogovaya_tablet@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/larisa-rogovaya_mobile.jpg" srcset="img/avatars/larisa-rogovaya_mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Ларисы Роговой: улыбающаяся девушка в синем деловом костюме">
+                </picture>
               </a>
               <h3 class="traveler-card__name traveler-card__name--online">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Лариса <br class="traveler-card__name-br">Роговая</a>
@@ -1454,5 +1470,6 @@
 
     <script src="js/global.js"></script>
     <script src="js/filter-country.js"></script>
+    <script src="js/filter-catalog.js"></script>
   </body>
 </html>
