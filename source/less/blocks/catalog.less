@@ -5,12 +5,12 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: catalog;
-    margin-bottom: 54px;
+    margin-bottom: 65px;
   }
 }
 
@@ -29,8 +29,9 @@
 .catalog__more-link {
   position: relative;
   display: block;
-  width: 100%;
-  margin-bottom: 18px;
+  width: 150px;
+  margin: 0 auto 18px;
+  padding-left: 30px;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
@@ -38,49 +39,70 @@
   text-transform: uppercase;
   color: @basic-blue-light;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
-    position: relative;
-    top: 3px;
-    left: -3px;
-    display: inline-block;
+    position: absolute;
+    display: block;
+    background-color: @basic-blue-light;
+    border-radius: 2px;
+  }
+
+  &::before {
+    top: 12px;
+    left: 15px;
     width: 18px;
+    height: 2px;
+  }
+
+  &::after {
+    top: 4px;
+    left: 23px;
+    width: 2px;
     height: 18px;
-    margin-right: 12px;
-    background-color: @red;
   }
 
   &:hover::before,
-  &:focus::before {
-    opacity: 0.6;
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: @ui-more-plus-hover;
   }
 
-  &:active::before {
-    opacity: 0.3;
+  &:active::before,
+  &:active::after {
+    background-color: @ui-more-plus-down;
   }
 
   @media (min-width: @tablet-width) {
     .fontsize(20px);
     margin-bottom: 52px;
+    padding-left: 44px;
 
     &::before {
-      top: 6px;
-      left: -7px;
+      top: 7px;
+      left: 1px;
       width: 26px;
+    }
+
+    &::after {
+      top: -5px;
+      left: 13px;
       height: 26px;
-      margin-right: 18px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 94%;
-    margin-bottom: 72px;
+    margin: 0 auto 72px 344px;
 
     &::before {
-      left: -16px;
-      width: 27px;
-      height: 27px;
-      margin-right: 7px;
+      top: 8px;
+      left: 2px;
+    }
+
+    &::after {
+      top: -4px;
+      left: 14px;
     }
   }
 }
