@@ -11,9 +11,9 @@ if(ratesModal) {
   });
 
   ratesLink.addEventListener('keydown', function(evt) {
-    evt.preventDefault();
-
     if (evt.key === 'Enter') {
+      evt.preventDefault();
+
       ratesModal.classList.add('modal--show');
 
       setTimeout(function () {

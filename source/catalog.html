@@ -14,25 +14,48 @@
   </head>
 
   <body class="page-body page-body--inner">
-    <header class="page-body__header page-header">
+    <header class="page-body__header page-header page-header--inner">
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png"
+              srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15"
+              alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
+              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
+              alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <div class="top-bar__menu menu menu--inner-page menu--no-js">
-          <button class="menu__toggle" type="button" aria-label="Показать меню навигации"></button>
+          <button class="top-bar__menu-toggle menu__toggle" type="button" aria-label="Показать меню навигации"></button>
 
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link" href="blank.html">О сервисе</a>
+                <a class="navigation__link" href="blank.html">
+                  <span class="navigation__link-text" data-hover="О сервисе">О сервисе</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Направления</a>
+                <a class="navigation__link" href="form.html">
+                  <span class="navigation__link-text" data-hover="Направления">Направления</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Попутчики</a>
+                <a class="navigation__link" href="catalog.html">
+                  <span class="navigation__link-text" data-hover="Попутчики">Попутчики</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -66,7 +89,7 @@
             </li>
           </ul>
 
-          <ul class="menu__socials socials">
+          <ul class="menu__socials socials socials--menu">
             <li class="socials__item">
               <a class="socials__link" href="#" target="_blank" aria-label="Перейти на страницу «Погнали» в Фейсбуке">
                 <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -102,7 +125,7 @@
             </li>
           </ul>
 
-          <div class="menu__user-buttons user-buttons">
+          <div class="top-bar__user-buttons menu__user-buttons user-buttons">
             <a class="user-buttons__item user-buttons__item--phone" href="tel:88005558628" aria-label="Позвонить нам">
               <img class="user-buttons__icon" src="img/icons/icon_call.svg" width="18" height="18"
                 alt="Иконка звонящей трубки">
@@ -125,7 +148,7 @@
         </div>
       </div>
 
-      <section class="page-main__section page-main__section--light filter-country filter-country--open">
+      <section class="page-main__section page-main__section--light filter-country filter-country--no-js">
         <div class="filter-country__tabs-container">
           <div class="filter-country__wrapper wrapper">
             <h2 class="page-main__title page-main__title--uppercase page-main__title--no-margin filter-country__title">Фильтрация по странам:</h2>
@@ -186,37 +209,37 @@
                 <h3 class="filter-country__list-title">А</h3>
                 <ul class="filter-country__list">
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Австралия</a>
+                    <a class="filter-country__link" href="/oceania/australia">Австралия</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Австрия</a>
+                    <a class="filter-country__link" href="/europe/austria">Австрия</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Азербайджан</a>
+                    <a class="filter-country__link" href="/asia/azerbaijan">Азербайджан</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Албания</a>
+                    <a class="filter-country__link" href="/europe/albania">Албания</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Алжир</a>
+                    <a class="filter-country__link" href="/middle-east/algeria">Алжир</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Ангола</a>
+                    <a class="filter-country__link" href="/africa/angola">Ангола</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Андорра</a>
+                    <a class="filter-country__link" href="/europe/andorra">Андорра</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Антигуа и Барбуда</a>
+                    <a class="filter-country__link" href="/islands/antigua-and-barbuda">Антигуа и Барбуда</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Аргентина</a>
+                    <a class="filter-country__link" href="/america/argentina">Аргентина</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Армения</a>
+                    <a class="filter-country__link" href="/asia/armenia">Армения</a>
                   </li>
                   <li class="filter-country__item">
-                    <a class="filter-country__link" href="#">Афганистан</a>
+                    <a class="filter-country__link" href="/asia/afghanistan">Афганистан</a>
                   </li>
                 </ul>
               </div>
@@ -822,7 +845,9 @@
               </div>
             </div>
 
-            <button class="filter-country__close button button--dark-blue button--rectangular button--mobile-round" type="button">Свернуть</button>
+            <button class="filter-country__close button button--dark-blue button--rectangular button--mobile-round" type="button">
+              <span class="filter-country__close-text">Свернуть</span>
+            </button>
           </div>
         </div>
       </section>
@@ -830,13 +855,13 @@
       <section class="page-main__content wrapper">
         <h2 class="visually-hidden">Каталог попутчиков</h2>
 
-        <div class="filter-catalog">
+        <div class="filter-catalog filter-catalog--no-js">
           <form class="filter-catalog__form form" id="filter-catalog" method="GET" action="https://echo.htmlacademy.ru/">
             <h3 class="filter-catalog__title">Подберите идеального попутчика</h3>
 
             <div class="filter-catalog__fieldsets">
               <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Хобби<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -857,7 +882,7 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--open form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Музыка<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -878,7 +903,7 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Еда<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -902,36 +927,36 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--open form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend filter-catalog__legend--transport">
+                <legend class="filter-catalog__legend filter-catalog__legend--transport" tabindex="0">
                   <span class="filter-catalog__legend-text">Транспорт<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
                 <ul class="filter-catalog__transport-list form__list form__list--row">
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="plane"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="plane"
                       id="transport-plane" checked>
-                    <label class="form__label form__label--button form__label--plane" for="transport-plane">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--plane" for="transport-plane">
                       <span class="visually-hidden">Путешествия самолётом</span>
                     </label>
                   </li>
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car"
                       checked>
-                    <label class="form__label form__label--button form__label--car" for="transport-car">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--car" for="transport-car">
                       <span class="visually-hidden">Путешествия автотранспортом</span>
                     </label>
                   </li>
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="bicycle"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="bicycle"
                       id="transport-bicycle">
-                    <label class="form__label form__label--button form__label--bicycle" for="transport-bicycle">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--bicycle" for="transport-bicycle">
                       <span class="visually-hidden">Путешествия на велосипеде</span>
                     </label>
                   </li>
                   <li class="filter-catalog__transport-item form__item form__item--button">
-                    <input class="visually-hidden form__checkbox" type="checkbox" name="transport-type" value="afoot"
+                    <input class="form__checkbox" type="checkbox" name="transport-type" value="afoot"
                       id="transport-afoot" checked>
-                    <label class="form__label form__label--button form__label--afoot" for="transport-afoot">
+                    <label class="filter-catalog__transport-label form__label form__label--button form__label--afoot" for="transport-afoot">
                       <span class="visually-hidden">Путешествия пешком</span>
                     </label>
                   </li>
@@ -939,7 +964,7 @@
               </fieldset>
 
               <fieldset class="filter-catalog__fieldset filter-catalog__fieldset--open form__fieldset form__fieldset--no-border">
-                <legend class="filter-catalog__legend">
+                <legend class="filter-catalog__legend" tabindex="0">
                   <span class="filter-catalog__legend-text">Левел<span class="filter-catalog__legend-colon">:</span></span>
                 </legend>
 
@@ -970,7 +995,11 @@
           <ul class="catalog__list">
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/tanya-firsova.jpg" width="70" height="70" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/avatars/tanya-firsova_desktop-catalog.jpg 1x, img/avatars/tanya-firsova_desktop-catalog@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet-catalog.jpg 1x, img/avatars/tanya-firsova_tablet-catalog@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/tanya-firsova_mobile-catalog.jpg" srcset="img/avatars/tanya-firsova_mobile-catalog@2x.jpg 2x" width="70" height="70" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
+                </picture>
               </a>
               <h3 class="traveler-card__name">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Таня <br class="traveler-card__name-br">Фирсова</a>
@@ -1064,7 +1093,11 @@
 
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/petya-demin.jpg" width="70" height="70" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+                <picture>
+                  <source media="(min-width: 1440px" srcset="img/avatars/petya-demin_desktop-catalog.jpg 1x, img/avatars/petya-demin_desktop-catalog@2x.jpg 2x">
+                  <source media="(min-width: 768px" srcset="img/avatars/petya-demin_tablet-catalog.jpg 1x, img/avatars/petya-demin_tablet-catalog@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/petya-demin_mobile-catalog.jpg" srcset="img/avatars/petya-demin_mobile-catalog@2x.jpg 2x" width="70" height="70" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
+                </picture>
               </a>
               <h3 class="traveler-card__name">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Петя <br class="traveler-card__name-br">Демин</a>
@@ -1155,7 +1188,11 @@
 
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/mark-smolov-mobile.jpg" width="70" height="70" alt="Аватар Марка Смолова: татуированный молодой человек в кепке сидит на крыше автомобиля">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/avatars/mark-smolov_desktop.jpg 1x, img/avatars/mark-smolov_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/mark-smolov_tablet.jpg 1x, img/avatars/mark-smolov_tablet@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/mark-smolov_mobile.jpg" srcset="img/avatars/mark-smolov_mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Марка Смолова: татуированный молодой человек в кепке сидит на крыше автомобиля">
+                </picture>
               </a>
               <h3 class="traveler-card__name">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Марк <br class="traveler-card__name-br">Смолов</a>
@@ -1249,7 +1286,11 @@
 
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
-                <img class="traveler-card__avatar" src="img/avatars/larisa-rogovaya-mobile.jpg" width="70" height="70" alt="Аватар Ларисы Роговой: улыбающаяся девушка в синем деловом костюме">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/avatars/larisa-rogovaya_desktop.jpg 1x, img/avatars/larisa-rogovaya_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/larisa-rogovaya_tablet.jpg 1x, img/avatars/larisa-rogovaya_tablet@2x.jpg 2x">
+                  <img class="traveler-card__avatar" src="img/avatars/larisa-rogovaya_mobile.jpg" srcset="img/avatars/larisa-rogovaya_mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Ларисы Роговой: улыбающаяся девушка в синем деловом костюме">
+                </picture>
               </a>
               <h3 class="traveler-card__name traveler-card__name--online">
                 <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Лариса <br class="traveler-card__name-br">Роговая</a>
@@ -1369,7 +1410,11 @@
     <footer class="page-body__footer page-footer">
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
-          <img src="img/logo_mobile_blue.png" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <ul class="page-footer__socials socials socials--footer">
@@ -1420,5 +1465,9 @@
         </p>
       </div>
     </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/filter-country.js"></script>
+    <script src="js/filter-catalog.js"></script>
   </body>
 </html>

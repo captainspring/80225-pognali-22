@@ -9,7 +9,9 @@
     display: block;
     width: 26px;
     height: 18px;
-    background-color: @red;
+    .bg-image("../../img/flags/flags-sprite.png", 114px, auto);
+    background-size: 114px auto;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @tablet-width) {
@@ -18,12 +20,113 @@
       left: -46px;
       width: 35px;
       height: 24px;
+      background-size: 158px auto;
+
+      @media (min-resolution: 2dppx) {
+        background-size: 158px auto;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
       left: -54px;
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-position: 0 -21px;
+
+      @media (min-width: @tablet-width) {
+        background-position: 0 -29px;
+      }
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-position: -29px -42px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -41px -58px;
+      }
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-position: -29px -21px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -41px -29px;
+      }
+    }
+  }
+
+  &--dominica {
+    &::before {
+      background-position: -29px 0;
+
+      @media (min-width: @tablet-width) {
+        background-position: -41px 0;
+      }
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-position: -59px -21px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -82px -29px;
+      }
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-position: 0 0;
+    }
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-position: -59px -42px;
+
+      @media (min-width: @tablet-width) {
+        background-position: -82px -58px;
+      }
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-position: -59px 0;
+
+      @media (min-width: @tablet-width) {
+        background-position: -82px 0;
+      }
+    }
+  }
+
+  &--uk {
+    &::before {
+      background-position: 0 -42px;
+
+      @media (min-width: @tablet-width) {
+        background-position: 0 -58px;
+      }
+    }
+  }
+
+  &--usa {
+    &::before {
+      background-position: -88px 0;
+
+      @media (min-width: @tablet-width) {
+        background-position: -123px 0;
+      }
     }
   }
 }

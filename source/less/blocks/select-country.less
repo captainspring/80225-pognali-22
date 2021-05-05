@@ -565,11 +565,16 @@
 .select-country__list {
   grid-area: countries;
   margin: 0;
-  padding: 19px 18px 10px;
   border: 1px solid @special-grey-border;
   border-top: 0;
   border-radius: 0 0 4px 4px;
   list-style: none;
+
+  @media (max-width: @mobile-width-only) {
+    max-height: 230px;
+    padding: 13px 18px 10px;
+    overflow-y: auto;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 36px 11px 33px 24px;
