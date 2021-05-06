@@ -75,15 +75,15 @@
       }
     }
 
-    &:first-child::after {
+    &:nth-child(3n + 1)::after {
       background-color: @special-orange;
     }
 
-    &:nth-child(2)::after {
+    &:nth-child(3n + 2)::after {
       background-color: @special-yellow-dark;
     }
 
-    &:nth-child(3)::after {
+    &:nth-child(3n + 3)::after {
       background-color: @basic-yellow;
     }
   }

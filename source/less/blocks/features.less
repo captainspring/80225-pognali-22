@@ -25,23 +25,26 @@
   position: relative;
   padding: 22px 96px 36px 24px;
   counter-increment: listCounter;
+  background-color: @special-orange;
   border-radius: 10px 10px 0 0;
 
-  &:first-child {
+  &:nth-child(4n + 1) {
+    top: 0;
     background-color: @special-orange;
+    border-radius: 10px 10px 0 0;
   }
 
-  &:nth-child(2) {
+  &:nth-child(4n + 2) {
     top: -14px;
     background-color: @special-orange-light;
   }
 
-  &:nth-child(3) {
+  &:nth-child(4n + 3) {
     top: -28px;
     background-color: @special-yellow-dark;
   }
 
-  &:last-child {
+  &:nth-child(4n + 4) {
     top: -42px;
     padding-bottom: 22px;
     background-color: @basic-yellow;
@@ -63,7 +66,7 @@
     z-index: @z-index-feature-item;
     padding: 31px 33px 61px;
 
-    &:first-child {
+    &:nth-child(4n + 1) {
       border-radius: 20px 0 0 0;
 
       &::before {
@@ -78,12 +81,12 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(4n + 2) {
       top: 0;
       border-radius: 20px 20px 0 0;
     }
 
-    &:nth-child(3) {
+    &:nth-child(4n + 3) {
       top: 0;
       border-radius: 0 0 0 20px;
 
@@ -99,7 +102,7 @@
       }
     }
 
-    &:last-child {
+    &:nth-child(4n + 4) {
       top: 0;
       padding-bottom: 61px;
       border-radius: 0 0 20px 20px;
@@ -117,7 +120,7 @@
   @media (min-width: @desktop-width) {
     padding: 30px 103px 29px 34px;
 
-    &:first-child {
+    &:nth-child(4n + 1) {
       border-radius: 20px 0 0 20px;
 
       &::after {
@@ -125,7 +128,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(4n + 2) {
       top: 0;
       left: -13px;
       padding-left: 29px;
@@ -147,7 +150,7 @@
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(4n + 3) {
       top: 0;
       left: -1px;
       padding-left: 31px;
@@ -169,7 +172,7 @@
       }
     }
 
-    &:last-child {
+    &:nth-child(4n + 4) {
       top: 0;
       left: 14px;
       box-sizing: border-box;
