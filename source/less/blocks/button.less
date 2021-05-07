@@ -33,6 +33,7 @@
   &--index {
     display: flex;
     padding: 23px;
+    padding-right: 45px;
     .fontsize(18px);
     text-align: left;
     text-transform: none;
@@ -91,6 +92,7 @@
 
   &--outline {
     padding: 19px;
+    padding-right: 45px;
     border: 3px solid @basic-blue-other;
 
     &:hover,
@@ -117,7 +119,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      padding: 25px 34px;
+      padding: 25px 65px 25px 34px;
 
       &::after {
         right: 34px;
@@ -125,7 +127,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 26px 34px 12px;
+      padding: 26px 45px 12px 34px;
     }
   }
 

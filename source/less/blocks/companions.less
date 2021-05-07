@@ -26,8 +26,8 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-areas: "right-top left"
-      "right-middle-1 left"
-      "right-middle-2 left"
+      "right-middle left"
+      "right-middle left"
       "right-bottom left";
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
@@ -55,6 +55,19 @@
   }
 }
 
+.companions__texts {
+  margin-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: right-middle;
+    margin-bottom: 85px;
+  }
+}
+
 .companions__text {
   margin: 0 0 21px;
   padding: 0 25px;
@@ -68,24 +81,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-area: right-middle-1;
     margin-bottom: 38px;
     padding: 0 78px;
   }
 
   &--bold {
-    margin-bottom: 54px;
     font-weight: 700;
+    margin-bottom: 0;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 59px;
       font-size: 21px;
       line-height: 24px;
-    }
-
-    @media (min-width: @desktop-width) {
-      grid-area: right-middle-2;
-      margin-bottom: 85px;
     }
   }
 }
@@ -99,22 +105,24 @@
 }
 
 .companions__list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 9px;
+  justify-items: center;
   align-items: center;
-  margin: 0 auto 11px;
+  margin: 0 auto 20px;
   padding: 0;
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
     margin-bottom: 81px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: left;
+    grid-gap: 60px;
     margin: 0;
   }
 }
@@ -122,23 +130,18 @@
 .companions__item {
   position: relative;
   z-index: @z-index-companion-card;
-  margin-bottom: 9px;
 
   &:hover {
     z-index: @z-index-companion-card-hover;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-
-    &:not(:last-child) {
-      margin-right: 50px;
+    &:nth-child(2n + 1) {
+      justify-self: end;
     }
-  }
 
-  @media (min-width: @desktop-width) {
-    &:not(:last-child) {
-      margin-right: 60px;
+    &:nth-child(2n + 2) {
+      justify-self: start;
     }
   }
 }
