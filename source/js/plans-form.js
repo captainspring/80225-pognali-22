@@ -1,6 +1,6 @@
 const plansForm = document.querySelector('.add-plan__form');
 
-if(plansForm) {
+if (plansForm) {
   // Delete fallback classes
   const secondStep = plansForm.querySelector('.step--second');
   const secondStepNoJS = secondStep.classList.contains('step--second-no-js');
@@ -62,12 +62,21 @@ if(plansForm) {
     }
   }
 
+  // Calendar tabindex
+  let disabledDays = plansForm.querySelectorAll('.calendar__day--grey');
+
+  for (let i = 0; i < disabledDays.length; i++) {
+    let disabledDay = disabledDays[i];
+
+    disabledDay.setAttribute('tabindex', '-1');
+  }
+
   // Plans field validation
   const submitButton = plansForm.querySelector('button[type="submit"]');
   submitButton.addEventListener('click', function(evt) {
     let planDescriptions = plansForm.querySelectorAll('.descriptions__textarea');
 
-    for(let i = 0; i < planDescriptions.length; i++) {
+    for (let i = 0; i < planDescriptions.length; i++) {
       let planDescription = planDescriptions[i];
 
       if (!planDescription.value) {
