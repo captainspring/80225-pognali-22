@@ -43,28 +43,40 @@
       box-sizing: border-box;
       width: unset;
       min-width: 308px;
-      margin-bottom: -140px;
       padding: 25px;
+
+      &:last-of-type {
+        margin-bottom: -140px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       top: 0;
       order: 2;
       min-width: 384px;
-      margin-bottom: 0;
       padding: 23px 25px 27px 28px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 .info__legend {
+  box-sizing: border-box;
+  min-width: 70px;
+  max-width: 115px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     bottom: 0;
     left: 50%;
+    max-width: 152px;
     letter-spacing: 0.1em;
-    transform: translate(-50%, 50%);
     background-color: @basic-steelblue;
+    transform: translate(-50%, 50%);
   }
 }
 
