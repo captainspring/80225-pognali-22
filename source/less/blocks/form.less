@@ -144,35 +144,52 @@
     }
   }
 
-  &--number-input-container {
-    display: grid;
-    grid-template-areas: "label units"
-      "number number";
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: min-content;
-    grid-row-gap: 8px;
-    padding: 0;
-
-    @media (min-width: @tablet-width) {
-      grid-row-gap: 24px;
-      margin-bottom: 40px;
-    }
+  &--number-input {
+    grid-area: label;
+    margin-bottom: 0;
+    padding-right: 25px;
 
     @media (min-width: @desktop-width) {
-      grid-template-areas: "label number units";
-      grid-template-columns: 221px 180px min-content;
-      grid-row-gap: 0;
-      align-items: center;
-      margin-bottom: 0;
+      padding-right: 20px;
     }
   }
 }
 
-.form__label-text {
-  grid-area: label;
+.form__number-input-container {
+  display: grid;
+  grid-template-areas: "label units"
+    "number number";
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: min-content;
+  grid-row-gap: 8px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-row-gap: 24px;
+    margin-bottom: 40px;
+  }
 
   @media (min-width: @desktop-width) {
-    padding-right: 20px;
+    grid-template-areas: "label number units";
+    grid-template-columns: 221px 180px min-content;
+    grid-row-gap: 0;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  &--days {
+    position: relative;
+    top: -16px;
+    margin-bottom: 53px;
+
+    @media (min-width: @tablet-width) {
+      position: static;
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 32px;
+    }
   }
 }
 
@@ -316,7 +333,7 @@
 
 .form__checkbox-kids {
   position: relative;
-  top: 106px;
+  top: 114px;
   z-index: @z-index-checkbox-kids;
 
   @media (min-width: @tablet-width) {
@@ -437,25 +454,6 @@
 
 .form__checkbox:checked + .form__label::after {
   display: block;
-}
-
-.form__input-days {
-  position: relative;
-  top: -25px;
-  margin-bottom: 45px;
-
-  @media (min-width: @tablet-width) {
-    position: static;
-    margin-bottom: 80px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 32px;
-  }
 }
 
 .form__input-days .form__label {

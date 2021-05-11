@@ -252,15 +252,15 @@
                 <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--companions">
                   <legend class="visually-hidden">Попутчики</legend>
 
-                  <label class="form__label form__label--number-input-container" for="quantity-companions">
-                    <span class="form__label-text">Ищу попутчиков:</span>
+                  <div class="form__number-input-container">
+                    <label class="form__label form__label--number-input" for="quantity-companions">Ищу попутчиков:</label>
                     <div class="form__input form__input--number number-input">
                       <button class="number-input__button number-input__button--minus" type="button" aria-label="На одного попутчика меньше"></button>
                       <input class="number-input__input" type="number" name="quantity-companions" value="2" id="quantity-companions" min="1" step="1">
                       <button class="number-input__button number-input__button--plus" type="button" aria-label="На одного попутчика больше"></button>
                     </div>
                     <span class="form__units form__units--people" aria-hidden="true">Чел.</span>
-                  </label>
+                  </div>
 
                   <div class="form__checkbox-kids">
                     <input class="form__checkbox" type="checkbox" name="kids-ok" id="kids-ok" checked>
@@ -271,16 +271,14 @@
                 <fieldset class="form__fieldset form__fieldset--no-border step__fieldset step__fieldset--dates">
                   <legend class="visually-hidden">Даты</legend>
 
-                  <div class="form__input-days">
-                    <label class="form__label form__label--number-input-container" for="quantity-days">
-                      <span class="form__label-text">Длительность:</span>
-                      <div class="form__input form__input--number number-input">
-                        <button class="number-input__button number-input__button--minus" type="button" aria-label="На один день меньше"></button>
-                        <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1" step="1">
-                        <button class="number-input__button number-input__button--plus" type="button" aria-label="На один день больше"></button>
-                      </div>
-                      <span class="form__units form__units--days" aria-hidden="true">Дн.</span>
-                    </label>
+                  <div class="form__number-input-container form__number-input-container--days">
+                    <label class="form__label form__label--number-input" for="quantity-days">Длительность:</label>
+                    <div class="form__input form__input--number number-input">
+                      <button class="number-input__button number-input__button--minus" type="button" aria-label="На один день меньше"></button>
+                      <input class="number-input__input" type="number" name="quantity-days" value="3" id="quantity-days" min="1" step="1">
+                      <button class="number-input__button number-input__button--plus" type="button" aria-label="На один день больше"></button>
+                    </div>
+                    <span class="form__units form__units--days" aria-hidden="true">Дн.</span>
                   </div>
 
                   <div class="form__calendar calendar">
@@ -560,6 +558,6 @@
 
     <script src="js/global.js"></script>
     <script src="js/pick-country.js"></script>
-    <script src="js/plans-form.js"></script>
+    <!-- <script src="js/plans-form.js"></script> -->
   </body>
 </html>
