@@ -142,11 +142,12 @@
             <img class="user-profile__avatar" src="img/avatars/petya-demin_mobile-form.jpg" srcset="img/avatars/petya-demin_mobile-form@2x.jpg" width="100" height="100" alt="Ваш аватар: бородатый мужчина в шапке и темных очках на фоне снега">
           </picture>
         </div>
-        <a class="user-profile__change-avatar button button--blue" href="blank.html"><span class="button__additional-text">Сменить </span>фото</a>
 
         <div class="user-profile__tags info info--no-js">
           <h3 class="visually-hidden">Информация о вас</h3>
           <form class="info__form form" id="user-tags" method="POST" action="https://echo.htmlacademy.ru/">
+            <a class="info__change-avatar button button--blue" href="blank.html"><span class="button__additional-text">Сменить </span>фото</a>
+
             <fieldset class="info__fieldset info__fieldset--tags form__fieldset">
               <legend class="info__legend form__legend">Тэги</legend>
               <label class="form__label form__label--container">
@@ -159,25 +160,37 @@
               <ul class="form__list form__list--row">
                 <li class="info__transport form__item form__item--checkbox">
                   <input class="form__checkbox" type="checkbox" name="transport-type" value="plane" id="transport-plane" checked>
-                  <label class="form__label form__label--checkbox form__label--plane" for="transport-plane">
+                  <svg class="form__checkbox-icon form__checkbox-icon--plane" width="18" height="20" role="img" aria-hidden="true" focusable="false">
+                    <use href="img/icons/icons-sprite.svg#icon-plane"></use>
+                  </svg>
+                  <label class="form__label form__label--checkbox" for="transport-plane">
                     <span class="visually-hidden">Путешествия самолётом</span>
                   </label>
                 </li>
                 <li class="info__transport form__item form__item--checkbox">
                   <input class="form__checkbox" type="checkbox" name="transport-type" value="car" id="transport-car" checked>
-                  <label class="form__label form__label--checkbox form__label--car" for="transport-car">
+                  <svg class="form__checkbox-icon form__checkbox-icon--car" width="18" height="20" role="img" aria-hidden="true" focusable="false">
+                    <use href="img/icons/icons-sprite.svg#icon-bus"></use>
+                  </svg>
+                  <label class="form__label form__label--checkbox" for="transport-car">
                     <span class="visually-hidden">Путешествия автотранспортом</span>
                   </label>
                 </li>
                 <li class="info__transport form__item form__item--checkbox">
                   <input class="form__checkbox" type="checkbox" name="transport-type" value="bicycle" id="transport-bicycle">
-                  <label class="form__label form__label--checkbox form__label--bicycle" for="transport-bicycle">
+                  <svg class="form__checkbox-icon form__checkbox-icon--bicycle" width="18" height="20" role="img" aria-hidden="true" focusable="false">
+                    <use href="img/icons/icons-sprite.svg#icon-bicycle"></use>
+                  </svg>
+                  <label class="form__label form__label--checkbox" for="transport-bicycle">
                     <span class="visually-hidden">Путешествия на велосипеде</span>
                   </label>
                 </li>
                 <li class="info__transport form__item form__item--checkbox">
                   <input class="form__checkbox" type="checkbox" name="transport-type" value="afoot" id="transport-afoot" checked>
-                  <label class="form__label form__label--checkbox form__label--afoot" for="transport-afoot">
+                  <svg class="form__checkbox-icon form__checkbox-icon--afoot" width="18" height="20" role="img" aria-hidden="true" focusable="false">
+                    <use href="img/icons/icons-sprite.svg#icon-afoot"></use>
+                  </svg>
+                  <label class="form__label form__label--checkbox" for="transport-afoot">
                     <span class="visually-hidden">Путешествия пешком</span>
                   </label>
                 </li>
