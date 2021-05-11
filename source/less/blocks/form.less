@@ -57,6 +57,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(0 0 0 fade(@special-shadow-light, 16%));
+    transition: filter 0.4s ease;
 
     &:hover {
       filter: drop-shadow(0 2px 6px @special-shadow-light);
@@ -197,6 +199,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: @z-index-checkbox-icon;
   transform: translate(-50%, -50%);
   fill: @special-grey-icons;
   pointer-events: none;
@@ -212,22 +215,28 @@
 }
 
 .form__item--checkbox:hover .form__checkbox-icon,
-.form__item--checkbox:focus-within .form__checkbox-icon {
+.form__item--checkbox:focus-within .form__checkbox-icon,
+.form__item--button:hover .form__checkbox-icon,
+.form__item--button:focus-within .form__checkbox-icon {
   fill: @special-grey-icons-hover;
 }
 
-.form__item--checkbox:active .form__checkbox-icon {
+.form__item--checkbox:active .form__checkbox-icon,
+.form__item--button:active .form__checkbox-icon {
   fill: @basic-blue-light;
   opacity: 0.1;
 }
 
 .form__item--checkbox:hover .form__checkbox:checked + .form__checkbox-icon,
-.form__item--checkbox:focus-within .form__checkbox:checked + .form__checkbox-icon {
+.form__item--checkbox:focus-within .form__checkbox:checked + .form__checkbox-icon,
+.form__item--button:hover .form__checkbox:checked + .form__checkbox-icon,
+.form__item--button:focus-within .form__checkbox:checked + .form__checkbox-icon {
   fill: @basic-blue-light;
   opacity: 0.7;
 }
 
-.form__item--checkbox:active .form__checkbox:checked + .form__checkbox-icon {
+.form__item--checkbox:active .form__checkbox:checked + .form__checkbox-icon,
+.form__item--button:active .form__checkbox:checked + .form__checkbox-icon {
   opacity: 0.3;
 }
 
@@ -433,7 +442,7 @@
   }
 }
 
-.form__checkbox:focus + .form__label {
+.form__checkbox:focus ~ .form__label {
   outline: -webkit-focus-ring-color auto 1px;
 }
 

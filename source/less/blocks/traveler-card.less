@@ -13,8 +13,10 @@
   padding: 15px 0 23px;
   background-color: @white;
   border-radius: 20px;
+  overflow: hidden;
   filter: drop-shadow(0 0 0 fade(@black, 16%));
   transition: filter 0.4s ease;
+  will-change: filter;
 
   &:hover,
   &:focus-within {
@@ -133,6 +135,7 @@
   .circle(70px);
   transform: scale(1);
   transition: transform 0.9s ease;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     width: 190px;
@@ -173,6 +176,9 @@
 
 .traveler-card__like-button {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .circle(30px);
   margin-right: 6px;
   border: 0;
@@ -183,22 +189,6 @@
   &:focus,
   &:active {
     background-color: @special-bluegrey;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    width: 12px;
-    height: 10px;
-    background-color: @red;
-    transform: translate(-50%, -50%);
-  }
-
-  &:active::before {
-    opacity: 0.3;
   }
 
   &--liked {
@@ -220,6 +210,40 @@
       height: 18px;
     }
   }
+}
+
+.traveler-card__heart-icon {
+  stroke: @basic-blue-other;
+  stroke-width: 1px;
+  fill: transparent;
+
+  @media (min-width: @tablet-width) {
+    width: 21px;
+    height: 18px;
+  }
+}
+
+.traveler-card__like-button:hover .traveler-card__heart-icon,
+.traveler-card__like-button:focus .traveler-card__heart-icon {
+  opacity: 0.5;
+}
+
+.traveler-card__like-button:active .traveler-card__heart-icon {
+  opacity: 0.1;
+}
+
+.traveler-card__like-button--liked .traveler-card__heart-icon {
+  stroke-width: 0;
+  fill: @special-red-icon;
+}
+
+.traveler-card__like-button--liked:hover .traveler-card__heart-icon,
+.traveler-card__like-button--liked:focus .traveler-card__heart-icon {
+  opacity: 1;
+}
+
+.traveler-card__like-button--liked:active .traveler-card__heart-icon {
+  opacity: 0.3;
 }
 
 .traveler-card__likes-counter {
