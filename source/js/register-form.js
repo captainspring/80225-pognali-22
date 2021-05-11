@@ -1,6 +1,6 @@
 const registerForm = document.querySelector('.feedback-form');
 
-if(registerForm) {
+if (registerForm) {
   const registerEmail = registerForm.querySelector('#feedback-email');
 
   registerForm.addEventListener('submit', function(evt) {

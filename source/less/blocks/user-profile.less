@@ -2,15 +2,13 @@
   position: relative;
   display: grid;
   grid-template-areas: "badge avatar"
-    "button button"
     "tags tags";
   justify-items: center;
   row-gap: 18px;
-  padding: 24px 25px 17px;
+  padding: 24px 25px 35px;
 
   @media (min-width: @tablet-width) {
     grid-template-areas: "badge empty empty avatar"
-      "button button button button"
       "tags tags tags tags";
     grid-template-columns: 164px 1fr 1fr 164px;
     grid-row-gap: 51px;
@@ -22,7 +20,6 @@
     top: -190px;
     z-index: @z-index-user-profile;
     grid-template-areas: "empty badge avatar"
-      "none none button"
       "tags tags tags";
     grid-template-columns: 830px 140px 285px;
     grid-row-gap: 0;
@@ -90,24 +87,15 @@
   }
 }
 
-.user-profile__change-avatar {
-  grid-area: button;
-  width: 100%;
-  margin-bottom: 9px;
+.user-profile__tags {
+  grid-area: tags;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 46px;
+    position: relative;
+    .move-up(-145px);
   }
 
   @media (min-width: @desktop-width) {
-    justify-self: start;
-    width: 190px;
-    margin-bottom: 26px;
-    padding: 17px 15px 13px 15px;
-    border-radius: 0 0 10px 10px;
+    .move-up(0);
   }
-}
-
-.user-profile__tags {
-  grid-area: tags;
 }

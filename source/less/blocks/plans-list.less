@@ -64,6 +64,7 @@
     &::after {
       top: 40px;
       left: 43px;
+      width: 50px;
     }
   }
 }
@@ -86,7 +87,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 36px 36px 37px 95px;
+    padding: 37px 36px 37px 95px;
     border: 0;
   }
 }
@@ -170,14 +171,15 @@
 
   @media (min-width: @tablet-width) {
     grid-area: edit;
-    padding: 20px 10px 14px 30px;
+    margin-right: 29px;
+    padding: 20px 10px 14px;
     .fontsize(20px);
     letter-spacing: 0.1em;
-    text-align: center;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
+    margin-right: unset;
     padding: 40px 39px 37px;
-    text-align: right;
   }
 }

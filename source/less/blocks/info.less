@@ -12,20 +12,48 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 969px;
+      height: 47px;
+    }
+  }
+}
+
+.info__change-avatar {
+  order: 1;
+  width: 100%;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    width: 190px;
+    margin-right: auto;
+    margin-bottom: 26px;
+    padding: 17px 15px 13px 15px;
+    border-radius: 0 0 10px 10px;
   }
 }
 
 .info__fieldset {
   &--tags {
-    order: 1;
+    order: 2;
     padding: 0;
 
     @media (min-width: @tablet-width) {
-      order: 2;
+      order: 3;
     }
 
     @media (min-width: @desktop-width) {
-      order: 1;
+      order: 2;
       box-sizing: border-box;
       width: 732px;
       margin-bottom: 0;
@@ -33,38 +61,51 @@
   }
 
   &--transport {
-    order: 2;
+    order: 3;
     padding: 5px 22px 15px;
 
     @media (min-width: @tablet-width) {
-      position: relative;
-      top: -302px;
       order: 1;
       box-sizing: border-box;
       width: unset;
       min-width: 308px;
-      margin-bottom: -140px;
+      margin-left: 155px;
+      margin-right: 155px;
       padding: 25px;
+
+      &:last-of-type {
+        margin-bottom: 50px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       top: 0;
-      order: 2;
-      min-width: 384px;
-      margin-bottom: 0;
+      order: 3;
+      width: 384px;
+      margin: unset;
       padding: 23px 25px 27px 28px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 .info__legend {
+  box-sizing: border-box;
+  min-width: 70px;
+  max-width: 115px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     bottom: 0;
     left: 50%;
+    max-width: 152px;
     letter-spacing: 0.1em;
-    transform: translate(-50%, 50%);
     background-color: @basic-steelblue;
+    transform: translate(-50%, 50%);
   }
 }
 

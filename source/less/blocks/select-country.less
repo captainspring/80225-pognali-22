@@ -14,15 +14,14 @@
 .select-country__item {
   position: relative;
 
+
   // Add country -- circle
   &:last-child::after {
-    content: "";
-    position: absolute;
     top: 17px;
     right: 49px;
-    display: block;
     box-sizing: border-box;
     .circle(8px);
+    background-image: none;
     background-color: @basic-steelblue;
     border: 1px solid @special-grey-border;
   }
@@ -30,6 +29,19 @@
   @media (max-width: @mobile-width-only) {
     &:last-child {
       margin-top: 22px;
+    }
+
+    // Down arrow
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      right: 49px;
+      display: block;
+      width: 8px;
+      height: 11px;
+      background-image: url("../../img/icons/icon_down-arrow.svg");
+      background-repeat: no-repeat;
     }
   }
 
@@ -512,8 +524,8 @@
     border: 1px solid @special-grey-border;
   }
 
-  &:hover::before,
-  &:focus::before {
+  &:not(.select-country__first-letter--selected):hover::before,
+  &:not(.select-country__first-letter--selected):focus::before {
     z-index: @z-index-pseudo-hover;
     border-color: @basic-blue-light;
   }
