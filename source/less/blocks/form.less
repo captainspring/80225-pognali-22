@@ -58,8 +58,18 @@
     justify-content: center;
     align-items: center;
 
+    &:hover {
+      filter: drop-shadow(0 2px 6px @special-shadow-light);
+    }
+
     &:focus-within {
+      filter: drop-shadow(0 2px 6px @special-shadow-light);
       outline: -webkit-focus-ring-color auto 1px;
+    }
+
+    &:active {
+      background-color: @special-bluegrey;
+      filter: none;
     }
   }
 }
@@ -123,50 +133,14 @@
 
   &--checkbox {
     display: block;
+    width: 31px;
+    height: 31px;
     margin: 0;
     padding: 0;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: block;
-      width: 18px;
-      height: 20px;
-      transform: translate(-50%, -50%);
-      opacity: 0.15;
-      background-repeat: no-repeat;
-      cursor: pointer;
-
-      @media (min-width: @tablet-width) {
-        width: 23px;
-        height: 25px;
-      }
-    }
-  }
-
-  &--plane {
-    &::before {
-      background-image: url("../../img/icons/icon_plane.svg");
-    }
-  }
-
-  &--car {
-    &::before {
-      background-image: url("../../img/icons/icon_bus.svg");
-    }
-  }
-
-  &--bicycle {
-    &::before {
-      background-image: url("../../img/icons/icon_bicycle.svg");
-    }
-  }
-
-  &--afoot {
-    &::before {
-      background-image: url("../../img/icons/icon_run.svg");
+    @media (min-width: @tablet-width) {
+      width: 43px;
+      height: 43px;
     }
   }
 
@@ -200,6 +174,44 @@
   @media (min-width: @desktop-width) {
     padding-right: 20px;
   }
+}
+
+.form__checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: @special-grey-icons;
+  pointer-events: none;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 25px;
+  }
+}
+
+.form__checkbox:checked + .form__checkbox-icon {
+  fill: @basic-blue-light;
+}
+
+.form__item--checkbox:hover .form__checkbox-icon,
+.form__item--checkbox:focus-within .form__checkbox-icon {
+  fill: @special-grey-icons-hover;
+}
+
+.form__item--checkbox:active .form__checkbox-icon {
+  fill: @basic-blue-light;
+  opacity: 0.1;
+}
+
+.form__item--checkbox:hover .form__checkbox:checked + .form__checkbox-icon,
+.form__item--checkbox:focus-within .form__checkbox:checked + .form__checkbox-icon {
+  fill: @basic-blue-light;
+  opacity: 0.7;
+}
+
+.form__item--checkbox:active .form__checkbox:checked + .form__checkbox-icon {
+  opacity: 0.3;
 }
 
 .form__textarea {
@@ -293,12 +305,13 @@
 }
 
 .form__checkbox {
-  position: relative;
+  position: absolute;
+  top: 5px;
+  left: 5px;
   z-index: @z-index-checkbox;
-}
-
-.form__checkbox:checked + .form__label::before {
-  opacity: 1;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 .form__checkbox-kids {
