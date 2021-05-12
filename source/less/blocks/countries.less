@@ -1,20 +1,13 @@
 .countries {
   position: relative;
-
-  @media (min-width: @tablet-width) {
-    .bg-image("../../img/backgrounds/tablet_flags-back.png", 288px, auto);
-    background-position: 92% 80px;
-    background-repeat: no-repeat;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-position: 1092px 88px;
-  }
 }
 
 .countries__wrapper {
   @media (min-width: @tablet-width) {
     padding: 73px 75px 81px 73px;
+    .bg-image("../../img/backgrounds/tablet_flags-back.png", 288px, auto);
+    background-position: 92% 80px;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,6 +19,7 @@
     grid-gap: 60px;
     grid-row-gap: 0;
     padding: 161px 60px 138px;
+    background-position: 1092px 88px;
   }
 }
 
@@ -93,6 +87,7 @@
 
   @media (min-width: @desktop-width) {
     grid-area: right;
+    width: 630px;
     margin-bottom: 0;
 
     &::before {
