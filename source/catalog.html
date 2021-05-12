@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="page-body page-body--inner">
@@ -18,22 +18,20 @@
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
-            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png"
-              srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15"
-              alt="Логотип сервиса поиска попутчиков «Погнали»">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.webp 1x, img/logo/logo_desktop--white@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.webp 1x, img/logo/logo_tablet--white@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--white.webp 1x, img/logo/logo_mobile--white@2x.webp 2x">
+            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png" srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
           <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
-            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
-              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
-              alt="Логотип сервиса поиска попутчиков «Погнали»">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
+            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
 
@@ -990,13 +988,16 @@
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/avatars/tanya-firsova_desktop-catalog.webp 1x, img/avatars/tanya-firsova_desktop-catalog@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/avatars/tanya-firsova_desktop-catalog.jpg 1x, img/avatars/tanya-firsova_desktop-catalog@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet-catalog.webp 1x, img/avatars/tanya-firsova_tablet-catalog@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet-catalog.jpg 1x, img/avatars/tanya-firsova_tablet-catalog@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/avatars/tanya-firsova_mobile-catalog.webp 1x, img/avatars/tanya-firsova_mobile-catalog@2x.webp 2x">
                   <img class="traveler-card__avatar" src="img/avatars/tanya-firsova_mobile-catalog.jpg" srcset="img/avatars/tanya-firsova_mobile-catalog@2x.jpg 2x" width="70" height="70" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
                 </picture>
               </a>
               <h3 class="traveler-card__name">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Таня <br class="traveler-card__name-br">Фирсова</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Таня <span class="traveler-card__name-br">Фирсова</span></a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1085,13 +1086,16 @@
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/avatars/petya-demin_desktop-catalog.webp 1x, img/avatars/petya-demin_desktop-catalog@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/avatars/petya-demin_desktop-catalog.jpg 1x, img/avatars/petya-demin_desktop-catalog@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet-catalog.webp 1x, img/avatars/petya-demin_tablet-catalog@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet-catalog.jpg 1x, img/avatars/petya-demin_tablet-catalog@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/avatars/petya-demin_mobile-catalog.webp 1x, img/avatars/petya-demin_mobile-catalog@2x.webp 2x">
                   <img class="traveler-card__avatar" src="img/avatars/petya-demin_mobile-catalog.jpg" srcset="img/avatars/petya-demin_mobile-catalog@2x.jpg 2x" width="70" height="70" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
                 </picture>
               </a>
               <h3 class="traveler-card__name">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Петя <br class="traveler-card__name-br">Демин</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Петя <span class="traveler-card__name-br">Демин</span></a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1177,13 +1181,16 @@
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/avatars/mark-smolov_desktop.webp 1x, img/avatars/mark-smolov_desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/avatars/mark-smolov_desktop.jpg 1x, img/avatars/mark-smolov_desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/mark-smolov_tablet.webp 1x, img/avatars/mark-smolov_tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/avatars/mark-smolov_tablet.jpg 1x, img/avatars/mark-smolov_tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/avatars/mark-smolov_mobile.webp 1x, img/avatars/mark-smolov_mobile@2x.webp 2x">
                   <img class="traveler-card__avatar" src="img/avatars/mark-smolov_mobile.jpg" srcset="img/avatars/mark-smolov_mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Марка Смолова: татуированный молодой человек в кепке сидит на крыше автомобиля">
                 </picture>
               </a>
               <h3 class="traveler-card__name">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Марк <br class="traveler-card__name-br">Смолов</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Марк <span class="traveler-card__name-br">Смолов</span></a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1272,13 +1279,16 @@
             <li class="catalog__item traveler-card">
               <a class="traveler-card__profile-link traveler-card__profile-link--avatar" href="blank.html">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/avatars/larisa-rogovaya_desktop.webp 1x, img/avatars/larisa-rogovaya_desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/avatars/larisa-rogovaya_desktop.jpg 1x, img/avatars/larisa-rogovaya_desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/larisa-rogovaya_tablet.webp 1x, img/avatars/larisa-rogovaya_tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/avatars/larisa-rogovaya_tablet.jpg 1x, img/avatars/larisa-rogovaya_tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/avatars/larisa-rogovaya_mobile.webp 1x, img/avatars/larisa-rogovaya_mobile@2x.webp 2x">
                   <img class="traveler-card__avatar" src="img/avatars/larisa-rogovaya_mobile.jpg" srcset="img/avatars/larisa-rogovaya_mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Ларисы Роговой: улыбающаяся девушка в синем деловом костюме">
                 </picture>
               </a>
               <h3 class="traveler-card__name traveler-card__name--online">
-                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Лариса <br class="traveler-card__name-br">Роговая</a>
+                <a class="traveler-card__profile-link traveler-card__profile-link--name" href="blank.html">Лариса <span class="traveler-card__name-br">Роговая</span></a>
               </h3>
 
               <div class="traveler-card__likes">
@@ -1393,13 +1403,12 @@
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
-            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
-              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
-              alt="Логотип сервиса поиска попутчиков «Погнали»">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
+            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
 
@@ -1443,8 +1452,6 @@
       </div>
     </footer>
 
-    <script src="js/global.js"></script>
-    <script src="js/filter-country.js"></script>
-    <script src="js/filter-catalog.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

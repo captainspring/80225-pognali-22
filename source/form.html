@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="page-body page-body--inner">
@@ -18,13 +18,19 @@
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.webp 1x, img/logo/logo_desktop--white@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.webp 1x, img/logo/logo_tablet--white@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--white.webp 1x, img/logo/logo_mobile--white@2x.webp 2x">
             <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png" srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
             <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
@@ -136,9 +142,12 @@
 
         <div class="user-profile__avatar-container">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/avatars/petya-demin_desktop-form.webp 1x, img/avatars/petya-demin_desktop-form@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/avatars/petya-demin_desktop-form.jpg 1x, img/avatars/petya-demin_desktop-form@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet-form.webp 1x, img/avatars/petya-demin_tablet-form@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet-form.jpg 1x, img/avatars/petya-demin_tablet-form@2x.jpg 2x">
-            <img class="user-profile__avatar" src="img/avatars/petya-demin_mobile-form.jpg" srcset="img/avatars/petya-demin_mobile-form@2x.jpg" width="100" height="100" alt="Ваш аватар: бородатый мужчина в шапке и темных очках на фоне снега">
+            <source type="image/webp" srcset="img/avatars/petya-demin_mobile-form.webp 1x, img/avatars/petya-demin_mobile-form@2x.webp 2x">
+            <img class="user-profile__avatar" src="img/avatars/petya-demin_mobile-form.jpg" srcset="img/avatars/petya-demin_mobile-form@2x.jpg 2x" width="100" height="100" alt="Ваш аватар: бородатый мужчина в шапке и темных очках на фоне снега">
           </picture>
         </div>
 
@@ -516,8 +525,11 @@
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
             <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
@@ -555,8 +567,6 @@
       </div>
     </footer>
 
-    <script src="js/global.js"></script>
-    <script src="js/pick-country.js"></script>
-    <script src="js/plans-form.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="page-body">
@@ -18,13 +18,19 @@
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.webp 1x, img/logo/logo_desktop--white@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.webp 1x, img/logo/logo_tablet--white@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--white.webp 1x, img/logo/logo_mobile--white@2x.webp 2x">
             <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png" srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
             <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
@@ -125,7 +131,7 @@
 
           <blockquote class="promo__review review">
             <p class="review__quote">«Лучшее приложение,<br>что я видел в жизни!»</p>
-            <cite class="review__author">Мурат Эльтазин<br>главный редактор <br class="review__author-break">газеты «гаджетлайф»</cite>
+            <cite class="review__author">Мурат Эльтазин<br>главный редактор <span class="review__author-break">газеты «гаджетлайф»</span></cite>
           </blockquote>
 
           <ul class="promo__features features">
@@ -141,7 +147,7 @@
         <div class="page-main__wrapper about__wrapper wrapper">
           <h2 class="page-main__title page-main__title--orange about__title">О сервисе</h2>
 
-          <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий <br class="about__text-break">и черпайте вдохновение в&nbsp;чужих.</p>
+          <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий <span class="about__text-break">и черпайте вдохновение в&nbsp;чужих.</span></p>
           <p class="about__text about__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
 
           <a class="about__button button button--index button--normalcase" href="blank.html">Подробнее</a>
@@ -157,7 +163,9 @@
           <ul class="countries__list">
             <li class="countries__item country-card">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/country-photos/thailand-tablet.webp 1x, img/country-photos/thailand-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/country-photos/thailand-tablet.jpg 1x, img/country-photos/thailand-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/country-photos/thailand-mobile.webp 1x, img/country-photos/thailand-mobile@2x.webp 2x">
                 <img class="country-card__image" src="img/country-photos/thailand-mobile.jpg" srcset="img/country-photos/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография зеленого тропического острова в насыщенно синей воде">
               </picture>
               <div class="country-card__container">
@@ -174,7 +182,9 @@
 
             <li class="countries__item country-card">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/country-photos/france-tablet.webp 1x, img/country-photos/france-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/country-photos/france-tablet.jpg 1x, img/country-photos/france-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/country-photos/france-mobile.webp 1x, img/country-photos/france-mobile@2x.webp 2x">
                 <img class="country-card__image" src="img/country-photos/france-mobile.jpg" srcset="img/country-photos/france-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография парижской улочки, слева пятиэтажные дома, справа аллея с деревьями">
               </picture>
               <div class="country-card__container">
@@ -191,7 +201,9 @@
 
             <li class="countries__item country-card">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/country-photos/czech-tablet.webp 1x, img/country-photos/czech-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/country-photos/czech-tablet.jpg 1x, img/country-photos/czech-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/country-photos/czech-mobile.webp 1x, img/country-photos/czech-mobile@2x.webp 2x">
                 <img class="country-card__image" src="img/country-photos/czech-mobile.jpg" srcset="img/country-photos/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Фотография с Карловым мостом и пражской архитектурой на заднем плане, на переднем плане плывет красно-белый речной трамвай">
               </picture>
               <div class="country-card__container">
@@ -216,8 +228,8 @@
           <h2 class="page-main__title page-main__title--orange companions__title">Попутчики</h2>
 
           <div class="companions__texts">
-            <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br class="companions__text-break">а другому маршрут для хайкинга.</p>
-            <p class="companions__text companions__text--bold">Теперь можно легко <br class="companions__text-break">найти единомышленников!</p>
+            <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <span class="companions__text-break">а другому маршрут для хайкинга.</span></p>
+            <p class="companions__text companions__text--bold">Теперь можно легко <span class="companions__text-break">найти единомышленников!</span></p>
           </div>
 
           <ul class="companions__list">
@@ -225,8 +237,8 @@
               <div class="companion-card__avatar-container">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet.webp 1x, img/avatars/tanya-firsova_tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/avatars/tanya-firsova_mobile.webp 1x, img/avatars/tanya-firsova_mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/avatars/tanya-firsova_tablet.jpg 1x, img/avatars/tanya-firsova_tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/avatars/tanya-firsova_mobile.webp 1x, img/avatars/tanya-firsova_mobile@2x.webp 2x">
                   <img class="companion-card__avatar" src="img/avatars/tanya-firsova_mobile.jpg" srcset="img/avatars/tanya-firsova_mobile@2x.jpg 2x" width="270" height="270" alt="Аватар Тани Фирсовой: девушка в ярком купальнике плавает на спине у берега, вид сверху">
                 </picture>
               </div>
@@ -242,6 +254,7 @@
                   <li class="flags-list__item">
                     <div class="flags-list__flag-container">
                       <picture>
+                        <source type="image/webp" srcset="img/flags/Sri-Lanka.webp 1x, img/flags/Sri-Lanka@2x.webp 2x">
                         <img class="flags-list__flag" src="img/flags/Sri-Lanka.png" srcset="img/flags/Sri-Lanka@2x.png 2x" width="35" height="25" alt="Флаг Шри-Ланки">
                       </picture>
                     </div>
@@ -252,6 +265,7 @@
                   <li class="flags-list__item">
                     <div class="flags-list__flag-container">
                       <picture>
+                        <source type="image/webp" srcset="img/flags/Thailand.webp 1x, img/flags/Thailand@2x.webp 2x">
                         <img class="flags-list__flag" src="img/flags/Thailand.png" srcset="img/flags/Thailand@2x.png 2x" width="35" height="25" alt="Флаг Таиланда">
                       </picture>
                     </div>
@@ -262,6 +276,7 @@
                   <li class="flags-list__item">
                     <div class="flags-list__flag-container">
                       <picture>
+                        <source type="image/webp" srcset="img/flags/Seychelles.webp 1x, img/flags/Seychelles@2x.webp 2x">
                         <img class="flags-list__flag" src="img/flags/Seychelles.png" srcset="img/flags/Seychelles@2x.png 2x" width="35" height="25" alt="Флаг Сейшелл">
                       </picture>
                     </div>
@@ -313,7 +328,7 @@
                   <span class="level-badge__label level-badge__label--white">level</span>
                 </p>
                 <svg class="level-badge__level-bar level-bar level-bar--companion-card" width="60" height="60" role="img"
-                  aria-hidden="true" focusable="false" stroke-dashoffset="105">
+                  aria-hidden="true" focusable="false" stroke-dashoffset="102">
                   <use href="img/icons/icons-sprite.svg#icon-level"></use>
                 </svg>
               </div>
@@ -322,7 +337,9 @@
             <li class="companions__item companion-card">
               <div class="companion-card__avatar-container">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet.webp 1x, img/avatars/petya-demin_tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet.jpg 1x, img/avatars/petya-demin_tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/avatars/petya-demin_mobile.webp 1x, img/avatars/petya-demin_mobile@2x.webp 2x">
                   <img class="companion-card__avatar" src="img/avatars/petya-demin_mobile.jpg" srcset="img/avatars/petya-demin_mobile@2x.jpg 2x" width="270" height="270" alt="Аватар Пети Демина: бородатый мужчина в шапке и темных очках на фоне снега">
                 </picture>
               </div>
@@ -338,6 +355,7 @@
                   <li class="flags-list__item">
                     <div class="flags-list__flag-container">
                       <picture>
+                        <source type="image/webp" srcset="img/flags/Belgium.webp 1x, img/flags/Belgium@2x.webp 2x">
                         <img class="flags-list__flag" src="img/flags/Belgium.png" srcset="img/flags/Belgium@2x.png 2x" width="35" height="25" alt="Флаг Бельгии">
                       </picture>
                     </div>
@@ -348,6 +366,7 @@
                   <li class="flags-list__item">
                     <div class="flags-list__flag-container">
                       <picture>
+                        <source type="image/webp" srcset="img/flags/Czechia.webp 1x, img/flags/Czechia@2x.webp 2x">
                         <img class="flags-list__flag" src="img/flags/Czechia.png" srcset="img/flags/Czechia@2x.png 2x" width="35" height="25" alt="Флаг Чехии">
                       </picture>
                     </div>
@@ -439,8 +458,8 @@
 
       <section class="page-main__section page-main__section--dark feedback">
         <h2 class="page-main__title page-main__title--orange feedback__title">Заинтересовались?</h2>
-        <p class="feedback__text">Зарегистрируйтесь, <br class="feedback__text-break">это быстро и бесплатно!<br>
-          Уже зарегистрированы? Тогда скорее <a class="feedback__login-link" href="blank.html">авторизуйтесь</a>.</p>
+        <p class="feedback__text">Зарегистрируйтесь, <span class="feedback__text-break">это быстро и бесплатно!</span></p>
+        <p class="feedback__text">Уже зарегистрированы? Тогда скорее <a class="feedback__login-link" href="blank.html">авторизуйтесь</a>.</p>
 
         <form class="feedback__form feedback-form" method="POST" action="https://echo.htmlacademy.ru/">
           <label class="visually-hidden" for="feedback-email">Ваш e-mail:</label>
@@ -450,7 +469,7 @@
           </button>
         </form>
 
-        <p class="feedback__text">Остались вопросы? <br class="feedback__text-break">Мы с радостью на них ответим!</p>
+        <p class="feedback__text">Остались вопросы? <span class="feedback__text-break">Мы с радостью на них ответим!</span></p>
 
         <ul class="feedback__contacts contacts">
           <li class="contacts__item">
@@ -497,8 +516,11 @@
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
             <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
@@ -561,8 +583,6 @@
       <button class="modal__button-close" type="button">Закрыть окно</button>
     </div>
 
-    <script src="js/global.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/register-form.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
