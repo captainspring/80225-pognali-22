@@ -10,6 +10,15 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="favicons/manifest.webmanifest">
 
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font" crossorigin>
+
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
@@ -147,7 +156,7 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet-form.webp 1x, img/avatars/petya-demin_tablet-form@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/avatars/petya-demin_tablet-form.jpg 1x, img/avatars/petya-demin_tablet-form@2x.jpg 2x">
             <source type="image/webp" srcset="img/avatars/petya-demin_mobile-form.webp 1x, img/avatars/petya-demin_mobile-form@2x.webp 2x">
-            <img class="user-profile__avatar" src="img/avatars/petya-demin_mobile-form.jpg" srcset="img/avatars/petya-demin_mobile-form@2x.jpg 2x" width="100" height="100" alt="Ваш аватар: бородатый мужчина в шапке и темных очках на фоне снега">
+            <img class="user-profile__avatar" src="img/avatars/petya-demin_mobile-form.jpg" srcset="img/avatars/petya-demin_mobile-form@2x.jpg 2x" width="100" height="100" loading="lazy" alt="Ваш аватар: бородатый мужчина в шапке и темных очках на фоне снега">
           </picture>
         </div>
 
@@ -561,7 +570,7 @@
         <p class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Перейти на сайт HTML Academy">
             <span class="copyright__text">Разработано</span>
-            <img class="copyright__logo" src="img/logo/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <img class="copyright__logo" src="img/logo/htmlacademy.svg" width="27" height="34" loading="lazy" alt="Логотип HTML Academy">
           </a>
         </p>
       </div>
