@@ -224,6 +224,7 @@
 
 .descriptions__error-message {
   position: relative;
+  top: 2px;
   display: none;
   box-sizing: border-box;
   width: 100%;
@@ -247,4 +248,14 @@
 
 .descriptions__textarea--error + .descriptions__error-message {
   display: block;
+}
+
+.descriptions__textarea--error:hover + .descriptions__error-message,
+.descriptions__textarea--error:focus + .descriptions__error-message {
+  border-color: @special-border-blue-fade;
+}
+
+.descriptions__textarea--error:active + .descriptions__error-message,
+.descriptions__textarea--error:focus-within + .descriptions__error-message {
+  border-color: @black;
 }

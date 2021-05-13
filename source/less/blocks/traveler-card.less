@@ -13,7 +13,6 @@
   padding: 15px 0 23px;
   background-color: @white;
   border-radius: 20px;
-  overflow: hidden;
   filter: drop-shadow(0 0 0 fade(@black, 16%));
   transition: filter 0.4s ease;
   will-change: filter;
@@ -97,8 +96,10 @@
 }
 
 .traveler-card__name-br {
+  display: block;
+
   @media (min-width: @tablet-width) {
-    display: none;
+    display: inline;
   }
 }
 
@@ -112,6 +113,8 @@
   }
 
   &--avatar {
+    position: relative;
+    z-index: @z-index-tranform-fix;
     grid-area: avatar;
     .circle(70px);
     overflow: hidden;
@@ -159,6 +162,7 @@
   position: relative;
   top: -4px;
   left: -37px;
+  z-index: @z-index-transform-fix-ontop;
   grid-area: likes;
   display: flex;
   align-items: center;
@@ -247,13 +251,16 @@
 }
 
 .traveler-card__likes-counter {
+  max-width: 125px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
   color: @basic-blue;
+  word-break: break-all;
 
   @media (min-width: @tablet-width) {
+    max-width: 100px;
     .fontsize(20px);
   }
 }

@@ -1,8 +1,9 @@
 const ratesLink = document.querySelector('.rates__link');
 const ratesModal = document.querySelector('.modal--business-rates');
-const closeButtonModal = ratesModal.querySelector('.modal__button-close');
 
 if (ratesModal) {
+  const closeButtonModal = ratesModal.querySelector('.modal__button-close');
+
   //Modal -- open
   ratesLink.addEventListener('click', function(evt) {
     evt.preventDefault();

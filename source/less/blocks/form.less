@@ -59,6 +59,7 @@
     align-items: center;
     filter: drop-shadow(0 0 0 fade(@special-shadow-light, 16%));
     transition: filter 0.4s ease;
+    will-change: filter;
 
     &:hover {
       filter: drop-shadow(0 2px 6px @special-shadow-light);
@@ -66,7 +67,7 @@
 
     &:focus-within {
       filter: drop-shadow(0 2px 6px @special-shadow-light);
-      outline: -webkit-focus-ring-color auto 1px;
+      outline: @basic-blue-light auto 1px;
     }
 
     &:active {
@@ -214,29 +215,23 @@
   fill: @basic-blue-light;
 }
 
-.form__item--checkbox:hover .form__checkbox-icon,
-.form__item--checkbox:focus-within .form__checkbox-icon,
-.form__item--button:hover .form__checkbox-icon,
-.form__item--button:focus-within .form__checkbox-icon {
+.form__checkbox:hover + .form__checkbox-icon,
+.form__checkbox:focus + .form__checkbox-icon {
   fill: @special-grey-icons-hover;
 }
 
-.form__item--checkbox:active .form__checkbox-icon,
-.form__item--button:active .form__checkbox-icon {
+.form__checkbox:active + .form__checkbox-icon {
   fill: @basic-blue-light;
   opacity: 0.1;
 }
 
-.form__item--checkbox:hover .form__checkbox:checked + .form__checkbox-icon,
-.form__item--checkbox:focus-within .form__checkbox:checked + .form__checkbox-icon,
-.form__item--button:hover .form__checkbox:checked + .form__checkbox-icon,
-.form__item--button:focus-within .form__checkbox:checked + .form__checkbox-icon {
+.form__checkbox:checked:hover + .form__checkbox-icon,
+.form__checkbox:checked:focus + .form__checkbox-icon {
   fill: @basic-blue-light;
   opacity: 0.7;
 }
 
-.form__item--checkbox:active .form__checkbox:checked + .form__checkbox-icon,
-.form__item--button:active .form__checkbox:checked + .form__checkbox-icon {
+.form__checkbox:checked:active + .form__checkbox-icon {
   opacity: 0.3;
 }
 
@@ -398,6 +393,7 @@
     background-color: @white;
     border: 1px solid @special-grey-border;
     border-radius: 4px;
+    cursor: pointer;
   }
 
   &::after {
@@ -443,7 +439,7 @@
 }
 
 .form__checkbox:focus ~ .form__label {
-  outline: -webkit-focus-ring-color auto 1px;
+  outline: @basic-blue-light auto 1px;
 }
 
 .form__checkbox-kids:hover .form__label::before,

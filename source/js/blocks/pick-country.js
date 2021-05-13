@@ -1,8 +1,9 @@
 const buttonContainer = document.querySelector('.select-country__controls--unpicked');
-const pickButton = buttonContainer.querySelector('.select-country__pick-button');
-const choiceContainer = document.querySelector('.select-country__choice-container');
 
-if (pickButton) {
+if (buttonContainer) {
+  const pickButton = buttonContainer.querySelector('.select-country__pick-button');
+  const choiceContainer = document.querySelector('.select-country__choice-container');
+
   pickButton.addEventListener('click', function() {
     let choiceContainerShown = choiceContainer.classList.contains('select-country__choice-container--show');
 

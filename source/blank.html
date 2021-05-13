@@ -2,37 +2,36 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали — Пустая страница</title>
 
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="favicons/manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="page-body page-body--inner">
-    <header class="page-body__header page-header">
+    <header class="page-body__header page-header page-header--inner">
       <div class="page-header__top-bar top-bar top-bar--no-js">
         <a class="top-bar__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
-            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png"
-              srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15"
-              alt="Логотип сервиса поиска попутчиков «Погнали»">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.webp 1x, img/logo/logo_desktop--white@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--white.png 1x, img/logo/logo_desktop--white@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.webp 1x, img/logo/logo_tablet--white@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--white.png 1x, img/logo/logo_tablet--white@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--white.webp 1x, img/logo/logo_mobile--white@2x.webp 2x">
+            <img class="top-bar__logo-image--white logo__image logo__image--white" src="img/logo/logo_mobile--white.png" srcset="img/logo/logo_mobile--white@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
           <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
-            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
-              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
-              alt="Логотип сервиса поиска попутчиков «Погнали»">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
+            <img class="top-bar__logo-image--blue logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
 
@@ -42,13 +41,19 @@
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link" href="blank.html">О сервисе</a>
+                <a class="navigation__link" href="blank.html">
+                  <span class="navigation__link-text" data-hover="О сервисе">О сервисе</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Направления</a>
+                <a class="navigation__link" href="form.html">
+                  <span class="navigation__link-text" data-hover="Направления">Направления</span>
+                </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Попутчики</a>
+                <a class="navigation__link" href="catalog.html">
+                  <span class="navigation__link-text" data-hover="Попутчики">Попутчики</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -58,24 +63,16 @@
           <ul class="menu__contacts contacts">
             <li class="contacts__item">
               <a class="contacts__link contacts__link--phone" href="tel:88005558628">
-                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-hidden="true" focusable="false">
-                  <circle cx="45" cy="45" r="45" fill="#121936" />
-                  <path class="contacts__icon" fill-rule="evenodd" clip-rule="evenodd"
-                    d="M45 30.2c-5.6 0-11.2 1-13.2 2.8-1.7 1.6-2.3 4.3-2.5 6v.3c0 .7.6 1.3 1.3 1.3l5.1-.4h.2c.7 0 1.3-.6 1.3-1.3v-2.4c0-.8.6-1.4 1.4-1.4h12.8c.8 0 1.4.6 1.4 1.4v2.4c0 .7.6 1.2 1.3 1.2h.2l5 .5c.8 0 1.4-.6 1.4-1.3v-.2c-.2-1.8-.8-4.5-2.5-6.1-2-1.9-7.6-2.8-13.2-2.8zm0 16a2.5 2.5 0 00-2.6 2.5c0 1.4 1.2 2.5 2.6 2.5 1.4 0 2.6-1.1 2.6-2.5s-1.2-2.5-2.6-2.5zm-2-5.5V39c0-.8-.7-1.5-1.6-1.5-.9 0-1.6.7-1.6 1.5v1.6l-8.9 8.9a3 3 0 00-1 2.2v2.5c0 1.3 1.2 2.4 2.7 2.4h.6v1.6c0 .8.8 1.5 1.7 1.5.9 0 1.6-.7 1.6-1.5v-1.6h17v1.6c0 .8.7 1.5 1.6 1.5 1 0 1.7-.7 1.7-1.5v-1.6h.6c1.5 0 2.6-1 2.6-2.4v-2.5a3 3 0 00-1-2.2l-8.8-9v-1.5c0-.8-.7-1.5-1.6-1.5-.9 0-1.6.7-1.6 1.5v1.6h-4zm2 3a5 5 0 015.2 5 5 5 0 01-5.2 5 5 5 0 01-5.2-5 5 5 0 015.2-5z"
-                    fill="#FFD74B" />
+                <svg class="contacts__icon" width="45" height="45" role="img" aria-hidden="true" focusable="false">
+                  <use href="img/icons/icons-sprite.svg#icon-phone"></use>
                 </svg>
                 <span class="contacts__text">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts__item">
               <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">
-                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-hidden="true" focusable="false">
-                  <circle cx="45" cy="45" r="45" fill="#121936" />
-                  <path class="contacts__icon" fill-rule="evenodd" clip-rule="evenodd"
-                    d="M60.3 55l-8.7-8 8.7-8-1.2-1.2-12.6 11.5-12.6-11.5-1.2 1.3 8.7 7.9-8.7 8 1.2 1.2 8.8-8 3.8 3.5 3.8-3.5 8.8 8 1.2-1.3zM31.2 34.4c-1.7 0-3 1.4-3 3.1v18.8c0 1.7 1.3 3.1 3 3.1h30.6c1.7 0 3-1.4 3-3.1V37.6c0-1.7-1.3-3.1-3-3.1H31.2z"
-                    fill="#FFD74B" />
+                <svg class="contacts__icon" width="45" height="45" role="img" aria-hidden="true" focusable="false">
+                  <use href="img/icons/icons-sprite.svg#icon-email"></use>
                 </svg>
                 <span class="contacts__text">mail@htmlacademy.ru</span>
               </a>
@@ -85,34 +82,25 @@
           <ul class="menu__socials socials socials--menu">
             <li class="socials__item">
               <a class="socials__link" href="#" target="_blank" aria-label="Перейти на страницу «Погнали» в Фейсбуке">
-                <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-hidden="true" focusable="false">
-                  <path class="socials__icon"
-                    d="M9.5 27.8H2.7v-13H0V8.6h2.6c-.2-3 .3-5 1.6-6.5a6.2 6.2 0 014.5-2h4.8v6.2H9.8c-.3.7-.3 1.5-.3 2.3h4v6.3h-4v13zm-5.3-1.6H8V13.4h4V10H8v-.8c0-2 0-3.7 1-4.4l.2-.1H12V1.5H8.8A4.7 4.7 0 005.3 3c-1 1.2-1.4 3.3-1.1 6.1v.9H1.6v3.3h2.7v13z"
-                    fill="#192144" />
+                <svg class="socials__icon socials__icon--facebook" width="11" height="21" role="img" aria-hidden="true"
+                  focusable="false">
+                  <use href="img/icons/icons-sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="#" target="_blank" aria-label="Перейти на страницу «Погнали» в Вконтакте">
-                <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-hidden="true" focusable="false">
-                  <path class="socials__icon"
-                    d="M23.95 15.78a4.05 4.05 0 01-2.08-.63c-.65-.44-1.25-.96-1.78-1.53-.44-.44-1.17-1.18-1.45-1.18s-.48.92-.47 1.57c0 .45-.17.88-.47 1.2-.35.3-.78.47-1.22.5h-1.92a11.32 11.32 0 01-7.43-3C3.45 9.36.29 2.92.16 2.64A1.34 1.34 0 01.3 1.15c.38-.32.86-.5 1.36-.48h4.2c.33.05.66.17.95.35.27.18.49.43.63.73.43.92.92 1.81 1.48 2.67 1.3 2 1.89 2.46 2.1 2.56.23-.94.3-1.91.19-2.87A2.7 2.7 0 0011 2.83a1.33 1.33 0 00-.77-.3l-.73-.68C9.37 1.19 10.1.62 10.6.4a8.69 8.69 0 013.15-.38h.7c.73-.02 1.45.05 2.16.2 1.7.36 1.64 1.73 1.57 3.3 0 .47-.05 1-.05 1.63v.48c-.04.43-.01.87.09 1.3a9.1 9.1 0 002.07-2.48 20.4 20.4 0 001.52-2.8 1.58 1.58 0 011.6-.95h4.28a2 2 0 01.38 0c1 0 1.59.29 1.83.85s.17 1.66-2.36 4.6l-1 1.14c-.49.47-.9 1-1.24 1.59.37.43.8.81 1.28 1.14 1.15.86 2.16 1.9 3 3.07a1.6 1.6 0 01.26 1.68 2.3 2.3 0 01-1.88 1l-3.8.05-.22-.04zm-5.31-4.84c.9 0 1.68.79 2.5 1.62.45.49.96.92 1.5 1.3.42.27.9.42 1.4.42h.1l3.8-.05c.2-.01.38-.06.55-.14l-.1-.16a13.22 13.22 0 00-2.68-2.72c-1.2-1-1.8-1.47-1.87-2.24-.07-.77.49-1.44 1.6-2.71l1-1.11c.85-.86 1.54-1.86 2.06-2.95a5.66 5.66 0 00-.67 0h-4.37a.55.55 0 00-.24 0 20.5 20.5 0 01-1.65 3.05c-1.9 2.82-2.78 3.2-3.41 3.2-.2 0-.4-.05-.56-.14-1-.57-1-1.84-.94-2.76v-.43c0-.65 0-1.21.05-1.7.08-1.67 0-1.68-.38-1.77a8.56 8.56 0 00-1.86-.16h-.7a13 13 0 00-1.9.1c.1.07.19.15.26.25.4.65.61 1.4.59 2.18.13 1.65.06 3.8-1 4.32-.2.09-.4.13-.6.13-.93 0-1.85-.88-3.42-3.26-.6-.91-1.14-1.87-1.61-2.85L6 2.26c-.1-.05-.21-.1-.32-.11H1.62C2.2 3.37 5 8.77 8.14 11.6a10 10 0 006.42 2.63h1.85a1 1 0 00.27-.1v-.1c0-.26 0-2.6 1.58-3l.38-.1z"
-                    fill="#192144" />
+                <svg class="socials__icon socials__icon--vk" width="23" height="12" role="img" aria-hidden="true"
+                  focusable="false">
+                  <use href="img/icons/icons-sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="#" target="_blank" aria-label="Перейти на страницу «Погнали» в Инстаграме">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-hidden="true" focusable="false">
-                  <path class="socials__icon"
-                    d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z"
-                    fill="#192144" />
-                  <path class="socials__icon"
-                    d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z"
-                    fill="#192144" />
+                <svg class="socials__icon socials__icon--insta" width="18" height="18" role="img" aria-hidden="true"
+                  focusable="false">
+                  <use href="img/icons/icons-sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -120,12 +108,15 @@
 
           <div class="top-bar__user-buttons menu__user-buttons user-buttons">
             <a class="user-buttons__item user-buttons__item--phone" href="tel:88005558628" aria-label="Позвонить нам">
-              <img class="user-buttons__icon" src="img/icons/icon_call.svg" width="18" height="18"
-                alt="Иконка звонящей трубки">
+              <svg class="user-buttons__icon" width="18" height="18" role="img" aria-hidden="true" focusable="false">
+                <use href="img/icons/icons-sprite.svg#icon-call"></use>
+              </svg>
             </a>
             <a class="user-buttons__item user-buttons__item--email" href="mailto:mail@htmlacademy.ru"
               aria-label="Написать нам">
-              <img class="user-buttons__icon" src="img/icons/icon_mail.svg" width="18" height="16" alt="Иконка конверта">
+              <svg class="user-buttons__icon" width="18" height="16" role="img" aria-hidden="true" focusable="false">
+                <use href="img/icons/icons-sprite.svg#icon-mail"></use>
+              </svg>
             </a>
             <a class="user-buttons__item button" href="blank.html">Авторизация</a>
           </div>
@@ -153,13 +144,12 @@
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer__logo logo" href="index.html" aria-label="Перейти на главную страницу">
           <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
-            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png"
-              srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15"
-              alt="Логотип сервиса поиска попутчиков «Погнали»">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.webp 1x, img/logo/logo_desktop--blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop--blue.png 1x, img/logo/logo_desktop--blue@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.webp 1x, img/logo/logo_tablet--blue@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_tablet--blue.png 1x, img/logo/logo_tablet--blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo/logo_mobile--blue.webp 1x, img/logo/logo_mobile--blue@2x.webp 2x">
+            <img class="logo__image logo__image--blue" src="img/logo/logo_mobile--blue.png" srcset="img/logo/logo_mobile--blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
 
@@ -167,36 +157,27 @@
           <li class="socials__item">
             <a class="socials__link socials__link--yellow-bg" href="#" target="_blank"
               aria-label="Перейти на страницу «Погнали» в Фейсбуке">
-              <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-hidden="true" focusable="false">
-                <path class="socials__icon"
-                  d="M9.5 27.8H2.7v-13H0V8.6h2.6c-.2-3 .3-5 1.6-6.5a6.2 6.2 0 014.5-2h4.8v6.2H9.8c-.3.7-.3 1.5-.3 2.3h4v6.3h-4v13zm-5.3-1.6H8V13.4h4V10H8v-.8c0-2 0-3.7 1-4.4l.2-.1H12V1.5H8.8A4.7 4.7 0 005.3 3c-1 1.2-1.4 3.3-1.1 6.1v.9H1.6v3.3h2.7v13z"
-                  fill="#192144" />
+              <svg class="socials__icon socials__icon--facebook" width="11" height="21" role="img" aria-hidden="true"
+                focusable="false">
+                <use href="img/icons/icons-sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--yellow-bg" href="#" target="_blank"
               aria-label="Перейти на страницу «Погнали» в Вконтакте">
-              <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-hidden="true" focusable="false">
-                <path class="socials__icon"
-                  d="M23.95 15.78a4.05 4.05 0 01-2.08-.63c-.65-.44-1.25-.96-1.78-1.53-.44-.44-1.17-1.18-1.45-1.18s-.48.92-.47 1.57c0 .45-.17.88-.47 1.2-.35.3-.78.47-1.22.5h-1.92a11.32 11.32 0 01-7.43-3C3.45 9.36.29 2.92.16 2.64A1.34 1.34 0 01.3 1.15c.38-.32.86-.5 1.36-.48h4.2c.33.05.66.17.95.35.27.18.49.43.63.73.43.92.92 1.81 1.48 2.67 1.3 2 1.89 2.46 2.1 2.56.23-.94.3-1.91.19-2.87A2.7 2.7 0 0011 2.83a1.33 1.33 0 00-.77-.3l-.73-.68C9.37 1.19 10.1.62 10.6.4a8.69 8.69 0 013.15-.38h.7c.73-.02 1.45.05 2.16.2 1.7.36 1.64 1.73 1.57 3.3 0 .47-.05 1-.05 1.63v.48c-.04.43-.01.87.09 1.3a9.1 9.1 0 002.07-2.48 20.4 20.4 0 001.52-2.8 1.58 1.58 0 011.6-.95h4.28a2 2 0 01.38 0c1 0 1.59.29 1.83.85s.17 1.66-2.36 4.6l-1 1.14c-.49.47-.9 1-1.24 1.59.37.43.8.81 1.28 1.14 1.15.86 2.16 1.9 3 3.07a1.6 1.6 0 01.26 1.68 2.3 2.3 0 01-1.88 1l-3.8.05-.22-.04zm-5.31-4.84c.9 0 1.68.79 2.5 1.62.45.49.96.92 1.5 1.3.42.27.9.42 1.4.42h.1l3.8-.05c.2-.01.38-.06.55-.14l-.1-.16a13.22 13.22 0 00-2.68-2.72c-1.2-1-1.8-1.47-1.87-2.24-.07-.77.49-1.44 1.6-2.71l1-1.11c.85-.86 1.54-1.86 2.06-2.95a5.66 5.66 0 00-.67 0h-4.37a.55.55 0 00-.24 0 20.5 20.5 0 01-1.65 3.05c-1.9 2.82-2.78 3.2-3.41 3.2-.2 0-.4-.05-.56-.14-1-.57-1-1.84-.94-2.76v-.43c0-.65 0-1.21.05-1.7.08-1.67 0-1.68-.38-1.77a8.56 8.56 0 00-1.86-.16h-.7a13 13 0 00-1.9.1c.1.07.19.15.26.25.4.65.61 1.4.59 2.18.13 1.65.06 3.8-1 4.32-.2.09-.4.13-.6.13-.93 0-1.85-.88-3.42-3.26-.6-.91-1.14-1.87-1.61-2.85L6 2.26c-.1-.05-.21-.1-.32-.11H1.62C2.2 3.37 5 8.77 8.14 11.6a10 10 0 006.42 2.63h1.85a1 1 0 00.27-.1v-.1c0-.26 0-2.6 1.58-3l.38-.1z"
-                  fill="#192144" />
+              <svg class="socials__icon socials__icon--vk" width="23" height="12" role="img" aria-hidden="true"
+                focusable="false">
+                <use href="img/icons/icons-sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--yellow-bg" href="#" target="_blank"
               aria-label="Перейти на страницу «Погнали» в Инстаграме">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-hidden="true" focusable="false">
-                <path class="socials__icon"
-                  d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z"
-                  fill="#192144" />
-                <path class="socials__icon"
-                  d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z"
-                  fill="#192144" />
+              <svg class="socials__icon socials__icon--insta" width="18" height="18" role="img" aria-hidden="true"
+                focusable="false">
+                <use href="img/icons/icons-sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -206,12 +187,12 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
             aria-label="Перейти на сайт HTML Academy">
             <span class="copyright__text">Разработано</span>
-            <img src="img/htmlacademy.svg" width="27" height="33" alt="Логотип HTML Academy">
+            <img class="copyright__logo" src="img/logo/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
           </a>
         </p>
       </div>
     </footer>
 
-    <script src="js/global.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
