@@ -34,6 +34,18 @@ const styles = () => {
 
 exports.styles = styles;
 
+const copyStyles = () => {
+  return gulp.src('source/less/style.less')
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest('build/css'))
+}
+
+exports.copyStyles = copyStyles;
+
 // HTML
 
 const html = () => {
@@ -112,8 +124,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   return gulp.src([
     'source/fonts/*.{woff,woff2}',
-    'source/*.ico',
-    'source/manifest.webmanifest',
+    'source/favicons/*.{ico,webmanifest}',
     'source/img/**/*.svg',
     '!source/img/icons/sprite/*.svg',
     'source/img/**/*.{png,jpg}'
@@ -169,6 +180,7 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   copy,
+  copyStyles,
   optimizeImages,
   gulp.parallel(
     styles,
