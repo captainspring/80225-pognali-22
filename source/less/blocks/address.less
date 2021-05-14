@@ -108,6 +108,30 @@
   }
 }
 
+.address__map-image {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  z-index: @z-index-map;
+  display: none;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    top: -1px;
+    width: 768px;
+    height: 581px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    height: 584px;
+  }
+
+  &--no-js {
+    display: block;
+  }
+}
+
 .address__map-container iframe {
   position: relative;
   left: 50%;

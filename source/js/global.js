@@ -29,6 +29,13 @@ if (userInfo) {
   }
 }
 
+// Index -- map
+const map = document.querySelector('.address__map-image');
+
+if (map) {
+  map.classList.remove('address__map-image--no-js');
+}
+
 //////// Menu
 const mainMenuToggle = mainMenu.querySelector('.menu__toggle');
 
