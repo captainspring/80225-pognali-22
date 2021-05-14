@@ -71,7 +71,7 @@
     &::after {
       position: relative;
       top: -4px;
-      right: -16px;
+      right: -25px;
       display: inline-block;
       .circle(8px);
     }
@@ -251,6 +251,8 @@
 }
 
 .traveler-card__likes-counter {
+  position: relative;
+  top: 3px;
   max-width: 125px;
   font-weight: 700;
   font-size: 14px;
@@ -263,12 +265,16 @@
     max-width: 100px;
     .fontsize(20px);
   }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+  }
 }
 
 .traveler-card__tags {
   grid-area: tags;
   margin: 0;
-  padding: 10px 70px 20px 26px;
+  padding: 12px 70px 20px 26px;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
