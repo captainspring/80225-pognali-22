@@ -14,6 +14,26 @@
   }
 }
 
+.number-input:hover .number-input__button,
+.number-input:focus .number-input__button {
+  border-color: @special-border-blue-fade;
+
+  &::before,
+  &::after {
+    background-color: @special-border-blue-fade;
+  }
+}
+
+.number-input:active .number-input__button,
+.number-input:focus-within .number-input__button {
+  border-color: @basic-blue;
+
+  &::before,
+  &::after {
+    background-color: @basic-blue;
+  }
+}
+
 .number-input__button {
   position: relative;
   box-sizing: border-box;
@@ -51,18 +71,6 @@
     }
   }
 
-  &:hover::before,
-  &:hover::after,
-  &:focus::before,
-  &:focus::after {
-    background-color: @ui-number-button-hover;
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: @ui-down;
-  }
-
   @media (min-width: @tablet-width) {
     &::before {
       width: 20px;
@@ -97,14 +105,18 @@
   }
 }
 
-.number-input:hover .number-input__button,
-.number-input:focus .number-input__button,
-.number-input:focus-within .number-input__button {
-  border-color: @special-border-blue-fade;
-}
+.number-input .number-input__button {
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: @ui-number-button-hover;
+  }
 
-.number-input:active .number-input__button {
-  border-color: @basic-blue;
+  &:active::before,
+  &:active::after {
+    background-color: @ui-down;
+  }
 }
 
 .number-input__input {
@@ -134,12 +146,12 @@
   }
 }
 
-.number-input:hover .number-input__input,
-.number-input:focus-within .number-input__input {
+.number-input:hover .number-input__input {
   border-color: @special-border-blue-fade;
 }
 
-.number-input:active .number-input__input {
+.number-input:active .number-input__input,
+.number-input:focus-within .number-input__input {
   border-color: @basic-blue;
 }
 

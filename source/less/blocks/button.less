@@ -339,7 +339,7 @@
     }
 
     &:active {
-      color: fade(@white, 10%);
+      color: @white;
     }
 
     &::before,
@@ -404,6 +404,10 @@
       .fontsize(16px);
       letter-spacing: 0.14em;
       color: @basic-blue-other;
+    }
+
+    &:active::before {
+      opacity: 0.3;
     }
 
     @media (max-width: @mobile-width-only) {
