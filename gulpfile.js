@@ -74,7 +74,10 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  return gulp.src([
+    'source/img/**/*.{png,jpg,svg}',
+    '!source/img/icons/sprite/*.svg'
+    ])
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -86,7 +89,9 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  return gulp.src([
+    'source/img/**/*.{png,jpg,svg}'
+  ])
     .pipe(gulp.dest('build/img'));
 }
 
@@ -121,7 +126,7 @@ exports.sprite = sprite;
 
 // Copy
 
-const copy = (done) => {
+const copy = () => {
   return gulp.src([
     'source/fonts/*.{woff,woff2}',
     'source/favicons/*.{ico,webmanifest}',
@@ -131,8 +136,7 @@ const copy = (done) => {
   ], {
     base: 'source'
   })
-    .pipe(gulp.dest('build'))
-  done();
+    .pipe(gulp.dest('build'));
 }
 
 exports.copy = copy;
