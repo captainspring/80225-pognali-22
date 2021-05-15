@@ -25,9 +25,14 @@
     position: relative;
     z-index: @z-index-promo;
     padding: 0;
-    .bg-image("../../img/backgrounds/desktop_globe-back.png", 1440px, auto);
+    background-image: url("../../img/backgrounds/desktop_globe-back.png");
+    background-size: 1440px auto;
     background-position: center top;
     background-color: @basic-blue-other;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/backgrounds/desktop_globe-back@2x.png");
+    }
   }
 }
 
